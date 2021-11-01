@@ -126,6 +126,8 @@ function showData(data){
          div4.append(img,div3)
          div4.style.cursor="pointer"
          midContainer.append(div4)
+         //midContainer.style.position="sticky"
+        // midContainer.style.top="100px"
          div4.style.backgroundColor="white"
       //  }
      
