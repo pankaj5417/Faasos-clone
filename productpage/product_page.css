@@ -163,6 +163,16 @@ body{
 .margin{
     margin: 6px;
 }
+.cartLeftBtn{
+    box-shadow: -2px -2px 14px -1px rgba(232,227,176,0.75);
+    -webkit-box-shadow: -2px -2px 14px -1px rgba(232,227,176,0.75);
+    -moz-box-shadow: -2px -2px 14px -1px rgba(232,227,176,0.75);
+}
+.cartRightBtn{
+    box-shadow: 1px -2px 14px -1px rgba(232,227,176,0.75);
+-webkit-box-shadow: 1px -2px 14px -1px rgba(232,227,176,0.75);
+-moz-box-shadow: 1px -2px 14px -1px rgba(232,227,176,0.75);
+}
 .addtoCartBtn{
     width: 50%;
     height: 30px;

@@ -161,36 +161,58 @@ qty.innerHTML=count;
         let div2=document.createElement("div")
         let product_name=document.createElement("p")
         product_name.innerText=item.name
+        product_name.style.width="90%"
         let product_price=document.createElement("p")
         product_price.innerText="₹"+" "+item.price
         let buttonLeft=document.createElement("button")
         buttonLeft.innerText="-"
-        buttonLeft.style.width="40px"
+        buttonLeft.style.width="43px"
         buttonLeft.style.fontSize="16px"
+        buttonLeft.style.marginRight="3px"
         buttonLeft.style.border="1px solid #FFA000"
         buttonLeft.style.borderRadius="4px 7px 7px 4px"
         let buttonRight=document.createElement("button")
         let itemNo=document.createElement("p")
-        itemNo.innerText=""
+        itemNo.innerText=" "+"1"+" "
         buttonRight.innerText="+"
         buttonLeft.style.backgroundColor="white"
         buttonRight.style.backgroundColor="white"
-        buttonRight.style.width="40px"
-        buttonRight.style.height="40px"
-        buttonLeft.style.height="40px"
+        buttonRight.style.width="43px"
+        buttonRight.style.height="32px"
+        buttonLeft.style.height="32px"
         buttonRight.style.fontSize="19px"
         buttonRight.style.border="1px solid #FFA000"
         buttonRight.style.borderRadius="7px 4px 4px 7px"
-        buttonRight.style.marginLeft="2%"
-        div2.append(buttonLeft,itemNo, buttonRight)
+        buttonRight.style.marginLeft="3px"
+        buttonLeft.className="cartLeftBtn"
+        buttonRight.className="cartRightBtn"
+        let btn_img = document.createElement("img")
+        if (item.type === 'veg') {
+            
+            btn_img.src="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png"
+        } else {
+            btn_img.src = "https://www.vhv.rs/dpng/d/437-4370761_non-veg-icon-non-veg-logo-png-transparent.png"
+        }
+       btn_img.style.width="12px"
+       btn_img.style.height="12px"
+
+        div2.append( buttonLeft,itemNo, buttonRight)
         div2.style.display="flex"
-        div2.style.width="19%"
+        div2.style.width="22%"
         div2.style.marginLeft="2%"
+        let div3=document.createElement("div")
+        div3.append(btn_img,product_name)
+        div3.style.display="flex"
+        div3.style.alignItems="center"
+        div3.style.width="56%"
+        div3.style.justifyContent="space-between"
+
+
 
         let cartItem=document.getElementById("cart-item")
-        div.append(product_name,div2,product_price)
-        product_name.style.width="58%"
-        product_price.style.width="17%"
+        div.append(div3,div2,product_price)
+       // product_name.style.width="58%"
+        product_price.style.width="15%"
         product_price.style.marginLeft="2%"
 
         div.style.display="flex"
