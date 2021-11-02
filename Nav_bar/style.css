@@ -28,13 +28,20 @@
     gap: 2px;
     border: 1px;
     width: 500px;
-    height: 40px;
-    margin-top: 15px;
+    height: 70px;
+    margin-top: 0px;
     margin-left: 15px;
     cursor: pointer;
+    position: relative;
 
 
 } 
+#location_display{
+    position: absolute;
+    bottom: 5px;
+    margin-left: 6px;
+    font-size: 18px;
+}
 
 #hamburger-div{
     display: inline-block;
