@@ -112,25 +112,26 @@ qty.innerHTML=count+" "+"Item";
 
         let product_price=document.createElement("p")
         product_price.innerText="₹"+" "+item.price
-        let buttonLeft=document.createElement("button")
-        buttonLeft.innerText="-"
+        //let buttonLeft=document.createElement("button")
+        let buttonLeft=document.createElement("img")
+        buttonLeft.src="https://github.com/pankaj5417/koovs.com/blob/main/icons/leftbtn.png?raw=true"
+       
+        let buttonRight=document.createElement("img")
+        buttonRight.src="https://github.com/pankaj5417/koovs.com/blob/main/icons/right btn.png?raw=true"
+       
+       
+      
         buttonLeft.style.width="43px"
-        buttonLeft.style.fontSize="16px"
         buttonLeft.style.marginRight="3px"
-        buttonLeft.style.border="1px solid #FFA000"
-        buttonLeft.style.borderRadius="4px 7px 7px 4px"
-        let buttonRight=document.createElement("button")
-        let itemNo=document.createElement("p")
+      let itemNo=document.createElement("p")
         itemNo.innerText=" "+"1"+" "
-        buttonRight.innerText="+"
+       // buttonRight.innerText="+"
         buttonLeft.style.backgroundColor="white"
         buttonRight.style.backgroundColor="white"
-        buttonRight.style.width="43px"
-        buttonRight.style.height="32px"
-        buttonLeft.style.height="32px"
-        buttonRight.style.fontSize="19px"
-        buttonRight.style.border="1px solid #FFA000"
-        buttonRight.style.borderRadius="7px 4px 4px 7px"
+        buttonRight.style.width="40px"
+        buttonRight.style.height="40px"
+        buttonLeft.style.height="40px"
+      
         buttonRight.style.marginLeft="3px"
         buttonLeft.className="cartLeftBtn"
         buttonRight.className="cartRightBtn"
@@ -144,9 +145,9 @@ qty.innerHTML=count+" "+"Item";
        btn_img.style.width="12px"
        btn_img.style.height="12px"
 
-        div2.append( buttonLeft,itemNo, buttonRight)
+        div2.append( buttonLeft,itemNo,buttonRight)
         div2.style.display="flex"
-        div2.style.width="22%"
+        div2.style.width="25%"
         div2.style.marginLeft="2%"
         let div3=document.createElement("div")
         div3.append(btn_img,product_name)
@@ -160,7 +161,7 @@ qty.innerHTML=count+" "+"Item";
         let cartItem=document.getElementById("cart-item")
         div.append(div3,div2,product_price)
        // product_name.style.width="58%"
-        product_price.style.width="15%"
+        product_price.style.width="10%"
         product_price.style.marginLeft="2%"
 
         div.style.display="flex"
