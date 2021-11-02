@@ -7,4 +7,6 @@ function search(){
 let close = document.getElementById("close");
 close.addEventListener("click",() => {
     document.getElementById("searchModal").style.display = "none";
+    searchContainer.style.display="block"
+
 });

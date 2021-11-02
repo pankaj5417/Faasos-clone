@@ -41,17 +41,17 @@ input.addEventListener("keyup",(e)=>{
     submitButton.disabled = false
     }
     if(v.length<10){
-        submitButton.style.backgroundColor = "#d2d2d2"
+        submitButton.style.backgroundColor = "rgba(210,210,210,255)"
         submitButton.style.color="white"
         submitButton.disabled = true
     }
 })
 function getdata(e){
 e.preventDefault()
-
+document.getElementById("number").innerhtml=null
 let number = document.getElementById("number").value
 
-console.log(number)
+//console.log(number)
 
 let credentials = true
 let arr = JSON.parse(localStorage.getItem("faasosUser"))
