@@ -63,7 +63,7 @@ function showData(data){
          let prod_rating=document.createElement("p")
          prod_rating="★"+" "+prod.rating
          prod_rating_div.append(prod_rating)
-         prod_rating_div.style.backgroundColor="green"
+         prod_rating_div.style.backgroundColor="#4caf50"
          prod_rating_div.style.color="white"
          prod_rating_div.style.width="20%"
          prod_rating_div.style.padding="6px"
@@ -93,27 +93,63 @@ function showData(data){
 
     
         
-         addtoCartBtn.onclick=function() {
-                 console.log("Yes")
-              let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
-              let bagcount=0;
-              console.log(presentitems);
-               presentitems.forEach(function (items) {
+        //  addtoCartBtn.onclick=function() {
+        //          console.log("Yes")
+        //       let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
+        //       let bagcount=0;
+        //       console.log(presentitems);
+        //        presentitems.forEach(function (items) {
                 
-               if(items.name==prod.name) {
-                 bagcount++;
-                 //let qty=document.getElementById(qty)
-                 //qty.innerText="bagcount"
-                }
-               }); 
-               if(bagcount==1) {
-                  alert("Already in Cart");
-              } else {
-                  addtobag(prod);
+        //        if(items.name==prod.name) {
+        //          bagcount++;
+        //          //let qty=document.getElementById(qty)
+        //          //qty.innerText="bagcount"
+        //         }
+        //        }); 
+        //        if(bagcount==1) {
+        //           alert("Already in Cart");
+        //       } else {
+        //           addtobag(prod);
                   
-               }   
-               }
+        //        }   	#4caf50
+        //        }
+          
+          addtoCartBtn.addEventListener("click", function (event) {
+              //add active class to the customize
+              document.querySelector(".custom-parent").classList.add("active-custom");
 
+
+              let div = event.target.parentNode;
+              div.innerHTML = `<div class="inc-des-quantity">
+              <div class="minus">-</div>
+              <div class="qty">1</div>
+              <div class="plus">+</div>
+              </div>`;
+              //for minus 
+              document.querySelector(".minus").addEventListener('click', (event) => {
+                  console.log(event.target.parentNode);
+                    let qty = event.target.parentNode.querySelector(".qty");
+                      let curent = Number(qty.innerText);
+                  if ((curent - 1)== 0){
+                      let div = event.target.parentNode.parentNode;
+                      console.log(div);
+                      div.innerHTML = `<button class="addtoCartBtn" style="background-color: rgb(255, 202, 40); width: 100%;">ADD</button><p style="font-size: 10px; line-height: 0;">customisable</p>`;
+              }else {
+                  qty.innerText = --curent;
+                      }
+              });
+            
+              //for plus 
+                  document.querySelector(".plus").addEventListener('click', (event) => {
+                      let qty = event.target.parentNode.querySelector(".qty");
+                      let curent = Number(qty.innerText);
+                      qty.innerText = ++curent;
+                      
+              });
+          });
+          
+
+          
                if(localStorage.getItem("FaasosCart")===null) {
          localStorage.setItem("FaasosCart",JSON.stringify([]))
      }
@@ -234,4 +270,10 @@ cartData()
 
 function gotoCart(){
  window.location.href="/cart2.html"
+}
+
+// close custom 
+function close_custom() {
+              document.querySelector(".custom-parent").classList.remove("active-custom");
+    
 }
