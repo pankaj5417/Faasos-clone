@@ -62,6 +62,10 @@
         function  appennd_location(Ldata){
 
             console.log(Ldata)
+            let arr = [];
+            arr.push(Ldata)
+            localStorage.setItem("location", JSON.stringify(arr))
+
 
             let location_display = document.getElementById("location_display")
             location_display.innerHTML = null;
