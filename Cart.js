@@ -194,6 +194,10 @@ qty.innerHTML=count+" "+"Item";
 }
 cartData()
 
+function viewCoupons(){
+    
+}
+
 function gotoCart(){
  window.location.href="cart.html"
 }

@@ -31,6 +31,7 @@
             display: flex;
            
         }
+        
         .center{
             align-items: center;
         }
@@ -124,10 +125,10 @@
        
        
         .cart-bottom-left{
-            width: 83%;
+            width: 85%;
         }
-        .cart-bottom-right{
-            width: 17%;
+        .cart-bottom-right {
+            width: 12%;
         }
         .grand-total{
             height: 17%;
@@ -140,11 +141,40 @@
         }
         .cart-txt-color{
             color: green;
+           
         }
         .coupon{
-            width: 98%;
-            border: 1px solid black;
+            width: 93%;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+            padding: 10px;
             justify-content: space-between;
+        }
+        .all-coupons{
+            color: indigo;
+        }
+        .credits{
+            width: 93%;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        
+        .credit-img{
+            width: 25px;
+            height: 22px;
+        }
+        .coupon-img{
+            width: 34px;
+            height: 17px;
+            margin-right: 7px;
+        }
+        .margin-rt{
+            margin-left:8%;
+        }
+        .cursor{
+            cursor: pointer;
         }
     </style>
 </head>
@@ -185,13 +215,25 @@
 
                 <p class="p-text-color ">You can either apply coupon or credits</p>
                 
-                <div class="credits ">
-                    <h4>FAASOS CREDIT</h4>
+                <div class="credits row center ">
+                    <div class="row center">
+                        <img class="credit-img" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/Screenshot%202021-11-02%20233252.png?raw=true" alt="">
+                        <div class="credits-mid-txt">
+                            <h5 class="line-height p-text-color">FAASOS CREDITS</h5>
+                            <h6 class="p-text-color">Click to Apply 0 Credits</h6>
+                        </div>
+                    </div>
+                   
+                   <img class="credit-img" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/Screenshot%202021-11-02%20233452.png?raw=true" alt="">
                     
                 </div>
-                <div class=" row coupon">
-                    <h3>APPLY COUPON</h3>
-                    <P class="all-coupons">View All Coupons</P>
+                <div class=" row coupon center">
+                    <div class="row center">
+                        <img class="coupon-img" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/Screenshot%202021-11-02%20231754.png?raw=true" alt="">
+                        <h5 class="line-height">APPLY COUPON</h5>
+                    </div>
+                   
+                    <p onclick="viewCoupons()" id="view-coupons" class="all-coupons cursor">View All Coupons ></p>
                 </div>
                 </div>  
                 </div>
@@ -201,20 +243,20 @@
 
                           <p class="line-height p-text-color">Cart Amount</p>
                         </div>
-                          <p class="line-height cart-bottom-right" id="total-amt"></p>
+                          <p class="line-height margin-rt" id="total-amt"></p>
                         </div>
                       <div class="row">
                         <div class="cart-bottom-left">
 
                         <p class="line-height p-text-color">Tax</p></div>
-                        <p class="line-height cart-bottom-right" id="gsttax"></p>
+                        <p class="line-height cart-bottom-right margin-rt" id="gsttax"></p>
                     </div>
                     <div class="row">
                         <div class="cart-bottom-left">
 
                         <p class="line-height p-text-color">Delivery</p>
                         </div>
-                        <p class="line-height cart-bottom-right cart-txt-color">Free</p>
+                        <p class="line-height cart-bottom-right cart-txt-color margin-rt">Free</p>
                     </div>
                     <hr>
                     <div class="row ">
@@ -222,7 +264,7 @@
                             <h2 class="line-height">GrandTotal</h2>
                         </div>
                         <div class="row cart-bottom-right">
-                           <p id="total"></p>
+                           <p class="" id="total"></p>
                         </div>
                     </div>
                   
