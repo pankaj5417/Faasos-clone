@@ -27,8 +27,13 @@ function showData(data){
          prod_name.style.color="black"
          prod_name.style.width="75%"
          let prod_price=document.createElement("p")
-         let btn_img=document.createElement("img")
-         btn_img.src="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png"
+          let btn_img = document.createElement("img")
+          if (prod.type === 'veg') {
+              
+              btn_img.src="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png"
+          } else {
+              btn_img.src = "https://www.vhv.rs/dpng/d/437-4370761_non-veg-icon-non-veg-logo-png-transparent.png"
+          }
          btn_img.style.width="12px"
          btn_img.style.height="12px"
          //btn_img.style.margin="25% 0 0 3%"
