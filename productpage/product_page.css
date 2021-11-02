@@ -88,7 +88,7 @@ body{
     margin: auto;
 
 }
-.container > div{
+.container  div{
     margin: 1%;
 }
 .row{
@@ -100,7 +100,7 @@ body{
 }
 .col-left{
     position: sticky;
-    top: 110px;
+    top: 105px;
     z-index: 1;
     width: 15%;
     height: 30%;
@@ -124,7 +124,7 @@ body{
 }
 .col-right{
     position: sticky;
-    top: 110px;
+    top: 105px;
     z-index: 1;
     width: 33%;
     height: 30%;
