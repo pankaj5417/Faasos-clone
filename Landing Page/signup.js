@@ -56,7 +56,7 @@ let number2 = myform2.number2.value
 let name2 = myform2.name2.value
 let email2 = myform2.email2.value
 console.log(name2)
-Document.getElementById("number2").innerText=null
+//Document.getElementById("number2").innerText=null
     // console.log(email)
     // console.log(name)
     // console.log(number)
@@ -85,6 +85,7 @@ arr2.forEach(el => {
 if(credentials2==true){
 arr2.push(user)
 alert("Sign Up sucsessfull")
+modal2.style.display = "none";
 }
            
 

@@ -104,7 +104,7 @@ body{
     z-index: 1;
     width: 15%;
     height: 30%;
-    height: 390px;
+    
     padding: 15px;
     background-color: white;
     border: none;
@@ -242,7 +242,7 @@ body{
             background-color:rgb(76, 175, 80);
             border-radius: 4px;
             color: white;
-            height:35px;
+            height:25px;
             width:70px;
             font-weight: bold;
             line-height:35px;
