@@ -1,61 +1,110 @@
+
 #topBox{
-    display:grid;
-    grid-template-columns: 58% 42%;
-    grid-template-rows: 93%;
+    display:flex;
+    border: 1px ;
 }
 #leftBox{
     width:100%;
+    height: 570px;
     background-image: url(https://assets.faasos.io/faasos_v2/brandPattern.png);
+    
+    border: 2px ;
+    box-sizing: border-box;
+    position: relative;
+}
+#rightBox{
+    border: 1px ;
+    box-sizing: border-box;
 }
 #rightBox > img{
-    width:575px;
-    height:584px;
-    border-bottom-left-radius: 4%;
+    width:100%;
+    /* height:584px; */
+    border-bottom-left-radius: 50px;
 }
 #logoLine{
-    display: grid;
-    grid-template-columns: 20% 50%;
-    grid-template-rows: 60%;
-    grid-gap: 38%;
-    margin:12% 0% 0% 13%;
+    display: flex;
+    /* grid-template-columns: 20% 50%;
+    grid-template-rows: 60%; */
+    gap: 38%;
+    margin:35px 0% 0% 13%;
+    border: 1px ;
 }
-#logoLine > div:nth-child(2){
-   
-    display:grid;
-    grid-template-columns: 30% 33%;
-    grid-gap: 1%;
-    font-size: large;
+
+#btn_div{
+    margin: 10px 0px 10px 27% ;
+    border: 1px;
 }
-#logoLine > div:nth-child(2) > div:nth-child(1){
-    padding:11% 0% 0% 26%;
-    color: rgb(255, 211, 68);
-    font-weight: 800;
-}
-#logoLine > div:nth-child(2) > div:nth-child(2){
-    padding:7% 0% 0% 22%;
-    color: rgb(255, 211, 68);
-    font-weight: 800;
-    border: 1px solid rgb(255, 211, 68);
-    border-radius: 0.4rem;
-}
-#leftBox > h1:nth-child(2){
-    color: rgb(255, 255, 255);
+#btn_div>button{
+    height: 80%;
+    width: 100px;
+    margin-top: 5px;
+    color: rgb(255, 230, 0);
+    background-color: #564099;
+    outline: none;
+    font-size: 17px;
+    font-family: sans-serif;
     font-weight: bold;
-    font-size: 40px;
-    letter-spacing: 0.01rem;
-    margin:10% 0% 0% 13%;
+    cursor: pointer;
 }
-body > h1:nth-child(2){
-    text-align: center;
-    color: rgb(51, 51, 51);
-    font-weight: 800;
-    margin-top:5%;
+#Login_btn{
+   margin-right: 10px;
+   border: none;
 }
-body > div:nth-child(3){
-    font-family: Muli, sans-serif;
-    color: rgb(126, 126, 126);
-    text-align: center;
-    white-space: normal;
-    font-weight: 300;
-    margin-top:-1%;
+#Signin_btn{
+    border: 1px solid rgb(255, 179, 0);
+    border-radius: 4px;
+}
+
+#tag_line{
+    font-size: 45px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 12%;
+}
+
+#landing_page_locationDiv{
+    height: 60px;
+    width: 60%;
+    border: 1px ;
+    margin-left: 12%;
+    display: flex;
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+}
+
+#find_food_btn{
+
+    height: 60px;
+    width: 160px;
+    background-color:#FFD344;
+    color: rgb(61, 61, 61);
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px;
+    font-family: sans-serif;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    border-radius: 10px;
+    border: none;
+    
+}
+#locate_me_div{
+    width: 78%;    
+   padding-top: 10px;
+    display: flex;
+    border: 1px ;
+
+} 
+#locationEnter{
+    border: 1px ;
+    padding-top: 10px;
+}
+#locateMe{
+  margin-left: 320px;
+  width: 100px;
+  border: 1px ;
+  padding-top: 10px;
 }
