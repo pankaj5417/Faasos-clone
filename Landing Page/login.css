@@ -20,7 +20,7 @@
   }
   
   /* The Close Button */
-  .close {
+  .close,.close2 {
     font-size: 28px;
     margin-top: 5px;
   }
@@ -29,12 +29,14 @@
   }
   
   .close:hover,
-  .close:focus {
+  .close:focus,
+  .close2:hover,
+  .close2:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
-  #number,#name,#email{
+  #number,#number2,#name2,#email2{
     margin-top:5px;
     padding: 10px;
     width: 60%;
@@ -43,16 +45,16 @@
     height: 40px;
     margin-bottom:20px ;
   }
-  #name,#email{
+  #name2,#email2{
     margin: auto 10px;
     width: 80%;
     margin-bottom:20px ;
 
   }
-  #span-F{
+  #span-F,#span-F2{
       display: flex;
   }
-  #code{
+  #code,#code2{
     margin-top:5px;
     padding: 10px;
     width: 10%;
@@ -62,10 +64,10 @@
     margin-left: 10px;
     margin-right: 10px;
   }
-  #lin,#tc{
+  #lin,#tc,#lin2,#tc2{
       text-align: center;
   }
-#btn{
+#btn,#btn2{
     margin-top: 20px;
    width:90%;
    color: white;
@@ -74,13 +76,13 @@
    height: 50px;
    border:none;
 }
-#top{
+#top,#top2{
     display: flex;
 }
-#img{
+#img,#img2{
     margin-left: auto;
 }
-#cl{
+#cl,#cl2{
     height:20px;
     transform: rotate(180deg);
 }
