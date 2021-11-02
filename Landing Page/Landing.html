@@ -23,7 +23,7 @@
                 <img src="https://assets.faasos.io/faasos_v2/faasosLogoBrand.svg" alt="Logo Image" />
                 <div id="btn_div">
                     
-                    <button id="myBtn">Login</button>
+                    <span><button id="myBtn">Login</button></span>
 
                     <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -37,7 +37,7 @@
       <span class="color-l">Enter your phone Number to continue</span><br><br><br>
       <form onsubmit="getdata(event)">
          
-          <select id="country-code" onchange="get()" class="arrenge">
+          <select style="margin-left: 40px;"id="country-code" onchange="get()" class="arrenge">
               <option value="+91">India</option>
               <option value="+93"> Afganishtan</option>
               <option value="+61">Australiya</option>
@@ -58,13 +58,14 @@
               <div id="code">+91</div>
           <input id="number" type="text"placeholder="phone Number"pattern="[1-9]{1}[0-9]{9}"  required ></input>
       </div>
+      <div id="check"></div>
           <button id="btn"type="submit">continue</button><br><br><br><br><br><br><br><br><br><br><br><br>
           <p id="lin">Don’t have an account? <a href="#">Sign up</a></p>
       </form>
     </div>
   
   </div> 
-  <button id="myBtn2">Sign Up</button>
+  <span><button id="myBtn2">Sign Up</button></span>
 
   <!-- The Modal -->
   <div id="myModal2" class="modal">
@@ -79,7 +80,7 @@
       <!-- form start -->
       <form onsubmit="signup(event)" id="form2">
          <!-- select -->
-          <select id="country-code2" onchange="get()" class="arrenge">
+          <select id="country-code2" style="margin-left: 40px;" onchange="get2()" class="arrenge">
               <option value="+91">India</option>
               <option value="+93"> Afganishtan</option>
               <option value="+61">Australiya</option>
@@ -96,10 +97,12 @@
               <option value="+967">Yemen</option>
               <option value="+260">Zambia</option>
           </select>
+          
           <div id="span-F2">
               <div id="code2">+91</div>
           <input id="number2" type="text"placeholder="phone Number"pattern="[1-9]{1}[0-9]{9}"  required ></input>
       </div>
+      <div id = "check2"></div>
       <input id="name2" type="text"placeholder="Name"required ></input>
       <input id="email2" type="text"placeholder="Email Adress"required ></input>
           <button id="btn2" type="submit">continue</button>

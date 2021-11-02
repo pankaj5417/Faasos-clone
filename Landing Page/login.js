@@ -23,6 +23,8 @@ window.onclick = function(event) {
   }
 }
 //to get the country code
+
+ 
 function get(){
         let code = document.getElementById("country-code").value
         console.log(code)
@@ -34,14 +36,32 @@ function get(){
    
     const input = document.getElementById("number")
 input.addEventListener("keyup",(e)=>{
-    let v = e.currentTarget.value;
+  
+   var v = e.currentTarget.value;
+   if(v.length>10 || v.length<10){
+    let check = document.getElementById("check")
+    console.log(check.innerText)
+    check.innerText=null
+    check.append("Phone should contain 10 digits")
+  }
+  if( v.length==10){
+    let check = document.getElementById("check")
+    console.log(check.innerText)
+    check.innerText=null
+  }
+  if(v.length==0){
+    let check = document.getElementById("check")
+    console.log(check.innerText)
+    check.innerText=null
+    check.append("Phone should not be empty")
+  }
     if(v.length==10){
     submitButton.style.backgroundColor = "#ffd344";
     submitButton.style.color="black"
     submitButton.disabled = false
     }
     if(v.length<10){
-        submitButton.style.backgroundColor = "rgba(210,210,210,255)"
+        submitButton.style.backgroundColor = "#d2d2d2"
         submitButton.style.color="white"
         submitButton.disabled = true
     }
@@ -49,7 +69,7 @@ input.addEventListener("keyup",(e)=>{
 
 function getdata(e){
 e.preventDefault()
-document.getElementById("number").innerhtml=null
+//document.getElementById("number").innerhtml=null
 let number = document.getElementById("number").value
 
 //console.log(number)
@@ -62,6 +82,12 @@ arr.forEach(el => {
        alert("Log in successfull")
        credentials = false
         modal.style.display = "none";
+        // s stores the value of number
+        let s = document.getElementById("number")
+    s.value = null
+    submitButton.style.backgroundColor = "rgba(210,210,210,255)"
+    submitButton.style.color="white"
+      
    }
 });
 if(credentials==true){

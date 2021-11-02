@@ -31,9 +31,8 @@
     margin: 10px 0px 10px 27% ;
     border: 1px;
 }
-#btn_div>button{
+#myBtn,#myBtn2{
     height: 80%;
-    width: 100px;
     margin-top: 5px;
     color: rgb(255, 230, 0);
     background-color: #564099;
@@ -47,8 +46,12 @@
    margin-right: 10px;
    border: none;
 }
-#Signin_btn{
+#myBtn2{
     border: 1px solid rgb(255, 179, 0);
+    border-radius: 4px;
+}
+#myBtn{
+    border: 1px solid #564099;
     border-radius: 4px;
 }
 
