@@ -81,9 +81,7 @@ body{
     background-color: whitesmoke;
 
 }
-.box{
-    border: 1px solid black;
-}
+
 .container{
     width: 85%;
     height: 100%;
@@ -102,7 +100,7 @@ body{
 }
 .col-left{
     position: sticky;
-    top: 80px;
+    top: 125px;
     z-index: 1;
     width: 15%;
     height: 30%;
@@ -111,11 +109,13 @@ body{
     background-color: white;
     border: none;
     border-radius: 2px;
+    cursor: pointer;
 
 }
 .col-mid{
+   
     width: 50%;
-    height: 100%;
+    height: auto;
     border-radius: 2px;
     display: grid;
     grid-template-columns: repeat(2,49%);
@@ -124,7 +124,7 @@ body{
 }
 .col-right{
     position: sticky;
-    top: 80px;
+    top: 125px;
     z-index: 1;
     width: 33%;
     height: 30%;
@@ -269,6 +269,14 @@ body{
         }
 
         /* search bar css*/
+
+        #search-container{
+            padding:1px;
+            position: sticky;
+            top: 0;
+            background-color: whitesmoke;
+            z-index: 1;
+        }
         #searchhead{
           display: grid;
           grid-template-columns: 25% 40%;
