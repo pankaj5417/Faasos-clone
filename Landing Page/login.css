@@ -27,7 +27,7 @@
   .color-l{
       color:#888;
   }
-  
+  /* close css */
   .close:hover,
   .close:focus,
   .close2:hover,
@@ -36,6 +36,7 @@
     text-decoration: none;
     cursor: pointer;
   }
+  /* input css */
   #number,#number2,#name2,#email2{
     margin-top:5px;
     padding: 10px;
@@ -45,15 +46,18 @@
     height: 40px;
     margin-bottom:20px ;
   }
+  /* sign up input css */
   #name2,#email2{
     margin: auto 10px;
     width: 80%;
     margin-bottom:20px ;
 
   }
+  /* flex to number,code */
   #span-F,#span-F2{
       display: flex;
   }
+  /* code css */
   #code,#code2{
     margin-top:5px;
     padding: 10px;
@@ -64,9 +68,11 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+  /* alignment */
   #lin,#tc,#lin2,#tc2{
       text-align: center;
   }
+  /* log in signup btn */
 #btn,#btn2{
     margin-top: 20px;
    width:90%;
@@ -76,12 +82,14 @@
    height: 50px;
    border:none;
 }
+/* flex to image and coles btn */
 #top,#top2{
     display: flex;
 }
 #img,#img2{
     margin-left: auto;
 }
+
 #cl,#cl2{
     height:20px;
     transform: rotate(180deg);
