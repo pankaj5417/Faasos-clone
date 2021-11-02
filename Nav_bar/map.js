@@ -70,5 +70,13 @@
             let location_display = document.getElementById("location_display")
             location_display.innerHTML = null;
             location_display.textContent = Ldata
-            // location_display.append()
+           
         }
+
+        let location_display = document.getElementById("location_display")
+        location_display.innerHTML = null;
+
+        let location_data = JSON.parse(localStorage.getItem("location"))
+        
+        console.log(location_data)
+        location_display.textContent = location_data[0]
