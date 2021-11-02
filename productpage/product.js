@@ -1,4 +1,5 @@
-async function getData(){
+
+async function getData() {
     let res=await fetch(`https://demo8715768.mockable.io/faasos`)
     let data=await res.json()
     console.log(data)
@@ -114,7 +115,8 @@ function showData(data){
         //        }   	#4caf50
         //        }
           
-          addtoCartBtn.addEventListener("click", function (event) {
+          addtoCartBtn.addEventListener("click", addtocart);
+          function addtocart(event) {
               //add active class to the customize
               document.querySelector(".custom-parent").classList.add("active-custom");
 
@@ -134,19 +136,23 @@ function showData(data){
                       let div = event.target.parentNode.parentNode;
                       console.log(div);
                       div.innerHTML = `<button class="addtoCartBtn" style="background-color: rgb(255, 202, 40); width: 100%;">ADD</button><p style="font-size: 10px; line-height: 0;">customisable</p>`;
+                      
               }else {
                   qty.innerText = --curent;
                       }
               });
             
               //for plus 
-                  document.querySelector(".plus").addEventListener('click', (event) => {
+              document.querySelector(".plus").addEventListener('click', (event) => {
+                      //adding custimable to +button
+              document.querySelector(".custom-parent").classList.add("active-custom");
+                  
                       let qty = event.target.parentNode.querySelector(".qty");
                       let curent = Number(qty.innerText);
-                      qty.innerText = ++curent;
+                      qty.innerText = curent+1;
                       
               });
-          });
+          };
           
 
           
