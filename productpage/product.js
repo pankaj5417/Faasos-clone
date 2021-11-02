@@ -53,9 +53,12 @@ function showData(data){
          let readmore=document.createElement('p')
          readmore.innerText="Read More"
 
+         //for productDetails page on click readmore
+
          readmore.onclick=()=>{
              window.location.href="productDetailsPage"
          }
+
          let prod_rating_div=document.createElement("div")
          let prod_rating=document.createElement("p")
          prod_rating="★"+" "+prod.rating
@@ -73,6 +76,13 @@ function showData(data){
          custom_text.innerText="customisable"
          custom_text.style.fontSize="10px"
          custom_text.style.lineHeight="0"
+
+         //for customisable
+
+         custom_text.onclick=()=>{
+
+         }
+
          div6.append(addtoCartBtn,custom_text)
          div6.style.textAlign="center"
          div6.style.width="50%"
