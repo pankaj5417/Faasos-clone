@@ -46,6 +46,7 @@ input.addEventListener("keyup",(e)=>{
         submitButton.disabled = true
     }
 })
+
 function getdata(e){
 e.preventDefault()
 document.getElementById("number").innerhtml=null
@@ -60,6 +61,7 @@ arr.forEach(el => {
    if(number==el.number){
        alert("Log in successfull")
        credentials = false
+        modal.style.display = "none";
    }
 });
 if(credentials==true){
