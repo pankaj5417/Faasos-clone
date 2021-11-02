@@ -270,7 +270,6 @@ body{
 
         /* search bar css*/
         #searchhead{
-           
           display: grid;
           grid-template-columns: 25% 40%;
           grid-gap:32%;
