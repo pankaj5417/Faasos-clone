@@ -77,13 +77,13 @@ let arr = JSON.parse(localStorage.getItem("faasosUser"))
 arr.forEach(el => {
 
    if(number==el.number || email==el.email){
-       alert("user exist")
+       alert("Already a member")
        credentials = false
    }
 });
 if(credentials==true){
 arr.push(user)
-  alert("Sign Up successful")
+alert("Sign Up sucsessfull")
 }
            
 
