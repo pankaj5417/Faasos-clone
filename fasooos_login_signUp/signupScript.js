@@ -29,10 +29,10 @@ const input = document.getElementById("email")
 input.addEventListener("keyup",(e)=>{
 let v = e.currentTarget.value;
 if(v.length>4){
-submitButton.style.Color = "black";
 submitButton.style.backgroundColor = "#ffd344";
+submitButton.style.color="black"
 }
-if(v.length<10){
+if(v.length<4){
     submitButton.style.backgroundColor = "#d2d2d2"
     submitButton.style.color="white"
 }
