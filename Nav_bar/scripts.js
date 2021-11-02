@@ -1,5 +1,5 @@
 
-
+// ---- Hamburger Scripts  start---
 
 let hmb_trigger = document.querySelector('#hmb-btn')
 let hmb_modelWrap = document.querySelector('.hmb_model_wrapper');
@@ -35,3 +35,5 @@ function open_hmb(){
 function  close_hmb(){
     hmb_modelWrap.classList.remove('active')
 }
+
+// ---- Hamburger scripts end----
