@@ -1,4 +1,5 @@
-async function getData(){
+
+async function getData() {
     let res=await fetch(`https://demo8715768.mockable.io/faasos`)
     let data=await res.json()
     console.log(data)
@@ -27,8 +28,13 @@ function showData(data){
          prod_name.style.color="black"
          prod_name.style.width="75%"
          let prod_price=document.createElement("p")
-         let btn_img=document.createElement("img")
-         btn_img.src="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png"
+          let btn_img = document.createElement("img")
+          if (prod.type === 'veg') {
+              
+              btn_img.src="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png"
+          } else {
+              btn_img.src = "https://www.vhv.rs/dpng/d/437-4370761_non-veg-icon-non-veg-logo-png-transparent.png"
+          }
          btn_img.style.width="12px"
          btn_img.style.height="12px"
          //btn_img.style.margin="25% 0 0 3%"
@@ -48,14 +54,17 @@ function showData(data){
          let readmore=document.createElement('p')
          readmore.innerText="Read More"
 
+         //for productDetails page on click readmore
+
          readmore.onclick=()=>{
              window.location.href="productDetailsPage"
          }
+
          let prod_rating_div=document.createElement("div")
          let prod_rating=document.createElement("p")
          prod_rating="★"+" "+prod.rating
          prod_rating_div.append(prod_rating)
-         prod_rating_div.style.backgroundColor="green"
+         prod_rating_div.style.backgroundColor="#4caf50"
          prod_rating_div.style.color="white"
          prod_rating_div.style.width="20%"
          prod_rating_div.style.padding="6px"
@@ -68,6 +77,13 @@ function showData(data){
          custom_text.innerText="customisable"
          custom_text.style.fontSize="10px"
          custom_text.style.lineHeight="0"
+
+         //for customisable
+
+         custom_text.onclick=()=>{
+
+         }
+
          div6.append(addtoCartBtn,custom_text)
          div6.style.textAlign="center"
          div6.style.width="50%"
@@ -78,27 +94,68 @@ function showData(data){
 
     
         
-         addtoCartBtn.onclick=function() {
-                 console.log("Yes")
-              let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
-              let bagcount=0;
-              console.log(presentitems);
-               presentitems.forEach(function (items) {
+        //  addtoCartBtn.onclick=function() {
+        //          console.log("Yes")
+        //       let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
+        //       let bagcount=0;
+        //       console.log(presentitems);
+        //        presentitems.forEach(function (items) {
                 
-               if(items.name==prod.name) {
-                 bagcount++;
-                 //let qty=document.getElementById(qty)
-                 //qty.innerText="bagcount"
-                }
-               }); 
-               if(bagcount==1) {
-                  alert("Already in Cart");
-              } else {
-                  addtobag(prod);
+        //        if(items.name==prod.name) {
+        //          bagcount++;
+        //          //let qty=document.getElementById(qty)
+        //          //qty.innerText="bagcount"
+        //         }
+        //        }); 
+        //        if(bagcount==1) {
+        //           alert("Already in Cart");
+        //       } else {
+        //           addtobag(prod);
                   
-               }   
-               }
+        //        }   	#4caf50
+        //        }
+          
+          addtoCartBtn.addEventListener("click", addtocart);
+          function addtocart(event) {
+              //add active class to the customize
+              document.querySelector(".custom-parent").classList.add("active-custom");
 
+
+              let div = event.target.parentNode;
+              div.innerHTML = `<div class="inc-des-quantity">
+              <div class="minus">-</div>
+              <div class="qty">1</div>
+              <div class="plus">+</div>
+              </div>`;
+              //for minus 
+              document.querySelector(".minus").addEventListener('click', (event) => {
+                  console.log(event.target.parentNode);
+                    let qty = event.target.parentNode.querySelector(".qty");
+                      let curent = Number(qty.innerText);
+                  if ((curent - 1)== 0){
+                      let div = event.target.parentNode.parentNode;
+                      console.log(div);
+                      div.innerHTML = `<button class="addtoCartBtn" style="background-color: rgb(255, 202, 40); width: 100%;">ADD</button><p style="font-size: 10px; line-height: 0;">customisable</p>`;
+                      
+              }else {
+                  qty.innerText = --curent;
+                      }
+              });
+            
+              //for plus 
+              document.querySelector(".plus").addEventListener('click', (event) => {
+                      //adding custimable to +button
+              document.querySelector(".custom-parent").classList.add("active-custom");
+                  
+                      let qty = event.target.parentNode.querySelector(".qty");
+                      let curent = Number(qty.innerText);
+                      qty.innerText = curent+1;
+                      
+              });
+          };
+          
+
+          
                if(localStorage.getItem("FaasosCart")===null) {
          localStorage.setItem("FaasosCart",JSON.stringify([]))
      }
@@ -146,36 +203,58 @@ qty.innerHTML=count;
         let div2=document.createElement("div")
         let product_name=document.createElement("p")
         product_name.innerText=item.name
+        product_name.style.width="90%"
         let product_price=document.createElement("p")
         product_price.innerText="₹"+" "+item.price
         let buttonLeft=document.createElement("button")
         buttonLeft.innerText="-"
-        buttonLeft.style.width="40px"
+        buttonLeft.style.width="43px"
         buttonLeft.style.fontSize="16px"
+        buttonLeft.style.marginRight="3px"
         buttonLeft.style.border="1px solid #FFA000"
         buttonLeft.style.borderRadius="4px 7px 7px 4px"
         let buttonRight=document.createElement("button")
         let itemNo=document.createElement("p")
-        itemNo.innerText=""
+        itemNo.innerText=" "+"1"+" "
         buttonRight.innerText="+"
         buttonLeft.style.backgroundColor="white"
         buttonRight.style.backgroundColor="white"
-        buttonRight.style.width="40px"
-        buttonRight.style.height="40px"
-        buttonLeft.style.height="40px"
+        buttonRight.style.width="43px"
+        buttonRight.style.height="32px"
+        buttonLeft.style.height="32px"
         buttonRight.style.fontSize="19px"
         buttonRight.style.border="1px solid #FFA000"
         buttonRight.style.borderRadius="7px 4px 4px 7px"
-        buttonRight.style.marginLeft="2%"
-        div2.append(buttonLeft,itemNo, buttonRight)
+        buttonRight.style.marginLeft="3px"
+        buttonLeft.className="cartLeftBtn"
+        buttonRight.className="cartRightBtn"
+        let btn_img = document.createElement("img")
+        if (item.type === 'veg') {
+            
+            btn_img.src="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png"
+        } else {
+            btn_img.src = "https://www.vhv.rs/dpng/d/437-4370761_non-veg-icon-non-veg-logo-png-transparent.png"
+        }
+       btn_img.style.width="12px"
+       btn_img.style.height="12px"
+
+        div2.append( buttonLeft,itemNo, buttonRight)
         div2.style.display="flex"
-        div2.style.width="19%"
+        div2.style.width="22%"
         div2.style.marginLeft="2%"
+        let div3=document.createElement("div")
+        div3.append(btn_img,product_name)
+        div3.style.display="flex"
+        div3.style.alignItems="center"
+        div3.style.width="56%"
+        div3.style.justifyContent="space-between"
+
+
 
         let cartItem=document.getElementById("cart-item")
-        div.append(product_name,div2,product_price)
-        product_name.style.width="58%"
-        product_price.style.width="17%"
+        div.append(div3,div2,product_price)
+       // product_name.style.width="58%"
+        product_price.style.width="15%"
         product_price.style.marginLeft="2%"
 
         div.style.display="flex"
@@ -197,4 +276,10 @@ cartData()
 
 function gotoCart(){
  window.location.href="/cart2.html"
+}
+
+// close custom 
+function close_custom() {
+              document.querySelector(".custom-parent").classList.remove("active-custom");
+    
 }

@@ -29,10 +29,10 @@ const input = document.getElementById("email")
 input.addEventListener("keyup",(e)=>{
 let v = e.currentTarget.value;
 if(v.length>4){
-submitButton.style.Color = "black";
 submitButton.style.backgroundColor = "#ffd344";
+submitButton.style.color="black"
 }
-if(v.length<10){
+if(v.length<4){
     submitButton.style.backgroundColor = "#d2d2d2"
     submitButton.style.color="white"
 }
@@ -77,13 +77,13 @@ let arr = JSON.parse(localStorage.getItem("faasosUser"))
 arr.forEach(el => {
 
    if(number==el.number || email==el.email){
-       alert("user exist")
+       alert("Already a member")
        credentials = false
    }
 });
 if(credentials==true){
 arr.push(user)
-  alert("Sign Up successful")
+alert("Sign Up sucsessfull")
 }
            
 
