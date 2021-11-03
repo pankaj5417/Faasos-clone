@@ -187,6 +187,9 @@ qty.innerHTML=count+" "+"Item";
             total3=total2
             total4=total2
             total_pr.innerHTML='₹'+" "+parseInt(total2)
+            total_pr.style.fontWeight="700"
+           // total_pr.style.fontSize="16px"
+           // total_pr.style.width="13%"
  
 
            // total_pr.style.marginLeft="10%"
