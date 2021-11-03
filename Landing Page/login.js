@@ -71,14 +71,15 @@ function getdata(e){
 e.preventDefault()
 //document.getElementById("number").innerhtml=null
 let number = document.getElementById("number").value
+console.log(number)
 
 //console.log(number)
 
 let credentials = true
 let arr = JSON.parse(localStorage.getItem("faasosUser"))
 arr.forEach(el => {
-
-   if(number==el.number){
+//console.log(el.number2+"qwerty")
+   if(number==el.number2){
        alert("Log in successfull")
        credentials = false
         modal.style.display = "none";
