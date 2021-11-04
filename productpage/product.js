@@ -104,7 +104,7 @@ function showData(data){
                 }
                }); 
                if(bagcount==1) {
-               alert("Already in Cart");
+              // alert("Already in Cart");
                } else {
                   addtobag(prod);
                   
