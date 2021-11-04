@@ -28,13 +28,9 @@ function showData(data){
          prod_name.style.color="black"
          prod_name.style.width="75%"
          let prod_price=document.createElement("p")
-          let btn_img = document.createElement("img")
-          if (prod.type === 'veg') {
-              
-              btn_img.src="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png"
-          } else {
-              btn_img.src = "https://www.vhv.rs/dpng/d/437-4370761_non-veg-icon-non-veg-logo-png-transparent.png"
-          }
+          let btn_img = document.createElement("img");
+        btn_img.src=  product_type(prod, btn_img);
+         
          btn_img.style.width="12px"
          btn_img.style.height="12px"
          //btn_img.style.margin="25% 0 0 3%"
@@ -119,6 +115,7 @@ function showData(data){
           function addtocart(event) {
               //add active class to the customize
               document.querySelector(".custom-parent").classList.add("active-custom");
+              show_customize(prod);
 
 
               let div = event.target.parentNode;
@@ -283,3 +280,31 @@ function close_custom() {
               document.querySelector(".custom-parent").classList.remove("active-custom");
     
 }
+
+//to set non - veg and veg image
+function product_type(prod) {
+     if (prod.type === 'veg') {
+              
+        
+         return "https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png";
+          } else {
+        //  btn_img.src = "https://www.vhv.rs/dpng/d/437-4370761_non-veg-icon-non-veg-logo-png-transparent.png"
+         return  "https://www.vhv.rs/dpng/d/437-4370761_non-veg-icon-non-veg-logo-png-transparent.png";
+          }
+}
+
+//function for customizable option 
+function show_customize(prod) {
+    let parent = document.querySelector(".custom-middle");
+    let type_src = product_type(prod);
+    console.log(type_src)
+    parent.innerHTML = `<div class="head">
+    <div><img src = ${type_src} /></div>
+    <div><h3>${prod.name}</h3></div>
+    </div>
+    <div><p> MAKE YOUR FAVOURITE MEAL </p></div>`
+        ;
+
+}
+
+
