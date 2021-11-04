@@ -94,26 +94,26 @@ function showData(data){
 
     
         
-        //  addtoCartBtn.onclick=function() {
-        //          console.log("Yes")
-        //       let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
-        //       let bagcount=0;
-        //       console.log(presentitems);
-        //        presentitems.forEach(function (items) {
+          addtoCartBtn.onclick=function() {
+                  console.log("Yes")
+              let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
+              let bagcount=0;
+           console.log(presentitems);
+               presentitems.forEach(function (items) {
                 
-        //        if(items.name==prod.name) {
-        //          bagcount++;
-        //          //let qty=document.getElementById(qty)
-        //          //qty.innerText="bagcount"
-        //         }
-        //        }); 
-        //        if(bagcount==1) {
-        //           alert("Already in Cart");
-        //       } else {
-        //           addtobag(prod);
+                if(items.name==prod.name) {
+                  bagcount++;
+                  //let qty=document.getElementById(qty)
+                 //qty.innerText="bagcount"
+                }
+               }); 
+               if(bagcount==1) {
+               alert("Already in Cart");
+               } else {
+                  addtobag(prod);
                   
-        //        }   	#4caf50
-        //        }
+            }   	
+               }
           
           addtoCartBtn.addEventListener("click", addtocart);
           function addtocart(event) {

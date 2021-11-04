@@ -95,6 +95,9 @@ function showData(data){
      
       })
 }
+var total2;
+var total_pr=document.getElementById("total")
+var total_amt=document.getElementById("total-amt")
 let qty=document.getElementById("qty")
 let kart=JSON.parse(localStorage.getItem("FaasosCart"))
 var count=0;
@@ -173,8 +176,8 @@ qty.innerHTML=count+" "+"Item";
 
             return ac+ Number(el.price)
             },0)
-            var total_pr=document.getElementById("total")
-            var total_amt=document.getElementById("total-amt")
+           // var total_pr=document.getElementById("total")
+           // var total_amt=document.getElementById("total-amt")
             //total_pr.style.textAlign="right"
            // total_pr.innerHTML='₹'+" "+total
             total_amt.innerHTML='₹'+" "+total
@@ -183,11 +186,13 @@ qty.innerHTML=count+" "+"Item";
             var tax=0;
             tax=total*0.05
             var gsttax=document.getElementById("gsttax").innerText='₹'+" "+parseInt(tax)
-            var total2=total+tax
+             total2=total+tax
             total3=total2
             total4=total2
             total_pr.innerHTML='₹'+" "+parseInt(total2)
             total_pr.style.fontWeight="700"
+
+            
            // total_pr.style.fontSize="16px"
            // total_pr.style.width="13%"
  
@@ -197,9 +202,14 @@ qty.innerHTML=count+" "+"Item";
 }
 cartData()
 
+
 function viewCoupons(){
-    let couponContainer=document.getElementById("coupon-container")
+    var couponContainer=document.getElementById("coupon-container")
+
+
    let div=document.getElementById("coupon-div")
+   div.innerHTML=null
+
    let div2=document.createElement("div")
    let div3=document.createElement("div")
    let div4=document.createElement("div")
@@ -214,6 +224,9 @@ function viewCoupons(){
    let couponTopBtn=document.createElement("p")
    couponTopBtn.innerText="<"
    couponTopBtn.style.marginRight="2%"
+   couponTopBtn.onclick=()=>{
+       couponContainer.style.display="none"
+   }
    
 
   
@@ -223,7 +236,7 @@ function viewCoupons(){
    div6.append(couponTopBtn,couponTop)
    div6.style.display="flex"
    div6.style.alignItems="center"
-   let couponBox=document.createElement("input")
+   var couponBox=document.createElement("input")
    couponBox.setAttribute("type","text")
    let vertline=document.createElement("div")
 
@@ -233,14 +246,8 @@ function viewCoupons(){
 
    let button3=document.createElement("p")
    button3.innerText="APPLY"
-   button3.onclick=()=>{
-       applyCoupon()
-   }
-   function applyCoupon(){
-       if(couponBox.value==="BIGSAVE"&&total_pr>=800){
-           total_pr-=200
-       }
-   }
+  
+  
    let label=document.createElement("p")
    label.innerText="Enter code"
    label.style.lineHeight="0"
@@ -251,6 +258,13 @@ function viewCoupons(){
    let hr3=document.createElement("hr")
 
    div7.append( div8,vertline,button3)
+ 
+ 
+   button3.onclick=()=>{
+       console.log(couponBox.value)
+    applyCoupon(couponBox.value)
+}
+
    div9.append(hr1,div7,hr2)
    div7.style.display='flex'
    vertline.style.height='40px'
@@ -318,6 +332,17 @@ div.style.display="block"
   // couponContainer.style.zIndex="2"
 
 
+}
+function applyCoupon(d){
+    console.log(total2)
+
+    if(d=="BIGSAVE"&&total2>=800){
+       var total12=total2-200
+
+        total_pr.innerHTML='₹'+" "+parseInt(total12)
+        console.log(total2)
+
+    }
 }
 
 function gotoCart(){
