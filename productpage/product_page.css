@@ -88,7 +88,7 @@ body{
     margin: auto;
 
 }
-.container > div{
+.container div{
     margin: 1%;
 }
 .row{
