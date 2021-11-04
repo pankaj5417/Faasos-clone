@@ -279,13 +279,13 @@ body{
             z-index: 1;
             width:85%;
             margin:auto;
-            border-bottom: 1.5px solid rgb(96, 94, 94);
+            border-bottom: 1.5px solid #BDBDBD;
         }
         #searchhead{
           display: grid;
-          grid-template-columns: 25% 40%;
+          grid-template-columns: 25% 45%;
           grid-gap:32%;
-          margin-top: 1%;
+          margin-top: 1.4%;
           
       }
       #searchhead > div:nth-child(1){ 
@@ -297,7 +297,7 @@ body{
       }
       #searchhead > div:nth-child(2){
           display: grid;
-          grid-template-columns: 40% 29% 24%;
+          grid-template-columns: 40% 28% 20%;
           grid-gap:2%;
           color:grey;
           font-weight: 100;
@@ -325,9 +325,9 @@ body{
       }
       #searchhead > div:nth-child(2) > div:nth-child(3){
           display: grid;
-          grid-template-columns: 10% 80%;
+          grid-template-columns: 14% 76%;
           grid-gap: 10%;
-          padding-top:8.5%;
+          padding-top:10%;
           padding-right:2%;
           cursor: pointer;
           background-color: white;
@@ -339,7 +339,7 @@ body{
       #searchModal{
           display: none; 
           position: fixed; 
-          z-index: 1;
+          z-index: 2;
           left: 0;
           top:0;
           width: 100%;

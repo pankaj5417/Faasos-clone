@@ -28,21 +28,31 @@
 }
 
 #btn_div{
-    margin: 10px 0px 10px 27% ;
+    margin: 10px 0px 10px 20% ;
     border: 1px;
 }
 #myBtn,#myBtn2{
-    height: 80%;
+    
     margin-top: 5px;
     color: rgb(255, 230, 0);
     background-color: #564099;
     outline: none;
-    font-size: 17px;
     font-family: sans-serif;
-    font-weight: bold;
-    font-size: 40px;
+    height:30px;
     letter-spacing: 0.01rem;
-    margin:10% 0% 0% 13%;
+     border:#564099 ; 
+     /* font-size: 20px; */
+     padding: 10px;
+     text-align: center;
+     /* display: inline-block; */
+     /* vertical-align: middle; */
+     font-size: 20px;
+}
+#myBtn2{
+border:1px solid rgb(255, 230, 0) ;
+padding-bottom:20%;
+border-radius: 5%;
+
 }
 body > h1:nth-child(2){
     text-align: center;
@@ -59,4 +69,7 @@ body > div:nth-child(3){
     font-weight: 200;
     margin-top:-1%;
 }
-
+#tag_line{
+    color:#fdfdfe;
+    font-size: 50px;
+}
