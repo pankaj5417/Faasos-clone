@@ -233,6 +233,14 @@ function viewCoupons(){
 
    let button3=document.createElement("p")
    button3.innerText="APPLY"
+   button3.onclick=()=>{
+       applyCoupon()
+   }
+   function applyCoupon(){
+       if(couponBox.value==="BIGSAVE"&&total_pr>=800){
+           total_pr-=200
+       }
+   }
    let label=document.createElement("p")
    label.innerText="Enter code"
    label.style.lineHeight="0"
@@ -248,7 +256,7 @@ function viewCoupons(){
    vertline.style.height='40px'
    vertline.style.backgroundColor="black"
    vertline.style.width="1px"
-   div7.style.width="95%"
+   div7.style.width="97%"
    div7.style.height="60px"
    div7.style.alignItems="center"
    div7.style.justifyContent="space-between"
