@@ -177,6 +177,28 @@
         .cursor{
             cursor: pointer;
         }
+        .coupon-cont{
+            display: none;
+
+         position: fixed;
+        
+         top:0;
+         left: 0;
+         height: 100%;
+        width: 100%;
+        
+         z-index:5;
+        background-color:rgba(0, 0, 0, 0.5);
+
+
+        }
+    .coupon-divs{
+    
+   
+    
+   
+        }
+       
     </style>
 </head>
 <body>
@@ -244,7 +266,7 @@
 
                           <p class="line-height p-text-color">Cart Amount</p>
                         </div>
-                          <p class="line-height margin-rt" id="total-amt"></p>
+                          <p class="line-height " id="total-amt"></p>
                         </div>
                       <div class="row">
                         <div class="cart-bottom-left">
@@ -274,7 +296,9 @@
             
         </div>   
     </div>
-        
+      <div id="coupon-container" class="coupon-cont">
+          <div class="coupon-divs" id="coupon-div"></div>
+      </div> 
     
 </body>
 </html>

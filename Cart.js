@@ -198,7 +198,118 @@ qty.innerHTML=count+" "+"Item";
 cartData()
 
 function viewCoupons(){
-    
+    let couponContainer=document.getElementById("coupon-container")
+   let div=document.getElementById("coupon-div")
+   let div2=document.createElement("div")
+   let div3=document.createElement("div")
+   let div4=document.createElement("div")
+   let div5=document.createElement("div")
+   let div6=document.createElement("div")
+   let div7=document.createElement("div")
+   let div8=document.createElement("div")
+
+   let div9=document.createElement("div")
+
+
+   let couponTopBtn=document.createElement("p")
+   couponTopBtn.innerText="<"
+   couponTopBtn.style.marginRight="2%"
+   
+
+  
+   let couponTop=document.createElement("p")
+   couponTop.innerText="Got an Offer/ Promo Code?"
+
+   div6.append(couponTopBtn,couponTop)
+   div6.style.display="flex"
+   div6.style.alignItems="center"
+   let couponBox=document.createElement("input")
+   couponBox.setAttribute("type","text")
+   let vertline=document.createElement("div")
+
+   couponBox.style.width="390px"
+   couponBox.style.border="none"
+   couponBox.style.outline="none"
+
+   let button3=document.createElement("p")
+   button3.innerText="APPLY"
+   let label=document.createElement("p")
+   label.innerText="Enter code"
+   label.style.lineHeight="0"
+
+   div8.append(label,couponBox)
+   let hr1=document.createElement("hr")
+   let hr2=document.createElement("hr")
+   let hr3=document.createElement("hr")
+
+   div7.append( div8,vertline,button3)
+   div9.append(hr1,div7,hr2)
+   div7.style.display='flex'
+   vertline.style.height='40px'
+   vertline.style.backgroundColor="black"
+   vertline.style.width="1px"
+   div7.style.width="95%"
+   div7.style.height="60px"
+   div7.style.alignItems="center"
+   div7.style.justifyContent="space-between"
+
+   let couponHeading=document.createElement("p")
+   couponHeading.innerText="Available Coupons"
+
+   let coupon1=document.createElement("p")
+   coupon1.innerText="BIGSAVE"
+   coupon1.style.border=" 2px dashed #FFA000"
+   let couponDetail1=document.createElement("p")
+   couponDetail1.innerText="Get Flat Rs 200 Off on all orders above 800."
+
+   let button1=document.createElement("p")
+   let button2=document.createElement("p")
+   button1.innerText="APPLY"
+   button2.innerText="APPLY"
+   button2.style.color="indigo"
+   button1.style.color="indigo"
+
+   let coupon2=document.createElement("p")
+   coupon2.innerText="WRAPPED"
+   coupon2.style.border=" 2px dashed #FFA000"
+
+  
+   let couponDetail2=document.createElement("p")
+   couponDetail2.innerText="Get 60% Off Upto ₹120 on minimum order of ₹199."
+  
+   div2.append(coupon1,button1)
+   div3.append(coupon2,button2)
+   div4.append(div2,couponDetail1)
+   div5.append(hr3,div3,couponDetail2)
+
+   div.append(div6, div9 ,couponHeading,div4,div5)
+   div.style.width="34%"
+   div.style.backgroundColor="white"
+   div.style.borderRadius="4px"
+   div.style.height="88vh"
+  div.style.padding="15px"
+  div.style.position="fixed"
+  div.style.top="40px"
+  div.style.left="33%"
+  div.style.zIndex="100"
+div.style.display="block"
+
+
+   div2.style.display="flex"
+   div2.style.justifyContent="space-between"
+   div3.style.display="flex"
+   div3.style.justifyContent="space-between"
+   
+  // couponContainer.append(div)
+   couponContainer.style.border="1px solid red"
+  couponContainer.style.display="block"
+//couponContainer.style.width="90%"
+///couponContainer.style.height="90%"
+  // couponContainer.style.position="fixed"
+  // couponContainer.style.backgroundColor="black"
+  // couponContainer.style.zIndex="2"
+
+
 }
 
 function gotoCart(){
