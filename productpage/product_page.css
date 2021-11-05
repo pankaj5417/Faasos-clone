@@ -482,6 +482,7 @@ bottom: 0;
 /* /* customisable middle  */
 .custom-middle{
     padding-left: 20px;
+    padding-right: 20px;
 }
 .head{
 display:flex;
@@ -498,6 +499,23 @@ gap:10px;
     color:grey;
 
 }
+.custom-option{
+    margin-top: 50px;
+}
 
+.option{
+    margin-top:20px;
+}
+.option-head img{
+    height:15px;
+    margin-right: 10px;
+
+}
+.option-head{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10px;
+    font-size: 15px;
+}
         
 
