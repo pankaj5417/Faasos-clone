@@ -88,7 +88,7 @@ body{
     margin: auto;
 
 }
-.container  div{
+.container div{
     margin: 1%;
 }
 .row{
@@ -439,8 +439,9 @@ background-color:rgba(0, 0, 0, 0.5);
     height: 650px;
     width:500px;
     max-width: 500px;
-    margin: auto;
-    margin-top: 50px;
+
+    left:33%;
+     top:40px;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
@@ -477,6 +478,26 @@ bottom: 0;
     display:block;
 }
 
+
+/* /* customisable middle  */
+.custom-middle{
+    padding-left: 20px;
+}
+.head{
+display:flex;
+align-items:center;
+gap:10px;
+}
+.head img{
+    height:20px;
+    margin-top: 4px;
+}
+.head+div>p{
+    margin: -10px;
+    padding-left:40px;
+    color:grey;
+
+}
 
         
 
