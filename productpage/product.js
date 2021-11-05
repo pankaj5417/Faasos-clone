@@ -302,7 +302,21 @@ function show_customize(prod) {
     <div><img src = ${type_src} /></div>
     <div><h3>${prod.name}</h3></div>
     </div>
-    <div><p> MAKE YOUR FAVOURITE MEAL </p></div>`
+    <div><p> MAKE YOUR FAVOURITE MEAL </p></div>
+    <div class="custom-option">
+    <div class = "option">
+    <div class = "option-head">
+    <div><img src ="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png" />Potato Wedges (Medium) Thums Up (250ml) (Save Rs26)</div>
+    <div>	&#8377 87<input type="checkbox" id="vehicle2" name="" value="87"></div>
+    </div>
+    </div>
+
+    <div class = "option-head">
+    <div><img src ="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png" />Coke 330 ml.</div>
+    <div>	&#8377 57<input type="checkbox" id="" name="" value="55"></div>
+    </div>
+    </div>
+    </div>`
         ;
 
 }
