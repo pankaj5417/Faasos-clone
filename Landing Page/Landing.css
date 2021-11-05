@@ -1,75 +1,180 @@
+/* Login CSS*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close,.close2 {
+    font-size: 28px;
+    margin-top: 5px;
+  }
+  .color-l{
+      color:#888;
+  }
+  /* close css */
+  .close:hover,
+  .close:focus,
+  .close2:hover,
+  .close2:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* input css */
+  #number,#number2,#name2,#email2{
+    margin-top:5px;
+    padding: 10px;
+    width: 75%;
+    border: 1px solid #aaa;
+    border-radius:5px;
+    height: 40px;
+    margin-bottom:20px ;
+  }
+  /* sign up input css */
+  #name2,#email2{
+    margin: auto 10px;
+    width: 85%;
+    margin-bottom:20px ;
+    margin-left: 33px;
+    
+  }
+  #name2{
+    margin-top: 15px;
+
+  }
+  /* flex to number,code */
+  #span-F,#span-F2{
+      display: flex;
+  }
+  /* code css */
+  #code,#code2{
+    margin-top:5px;
+    padding: 20px;
+    width: 20px;
+    border: 1px solid #aaa;
+    border-radius:5px;
+    height: 20px;
+    margin-right: 10px;
+    display: flex;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 5%;
+  }
+  /* alignment */
+  #lin,#tc,#lin2,#tc2{
+      text-align: center;
+  }
+  /* log in signup btn */
+#btn,#btn2{
+    margin-top: 20px;
+   width:90%;
+   color: white;
+   margin: 10px;
+   height: 50px;
+   border:none;
+   background-color: #d2d2d2;
+  position: relative;
+  border-radius: 0.4rem;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  justify-content: center;
+  margin-left: 5%;
+}
+/* flex to image and coles btn */
+#top,#top2{
+    display: flex;
+}
+#img1,#img2{
+    margin-left: auto;
+}
+
+#cl,#cl2{
+    height:20px;
+    transform: rotate(180deg);
+}
+#check,#check2{
+  color: red;
+  font-size: 10px;
+   margin-top: -15px; 
+   padding-left: 80px;
+  margin-left: 4px;
+  
+}
+/*Login Css End*/
+
 
 #topBox{
-    display:flex;
-    border: 1px ;
+    display:grid;
+    grid-template-columns: 58% 42%;
+    grid-template-rows: 93%;
+    margin-left: -0.5%;
 }
 #leftBox{
     width:100%;
-    height: 570px;
     background-image: url(https://assets.faasos.io/faasos_v2/brandPattern.png);
-    
-    border: 2px ;
-    box-sizing: border-box;
-    position: relative;
-}
-#rightBox{
-    border: 1px ;
-    box-sizing: border-box;
 }
 #rightBox > img{
-    width:100%;
-    border-bottom-left-radius: 50px;
+    width:571px;
+    height:590px;
+    border-bottom-left-radius: 4%;
 }
 #logoLine{
-    display: flex;
-    gap: 38%;
-    margin:35px 0% 0% 13%;
-    border: 1px ;
+    display: grid;
+    grid-template-columns: 20% 50%;
+    grid-template-rows: 60%;
+    grid-gap: 38%;
+    margin:12% 0% 0% 13%;
 }
-
-#btn_div{
-    margin: 10px 0px 10px 20% ;
-    border: 1px;
+#logoLine > div:nth-child(2){
+    display:grid;
+    grid-template-columns: 30% 33%;
+    grid-gap: 1%;
+    font-size: large;
 }
-#myBtn,#myBtn2{
-    
-    margin-top: 5px;
-    color: rgb(255, 230, 0);
-    background-color: #564099;
-    outline: none;
-    font-family: sans-serif;
-    height:30px;
-    letter-spacing: 0.01rem;
-     border:#564099 ; 
-     /* font-size: 20px; */
-     padding: 10px;
-     text-align: center;
-     /* display: inline-block; */
-     /* vertical-align: middle; */
-     font-size: 20px;
+#logoLine > div:nth-child(2) > div:nth-child(1){
+    padding:11% 0% 0% 26%;
+    color: rgb(255, 211, 68);
+    font-weight: 800;
 }
-#myBtn2{
-border:1px solid rgb(255, 230, 0) ;
-padding-bottom:20%;
-border-radius: 5%;
-
-}
-body > h1:nth-child(2){
+#logoLine > div:nth-child(2) > div:nth-child(2){
+    padding:7% 0% 0% 22%;
+    color: rgb(255, 211, 68);
+    font-weight: 800;
+    border: 1px solid rgb(255, 211, 68);
+    border-radius: 0.4rem;
+} 
+#head{
     text-align: center;
     color: rgb(51, 51, 51);
     font-weight: 800;
     margin-top:5%;
     letter-spacing: 0.01rem;
 }
-body > div:nth-child(3){
+#head2{
     font-family: Muli, sans-serif;
     color: rgb(126, 126, 126);
     text-align: center;
+    font-size: small;
     white-space: normal;
-    font-weight: 200;
-    margin-top:-1%;
+    margin-top: -1%;
 }
-#tag_line{
-    color:#fdfdfe;
-    font-size: 50px;
-}
+
