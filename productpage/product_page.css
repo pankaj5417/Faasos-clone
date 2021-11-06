@@ -180,9 +180,10 @@ body{
         position: sticky;
     }
     
-    .cart-bottom{
+    .cart-bottom,.cart-top{
         display: flex;
     }
+    
     .col-left{
         width: 100%;
         margin: auto;
@@ -224,6 +225,8 @@ body{
         background-color: #FFCA28;
     }
 }
+
+
 @media screen and (min-width:700px){
     
     .container{
