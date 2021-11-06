@@ -125,16 +125,24 @@
 #topBox{
     display:grid;
     grid-template-columns: 58% 42%;
-    grid-template-rows: 93%;
+    grid-template-rows: 94%;
     margin-left: -0.5%;
+    margin-top: -0.5%;
 }
 #leftBox{
     width:100%;
     background-image: url(https://assets.faasos.io/faasos_v2/brandPattern.png);
 }
+#leftBox > h1:nth-child(2){
+  color: white;
+  font-size: 45px;
+  font-family: Muli, sans-serif;
+  letter-spacing: 0.01rem;
+  margin: 9% 0% 0% 13%;
+}
 #rightBox > img{
     width:571px;
-    height:590px;
+    height:598px;
     border-bottom-left-radius: 4%;
 }
 #logoLine{
@@ -154,6 +162,7 @@
     padding:11% 0% 0% 26%;
     color: rgb(255, 211, 68);
     font-weight: 800;
+    cursor: pointer;
 }
 #logoLine > div:nth-child(2) > div:nth-child(2){
     padding:7% 0% 0% 22%;
@@ -161,11 +170,13 @@
     font-weight: 800;
     border: 1px solid rgb(255, 211, 68);
     border-radius: 0.4rem;
+    cursor: pointer;
 } 
 #head{
     text-align: center;
     color: rgb(51, 51, 51);
     font-weight: 800;
+    font-size: 38px;
     margin-top:5%;
     letter-spacing: 0.01rem;
 }
@@ -177,4 +188,35 @@
     white-space: normal;
     margin-top: -1%;
 }
+#middle{
+  width:75%;
+  margin:3% 0% 0% 13%;
+  display:grid;
+  grid-template-columns: 48% 45%;
+  grid-gap: 4%;
+}
+#middleLeft{
+  border:1px solid black;
+}
+#middleLeft > div:nth-child(1){
+  border:1px solid red;
+  display:grid;
+  grid-template-columns: 20% 70%;
+}
+#middleLeft > div:nth-child(2){
+  border:1px solid red;
+  display:grid;
+  grid-template-columns: 20% 70%;
+}
+
+#middleLeft > div:nth-child(3){
+  border:1px solid red;
+  display:grid;
+  grid-template-columns: 20% 70%;
+}
+#middleRight > iframe{
+  border-radius: 3%;
+}
+
+
 
