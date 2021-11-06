@@ -6,7 +6,7 @@
 // }
 
 
-export default class holder {
+export  class holder {
     operation(){
     console.log("suman");
     let arr2 = JSON.parse(localStorage.getItem("faasosUser"))
@@ -18,6 +18,13 @@ export default class holder {
     name.innerText = arr2[arr2.length-1].name2
     number.innerText = arr2[arr2.length-1].number2
     email.innerText = arr2[arr2.length-1].email2
+
+    }
+}
+
+export  class Dholder {
+    Doperation(){
+        let arr2 = JSON.parse(localStorage.getItem("faasosUser"))
     let n = document.getElementById("n")
     n.innerText=arr2[arr2.length-1].name2
 
@@ -28,10 +35,5 @@ export default class holder {
     e.innerText = arr2[arr2.length-1].email2
     }
 }
-// let boxtexts = document.querySelectorAll(".s");
-//     Array.from(boxtexts).forEach(element=>{
-//         //console.log(element.innerText.style.color)
-//         ;
-       // element.innerText=null
-    // });
-    
+
+
