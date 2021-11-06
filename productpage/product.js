@@ -272,7 +272,7 @@ qty.innerHTML=count;
 cartData()
 
 function gotoCart(){
- window.location.href="/cart2.html"
+ window.location.href="cart2.html"
 }
 
 // close custom 
