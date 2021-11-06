@@ -1,3 +1,4 @@
+import {product_type} from "./export.js";
 
 async function getData() {
     let res=await fetch(`https://demo8715768.mockable.io/faasos`)
@@ -5,7 +6,7 @@ async function getData() {
     console.log(data)
     showData(data)
 } 
-getData()
+getData();
 
 function showData(data){
     let midContainer=document.getElementById('mid-container')
@@ -177,7 +178,16 @@ function showData(data){
          div3.style.padding="2%"
 
          div3.append(div,prod_desc ,readmore,div2)
-         div4.append(img,div3)
+          div4.append(img, div3)
+
+        //   OPENING A NEW PAGE FOR INDIVIDUAL PRODUCT
+          div.onclick = ()=>{
+              
+              localStorage.setItem("single-prod", JSON.stringify(prod));
+              window.location.href = "single_product.html";
+              console.log(JSON.parse(localStorage.getItem("single-prod")));
+              
+          }
          div4.style.cursor="pointer"
          midContainer.append(div4)
          //midContainer.style.position="sticky"
@@ -187,11 +197,19 @@ function showData(data){
      
       })
 }
-let qty=document.getElementById("qty")
-let kart=JSON.parse(localStorage.getItem("FaasosCart"))
+
+
+
+//cart data();
+function cartData() {
+    let qty=document.getElementById("qty")
+let kart = JSON.parse(localStorage.getItem("FaasosCart"));
 var count=0;
-console.log(kart)
-function cartData(){
+    console.log(kart)
+    if (kart === null) {
+        return 
+    }
+    
     kart.forEach((item)=>{
         count++
 qty.innerHTML=count;
@@ -269,7 +287,7 @@ qty.innerHTML=count;
           
     })
 }
-cartData()
+cartData();
 
 function gotoCart(){
  window.location.href="cart2.html"
@@ -280,18 +298,15 @@ function close_custom() {
               document.querySelector(".custom-parent").classList.remove("active-custom");
     
 }
-
-//to set non - veg and veg image
-function product_type(prod) {
-     if (prod.type === 'veg') {
-              
-        
-         return "https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png";
-          } else {
-        //  btn_img.src = "https://www.vhv.rs/dpng/d/437-4370761_non-veg-icon-non-veg-logo-png-transparent.png"
-         return  "https://www.vhv.rs/dpng/d/437-4370761_non-veg-icon-non-veg-logo-png-transparent.png";
-          }
+//
+function apply_customisable() {
+    document.querySelector(".custom-parent").classList.remove("active-custom");
+    cartData();
 }
+
+
+
+
 
 //function for customizable option 
 function show_customize(prod) {
@@ -320,5 +335,10 @@ function show_customize(prod) {
         ;
 
 }
+
+
+
+//export function
+// export { product_type }; 
 
 

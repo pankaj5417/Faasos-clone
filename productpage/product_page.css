@@ -609,3 +609,22 @@ gap:10px;
 }
         
 
+/* individual product page.css */
+.single-product{
+    display: flex;
+}
+.prod-img img{
+height:300px
+}
+
+.prod-type{
+    height:15px;
+}
+
+.prod-head{
+    display: flex;
+}
+.prod-rating-add{
+    display:flex;
+}
+
