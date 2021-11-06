@@ -58,7 +58,8 @@ function showData(data){
          }
 
          let prod_rating_div=document.createElement("div")
-         let prod_rating=document.createElement("p")
+          let prod_rating = document.createElement("p")
+          prod_rating_div.setAttribute("class", "prod-rating");
          prod_rating="★"+" "+prod.rating
          prod_rating_div.append(prod_rating)
          prod_rating_div.style.backgroundColor="#4caf50"

@@ -29,24 +29,33 @@ function show_prod() {
     let div7 = document.createElement("div");
     div7.innerHTML = `	&#9733; ${prod.rating}`;
     let div8 = document.createElement("div");
-    div8.innerHTML = `<div>add<div><p>customisable</p>`;
+    div8.innerHTML = `<div class="prod-add">ADD</div><p>customisable</p>`;
     div6.append(div7, div8);
+
+    let div_top = document.createElement("div");
+    div_top.append(div3, div6);
+    div_top.setAttribute("class", "prod-head-name")
 
     let div9 = document.createElement("div");
     div9.innerHTML = prod.description;
+    div9.setAttribute("class", "prod-description")
 
     let div10 = document.createElement("div");
-    div10.innerHTML = `<p>Tags<p>`;
+        div10.setAttribute("class", "tag")
+
+    let div11 = document.createElement("div");
+
+    div11.innerHTML = `<p>Tags<p>`;
     
     for (let i = 0; i < prod.tags.length; i++) {
 
         let div = document.createElement("div");
-        div.setAttribute("class", "tag")
         div.innerHTML = `${prod.tags[i]}`
         div10.append(div)
     }
+    
 
-    div2.append(div3, div6, div9, div10);
+    div2.append(div_top,div9,div11, div10);
 
     parent.append(div1, div2);
 
