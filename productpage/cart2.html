@@ -24,10 +24,8 @@
              overflow: scroll;
             }
 
-        .box{
-            border: 1px solid black;
-        }
-        .container{
+        
+            .container{
             width: 85%;
             height: 100%;
             margin: auto;
@@ -36,17 +34,13 @@
         .container div{
             margin: 1%;
         }
-        .row{
+        .hrow{
             display: flex;
            
         }
         
         .center{
             align-items: center;
-        }
-
-        .grand-total  p{
-            padding-top: 1rem;
         }
         .col-left{
             width: 57%;
@@ -64,6 +58,7 @@
             text-align: center;
         }
         .add-new{
+            
             width: 30%;
             height: 33px;
             border-radius: 4px;
@@ -84,7 +79,7 @@
 
         }
         #cart-right{
-            margin: 3px;
+            padding: 5px;
             width: 98%;
             background-color: white;
         }
@@ -144,6 +139,7 @@
         }
         .grand-total{
             height: 17%;
+            padding: 5px;
             width: 98%;
             background-color: white;
         }
@@ -168,15 +164,20 @@
         }
         .credits{
             width: 93%;
+            height: 80px;
             border: 1px solid lightgrey;
             border-radius: 3px;
             padding: 10px;
             justify-content: space-between;
         }
+        .credits-mid-txt{
+            width: 290px;
+        }
         
         .credit-img{
             width: 25px;
             height: 22px;
+            margin: 5px;
         }
         .coupon-img{
             width: 34px;
@@ -189,6 +190,23 @@
         .cursor{
             cursor: pointer;
         }
+        .coupon-cont{
+            display: none;
+
+         position: fixed;
+        
+         top:0;
+         left: 0;
+         height: 100%;
+        width: 100%;
+        
+         z-index:5;
+        background-color:rgba(0, 0, 0, 0.5);
+
+
+        }
+
+
 
 
     .bg-modal{ 
@@ -445,9 +463,9 @@ form {
 <!-- OK -->
 
     <hr>
-    <div class="container box  "> 
-        <div class="row">
-            <div class="col-left box "> 
+    <div class="container   "> 
+        <div class="hrow">
+            <div class="col-left  "> 
                 <div class="cart-status">
                     <h2>Logged in</h2>
                 </div>
@@ -463,10 +481,10 @@ form {
                 </div>
      
                  </div>
-            <div class="col-right box "> 
+            <div class="col-right  "> 
                 <div id="cart-right">
 
-            <div class="row center ">
+            <div class="hrow center ">
                 <h2 class="margin ">Cart</h2>
                 <p id="qty">Q.</p>
                 <p></p> 
@@ -480,8 +498,8 @@ form {
 
                 <p class="p-text-color ">You can either apply coupon or credits</p>
                 
-                <div class="credits row center pt-4">
-                    <div class="row center">
+                <div class="credits hrow center pt-4">
+                    <div class="hrow center">
                         <img class="credit-img" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/Screenshot%202021-11-02%20233252.png?raw=true" alt="">
                         <div class="credits-mid-txt">
                             <h5 class="line-height p-text-color ">FAASOS CREDITS</h5>
@@ -492,8 +510,8 @@ form {
                    <img class="credit-img" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/Screenshot%202021-11-02%20233452.png?raw=true" alt="">
                     
                 </div>
-                <div class=" row coupon center">
-                    <div class="row center">
+                <div class=" hrow coupon center">
+                    <div class="hrow center">
                         <img class="coupon-img" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/Screenshot%202021-11-02%20231754.png?raw=true" alt="">
                         <h5 class="line-height">APPLY COUPON</h5>
                     </div>
@@ -503,20 +521,20 @@ form {
                 </div>  
                 </div>
                   <div class="grand-total">
-                      <div class="row">
+                      <div class="hrow">
                         <div class="cart-bottom-left">
 
                           <p class="line-height p-text-color">Cart Amount</p>
                         </div>
                           <p class="line-height margin-rt" id="total-amt"></p>
                         </div>
-                      <div class="row">
+                      <div class="hrow">
                         <div class="cart-bottom-left">
 
                         <p class="line-height p-text-color">Tax</p></div>
                         <p class="line-height cart-bottom-right margin-rt" id="gsttax"></p>
                     </div>
-                    <div class="row">
+                    <div class="hrow">
                         <div class="cart-bottom-left">
 
                         <p class="line-height p-text-color">Delivery</p>
@@ -524,11 +542,11 @@ form {
                         <p class="line-height cart-bottom-right cart-txt-color margin-rt">Free</p>
                     </div>
                     <hr>
-                    <div class="row ">
+                    <div class="hrow ">
                         <div class="cart-bottom-left">
                             <h2 class="line-height p-4">GrandTotal</h2>
                         </div>
-                        <div class="row cart-bottom-right">
+                        <div class="hrow cart-bottom-right">
                            <p class="" id="total"></p>
                         </div>
                     </div>
@@ -539,7 +557,9 @@ form {
         </div>   
     
     </div>
-
+    <div id="coupon-container" class="coupon-cont">
+        <div class="coupon-divs" id="coupon-div"></div>
+    </div> 
 
 
 
