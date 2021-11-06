@@ -246,8 +246,53 @@
   border-radius: 12%;
   padding:2%;
 }
-
-
+#lower{
+  width:100%;
+  font-family: Muli, sans-serif;
+  font-size: 15px;
+  margin-top:10%;
+  background-color: rgb(86, 64, 153);
+}
+#lower > p:nth-child(1){
+  font-family: Muli, sans-serif;
+  padding-top: 5%;
+  color:rgb(255, 211, 68);
+  text-align: center;
+}
+#lowerPortion{
+  width:82%;
+  margin:3% 0% 0% 6%;
+  display:grid;
+  grid-template-columns: 18% 22% 21% 22% 20%;
+  grid-gap:1%;
+  padding-bottom: 3%;
+}
+#lowerPortion > div:nth-child(1){
+  text-align: center;
+  color: white;
+}
+#lowerPortion > div:nth-child(2){
+  text-align: center;
+  color: white;
+}
+#lowerPortion > div:nth-child(3){
+  text-align: center;
+  color: white;
+}
+#lowerPortion > div:nth-child(4){
+  text-align: center;
+  color: white;
+}
+#lowerPortion > div:nth-child(5){
+  text-align: center;
+  color: white;
+}
+.pad{
+  padding-top: 7%;
+}
+.pad1{
+  padding-top: 8%;
+}
 
 
 
