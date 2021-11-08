@@ -295,15 +295,15 @@ function gotoCart(){
 }
 
 // close custom 
-function close_custom() {
-              document.querySelector(".custom-parent").classList.remove("active-custom");
+document.getElementById("custom-close").addEventListener("click",()=> {
+    document.querySelector(".custom-parent").classList.remove("active-custom");
     
-}
+});
 //
-function apply_customisable() {
+document.querySelector(".custom-bottom").addEventListener("click", () => {
     document.querySelector(".custom-parent").classList.remove("active-custom");
     cartData();
-}
+});
 
 
 
