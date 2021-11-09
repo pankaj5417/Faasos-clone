@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Food Online from Faasos</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="address.css" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+   <!-- <link rel="stylesheet" href="address.css" />-->
     <link rel="icon" href="https://c2.iwebchk.com/icon/view/order.faasos.io">
 
     <style>
@@ -138,8 +138,8 @@
             width: 12%;
         }
         .grand-total{
-            height: 17%;
-            padding: 5px;
+            height: 30%;
+            padding: 15px;
             width: 98%;
             background-color: white;
         }
@@ -152,7 +152,7 @@
            
         }
         .coupon{
-            width: 93%;
+            width: 98%;
             border: 1px solid lightgrey;
             border-radius: 3px;
             padding: 10px;
@@ -163,7 +163,7 @@
             font-size: 13px;
         }
         .credits{
-            width: 93%;
+            width: 98%;
             height: 80px;
             border: 1px solid lightgrey;
             border-radius: 3px;
@@ -190,6 +190,7 @@
         .cursor{
             cursor: pointer;
         }
+        
         .coupon-cont{
             display: none;
 
@@ -520,8 +521,8 @@ form {
                 </div>
                 </div>  
                 </div>
-                  <div class="grand-total">
-                      <div class="hrow">
+                  <div class="grand-total space-y-4 ">
+                      <div class="hrow ">
                         <div class="cart-bottom-left">
 
                           <p class="line-height p-text-color">Cart Amount</p>
@@ -542,11 +543,11 @@ form {
                         <p class="line-height cart-bottom-right cart-txt-color margin-rt">Free</p>
                     </div>
                     <hr>
-                    <div class="hrow ">
+                    <div class="hrow items-center">
                         <div class="cart-bottom-left">
-                            <h2 class="line-height p-4">GrandTotal</h2>
+                            <h2 class="line-height ">GrandTotal</h2>
                         </div>
-                        <div class="hrow cart-bottom-right">
+                        <div class=" cart-bottom-right">
                            <p class="" id="total"></p>
                         </div>
                     </div>

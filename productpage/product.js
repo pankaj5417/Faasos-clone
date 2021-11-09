@@ -289,10 +289,11 @@ qty.innerHTML=count;
     })
 }
 cartData();
-
-function gotoCart(){
- window.location.href="cart2.html"
+let checkouts=document.getElementById("checkout")
+checkouts.onclick=()=>{ window.location.href="cart2.html"
 }
+//function gotoCart(){
+//}
 
 // close custom 
 document.getElementById("custom-close").addEventListener("click",()=> {
