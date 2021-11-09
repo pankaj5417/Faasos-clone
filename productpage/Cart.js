@@ -190,7 +190,7 @@ qty.innerHTML=count+" "+"Item";
              total2=total+tax
             total3=total2
             total4=total2
-            total_pr.innerHTML='₹'+" "+parseInt(total2)
+            total_pr.innerHTML='₹'+parseInt(total2)
             total_pr.style.fontWeight="700"
 
             
@@ -224,6 +224,7 @@ function viewCoupons(){
 
    let couponTopBtn=document.createElement("p")
    couponTopBtn.innerText="<"
+   couponTopBtn.style.cursor="pointer"
    couponTopBtn.style.marginRight="2%"
    couponTopBtn.onclick=()=>{
        couponContainer.style.display="none"
@@ -237,11 +238,12 @@ function viewCoupons(){
    div6.append(couponTopBtn,couponTop)
    div6.style.display="flex"
    div6.style.alignItems="center"
+   div6.style.height="60px"
    var couponBox=document.createElement("input")
    couponBox.setAttribute("type","text")
    let vertline=document.createElement("div")
 
-   couponBox.style.width="390px"
+   couponBox.style.width="100%"
    couponBox.style.border="none"
    couponBox.style.outline="none"
 
@@ -251,14 +253,20 @@ function viewCoupons(){
   
    let label=document.createElement("p")
    label.innerText="Enter code"
+   label.style.marginLeft="10px"
    label.style.lineHeight="0"
 
    div8.append(label,couponBox)
+   div8.style.width="83%"
+  // div8.style.marginLeft=""
    let hr1=document.createElement("hr")
    let hr2=document.createElement("hr")
    let hr3=document.createElement("hr")
+   vertline.style.height='50px'
+   vertline.style.backgroundColor="black"
+   vertline.style.width="1px"
 
-   div7.append( div8,vertline,button3)
+   div7.append(div8,vertline,button3)
  
  
    button3.onclick=()=>{
@@ -268,11 +276,12 @@ function viewCoupons(){
 
    div9.append(hr1,div7,hr2)
    div7.style.display='flex'
-   vertline.style.height='40px'
-   vertline.style.backgroundColor="black"
-   vertline.style.width="1px"
-   div7.style.width="97%"
-   div7.style.height="60px"
+   //vertline.style.height='40px'
+  // vertline.style.backgroundColor="black"
+  // vertline.style.width="1px"
+   div7.style.width="100%"
+   div7.style.height="80px"
+   div7.style.margin=" 5px"
    div7.style.alignItems="center"
    div7.style.justifyContent="space-between"
 
@@ -281,7 +290,7 @@ function viewCoupons(){
 
    let coupon1=document.createElement("p")
    coupon1.innerText="BIGSAVE"
-   coupon1.style.border=" 2px dashed #FFA000"
+   coupon1.style.border=" 1.5px dashed #FFA000"
    let couponDetail1=document.createElement("p")
    couponDetail1.innerText="Get Flat Rs 200 Off on all orders above 800."
 
@@ -291,10 +300,19 @@ function viewCoupons(){
    button2.innerText="APPLY"
    button2.style.color="indigo"
    button1.style.color="indigo"
+   button1.style.cursor="pointer"
+   button2.style.cursor="pointer"
+   button3.style.cursor="pointer"
 
    let coupon2=document.createElement("p")
    coupon2.innerText="WRAPPED"
-   coupon2.style.border=" 2px dashed #FFA000"
+   coupon2.style.border=" 1.5px dashed #FFA000"
+   coupon2.style.padding="3px 20px"
+   coupon1.style.padding="3px 20px"
+   coupon2.style.backgroundColor="#faf9f5"
+   coupon1.style.backgroundColor="#faf9f5"
+   coupon1.style.borderRadius="2px"
+   coupon2.style.borderRadius="2px"
 
   
    let couponDetail2=document.createElement("p")
@@ -303,7 +321,15 @@ function viewCoupons(){
    div2.append(coupon1,button1)
    div3.append(coupon2,button2)
    div4.append(div2,couponDetail1)
+
    div5.append(hr3,div3,couponDetail2)
+   div4.style.height="13%"
+   div4.style.margin="7px 0"
+   div2.style.margin=" 14px 0"
+   div5.style.margin="7px 0"
+   div3.style.margin="14px 0"
+
+
 
    div.append(div6, div9 ,couponHeading,div4,div5)
    div.style.width="34%"
@@ -335,7 +361,7 @@ function applyCoupon(d){
     if(d=="BIGSAVE"&&total2>=800){
        var total12=total2-200
 
-        total_pr.innerHTML='₹'+" "+parseInt(total12)
+        total_pr.innerHTML='₹'+parseInt(total12)
         console.log(total2)
 
     }
