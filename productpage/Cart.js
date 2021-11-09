@@ -323,7 +323,7 @@ div.style.display="block"
    div3.style.display="flex"
    div3.style.justifyContent="space-between"
    
-   couponContainer.append(div)
+   //couponContainer.append(div)
   // couponContainer.style.border="1px solid red"
   couponContainer.style.display="block"
 
