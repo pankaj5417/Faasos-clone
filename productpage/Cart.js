@@ -323,14 +323,9 @@ div.style.display="block"
    div3.style.display="flex"
    div3.style.justifyContent="space-between"
    
-  // couponContainer.append(div)
-   couponContainer.style.border="1px solid red"
+   couponContainer.append(div)
+  // couponContainer.style.border="1px solid red"
   couponContainer.style.display="block"
-//couponContainer.style.width="90%"
-///couponContainer.style.height="90%"
-  // couponContainer.style.position="fixed"
-  // couponContainer.style.backgroundColor="black"
-  // couponContainer.style.zIndex="2"
 
 
 }
@@ -349,6 +344,8 @@ function applyCoupon(d){
 function gotoCart(){
  window.location.href="cart.html"
 }
+
+
 
 
 var div = document.querySelector(".checkStatus");
