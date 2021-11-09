@@ -165,7 +165,112 @@ body{
     line-height: 0%;
 }
 
-@media screen and (max-width:768px){
+@media (min-width:901px){
+    
+    .container{
+        width: 85%;
+        height: 100%;
+        margin: auto;
+    
+    }
+    .container div{
+        margin: 1%;
+    }
+    .row{
+        display: flex;
+       
+    }
+
+    .col-left{
+        position: sticky;
+        top: 107px;
+        z-index: 1;
+        width: 15%;
+        height: 30%;
+        
+        padding: 15px;
+        background-color: white;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+    
+    }
+    .col-mid{
+       
+        width: 50%;
+        height: auto;
+        border-radius: 2px;
+        display: grid;
+        grid-template-columns: repeat(2,49%);
+       column-gap: 3%;
+       row-gap: 0.5%;
+    }
+    .col-right{
+        position:sticky;
+        top: 107px;
+        z-index: 1;
+        width: 33%;
+        height: 30%;
+    
+        border-radius: 2px;
+        border: none;
+        background-color: white;
+        padding: 15px;
+    
+    }
+}
+
+
+
+@media (min-width:601px)and (max-width:900px){
+    
+    .container{
+        width: 85%;
+        height: 100%;
+        margin: auto;
+    
+    }
+    .container div{
+        margin: 1%;
+    }
+    .row{
+        display: flex;
+       
+    }
+
+    .col-left{
+        position: sticky;
+        top: 107px;
+        z-index: 1;
+        width: 15%;
+        height: 30%;
+        
+        padding: 15px;
+        background-color: white;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+    
+    }
+    .col-mid{
+       
+        width: 83%;
+        height: auto;
+        border-radius: 2px;
+        display: grid;
+        grid-template-columns: repeat(3,29%);
+       column-gap: 3%;
+       row-gap: 0.5%;
+    }
+    .col-right{
+        display: none;
+    
+    }
+}
+
+
+
+@media (max-width:600px){
     .checkout-btn{
     width: 100%;
       height: 20%;
@@ -224,60 +329,6 @@ body{
 }
 
 
-@media screen and (min-width:769px){
-    
-    .container{
-        width: 85%;
-        height: 100%;
-        margin: auto;
-    
-    }
-    .container div{
-        margin: 1%;
-    }
-    .row{
-        display: flex;
-       
-    }
-
-    .col-left{
-        position: sticky;
-        top: 107px;
-        z-index: 1;
-        width: 15%;
-        height: 30%;
-        
-        padding: 15px;
-        background-color: white;
-        border: none;
-        border-radius: 2px;
-        cursor: pointer;
-    
-    }
-    .col-mid{
-       
-        width: 50%;
-        height: auto;
-        border-radius: 2px;
-        display: grid;
-        grid-template-columns: repeat(2,49%);
-       column-gap: 3%;
-       row-gap: 0.5%;
-    }
-    .col-right{
-        position:sticky;
-        top: 107px;
-        z-index: 1;
-        width: 33%;
-        height: 30%;
-    
-        border-radius: 2px;
-        border: none;
-        background-color: white;
-        padding: 15px;
-    
-    }
-}
 
 
 
