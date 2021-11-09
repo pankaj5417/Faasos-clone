@@ -468,8 +468,39 @@ body{
 
       /* After search CSS*/
 
-      
-
+      .foodData{
+          width:90%;
+          height:65%;
+          margin: 2% 0% 0% 5%;
+          border:1px solid gray;
+          display:grid;
+          grid-template-columns: 30% 50% 10%;
+          grid-gap:4%;
+      }
+      .foodData > img{
+          margin:3% 0% 0% 3%;
+          width:95%;
+          border-radius: 8%;
+      }
+      .foodData > div:nth-child(2){
+        height:60%;
+        margin-top: 2%;
+      }
+      .foodData > div:nth-child(3){
+        text-align: right;
+        height:60%;
+        margin-top: 10%;
+      }
+       .foodData > button{
+           margin-left: 267%;
+           margin-top: -15%;
+           margin-bottom: 2%;
+           padding:5%;
+           width: 60%;
+           background-color:#FFCA28;
+           border: none;
+           border-radius: 8%;
+       }
       /* After search CSS End*/
       /*searchbar css End*/
 

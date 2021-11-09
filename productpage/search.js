@@ -33,7 +33,14 @@ function dataSearch(data){
     
     let img = document.createElement("img");
     img.src = food.img;
-    div.append(img);
+    let head = document.createElement("div");
+    head.innerHTML = food.name;
+    let price = document.createElement("div");
+    price.innerHTML = "₹ " +food.price;
+    let btn = document.createElement("button");
+    btn.innerHTML = "ADD";
+    
+    div.append(img,head,price,btn);
     searchContent.append(div);
   });
   console.log(data);
