@@ -94,6 +94,7 @@ arr.forEach(el => {
         email2,
         
     };
+    window.location = "/productpage/productpage.html"
     let curr = JSON.parse(localStorage.getItem("current"))
     curr.pop();
     curr.push(user2)
@@ -228,6 +229,7 @@ if(credentials2==true){
 arr2.push(user)
 alert("Sign Up sucsessfull")
 modal2.style.display = "none";
+window.location = "/productpage/productpage.html"
  let curr = JSON.parse(localStorage.getItem("current"))
     curr.pop();
     curr.push(user)
