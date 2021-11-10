@@ -164,12 +164,10 @@ qty.innerHTML=count+" "+"Item";
 
         let cartItem=document.getElementById("cart-item")
         div.append(div3,div2,product_price)
-       // product_name.style.width="58%"
         product_price.style.width="10%"
         product_price.style.marginLeft="2%"
 
         div.style.display="flex"
-       // div.style.height="20px"
         div.style.width="100%"
         cartItem.append(div)
 
@@ -177,13 +175,10 @@ qty.innerHTML=count+" "+"Item";
 
             return ac+ Number(el.price)
             },0)
-           // var total_pr=document.getElementById("total")
-           // var total_amt=document.getElementById("total-amt")
-            //total_pr.style.textAlign="right"
-           // total_pr.innerHTML='₹'+" "+total
-            total_amt.innerHTML='₹'+" "+total
+           
+            total_amt.innerHTML='₹'+total
+            total_amt.style.marginLeft="0"
 
-            //var total_pr2=document.getElementById("total2")
             var tax=0;
             tax=total*0.05
             var gsttax=document.getElementById("gsttax").innerText='₹'+" "+parseInt(tax)
@@ -194,11 +189,7 @@ qty.innerHTML=count+" "+"Item";
             total_pr.style.fontWeight="700"
 
             
-           // total_pr.style.fontSize="16px"
-           // total_pr.style.width="13%"
- 
-
-           // total_pr.style.marginLeft="10%"
+           
     })
 }
 cartData()
@@ -276,9 +267,7 @@ function viewCoupons(){
 
    div9.append(hr1,div7,hr2)
    div7.style.display='flex'
-   //vertline.style.height='40px'
-  // vertline.style.backgroundColor="black"
-  // vertline.style.width="1px"
+   
    div7.style.width="100%"
    div7.style.height="80px"
    div7.style.margin=" 5px"
@@ -349,8 +338,6 @@ div.style.display="block"
    div3.style.display="flex"
    div3.style.justifyContent="space-between"
    
-   //couponContainer.append(div)
-  // couponContainer.style.border="1px solid red"
   couponContainer.style.display="block"
 
 
