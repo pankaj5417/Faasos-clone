@@ -8,9 +8,8 @@
 
 export  class holder {
     operation(){
-    console.log("suman");
-    let arr2 = JSON.parse(localStorage.getItem("faasosUser"))
-    let profileInfo = arr2[arr2.length-1]
+    //console.log("suman");
+    let arr2 = JSON.parse(localStorage.getItem("current"))
     let name=document.getElementById("name")
     let email = document.getElementById("email")
     let number=document.getElementById("number")
@@ -24,7 +23,7 @@ export  class holder {
 
 export  class Dholder {
     Doperation(){
-        let arr2 = JSON.parse(localStorage.getItem("faasosUser"))
+        let arr2 = JSON.parse(localStorage.getItem("current"))
     let n = document.getElementById("n")
     n.innerText=arr2[arr2.length-1].name2
 

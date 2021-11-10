@@ -24,7 +24,9 @@ window.onclick = function(event) {
 }
 //to get the country code
 
- 
+if(localStorage.getItem("current")===null){
+  localStorage.setItem("current", JSON.stringify([]));
+}
 function get(){
         let code = document.getElementById("country-code").value
         console.log(code)
@@ -81,6 +83,23 @@ arr.forEach(el => {
 //console.log(el.number2+"qwerty")
    if(number==el.number2){
        alert("Log in successfull")
+       let name2 = el.name2
+       let  email2 = el.email2
+       let number2 = el.number2
+       //console.log(N,E,P)
+
+       let user2={
+        number2,
+        name2,
+        email2,
+        
+    };
+    let curr = JSON.parse(localStorage.getItem("current"))
+    curr.pop();
+    curr.push(user2)
+    localStorage.setItem("current",JSON.stringify( curr));
+
+    console.log(user2)
        credentials = false
         modal.style.display = "none";
         // s stores the value of number
@@ -209,6 +228,10 @@ if(credentials2==true){
 arr2.push(user)
 alert("Sign Up sucsessfull")
 modal2.style.display = "none";
+ let curr = JSON.parse(localStorage.getItem("current"))
+    curr.pop();
+    curr.push(user)
+    localStorage.setItem("current",JSON.stringify( curr));
 
 let s2 = document.getElementById("number2")
 let N = document.getElementById("name2")
