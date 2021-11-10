@@ -12,10 +12,10 @@ function yellow(){
     </div>
 </div>
 <div id=downbar>
-        <div id="pdiv1">Profile</div>
-        <div id="pdiv2">Orders</div>
-        <div id="pdiv3">Payments</div>
-        <div id="pdiv4">Addresses</div>
+        <div id="pdiv1"><a href="profile.html">Profile</a></div>
+        <div id="pdiv2"><a href="orders.html">Orders</a></div>
+        <div id="pdiv3"><a href="payments.html">Payments</a></div>
+        <div id="pdiv3"><a href="adress.html">Adress</a></div>
         <div id="hr1"></div>
         <div id="hr2"></div>
         <div id="hr3"></div>

@@ -8,15 +8,15 @@ async function getData(){
 getData()
 
 function showData(data){
-    let midContainer=document.getElementById('mid-container')
+    var midContainer=document.getElementById('mid-container')
       data.forEach((prod)=>{
          // console.log(prod)
-        let div=document.createElement("div")
-        let div2=document.createElement("div")
-        let div3=document.createElement("div")
-        let div4=document.createElement("div")
+        var div=document.createElement("div")
+        var div2=document.createElement("div")
+        var div3=document.createElement("div")
+        var div4=document.createElement("div")
        // if(prod.category=="Fab Wraps starting at 99 each"){
-        let img=document.createElement("img")
+        var img=document.createElement("img")
          img.src=prod.img
          img.style.width="100%"
          let prod_name=document.createElement("p")
@@ -90,7 +90,10 @@ function showData(data){
 
          div3.append(div,prod_desc,div2)
          div4.append(img,div3)
-         midContainer.append(div4)
+
+         console.log(midContainer+"mid")
+         console.log(div4)
+         //midContainer.append(div4+"div")
          div4.style.backgroundColor="white"
       //  }
      
@@ -464,4 +467,27 @@ document.getElementById("addAddress").addEventListener("click", function () {
 document.getElementById("closeMap").addEventListener("click", function () {
   document.querySelector(".bg-modal").style.display = "none";
 });
+const btn = document.getElementById('save')
+console.log(btn+"btn")
+let input = document.getElementById("landmark")
+input.addEventListener("keyup",(e)=>{
 
+  var v = e.currentTarget.value
+  console.log(v)
+
+  if(v.length>4){
+    console.log("suman")
+    
+    btn.style.backgroundColor="#eebc1c"
+    btn.style.color="black"
+
+  }
+  if(v.length<4){
+    console.log("suman")
+    
+    btn.style.backgroundColor="#d2d2d2"
+    btn.style.color="white"
+
+  }
+
+})
