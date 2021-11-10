@@ -23,7 +23,7 @@ async function getData()
   
 } 
 getData();
-let searchContent = document.getElementById("searchContent");
+var searchContent = document.getElementById("searchContent");
 
 function dataSearch(data){
   data.forEach((food) => {
@@ -46,10 +46,10 @@ function dataSearch(data){
   console.log(data);
 }
 function searchFoodData(){
-  let data = document.getElementById("searchData-appear").value;
+  let inputValue = document.getElementById("searchData-appear").value;
   let arr=[];
   searchFood.forEach((food) => {
-   if(food.name.includes(data) || food.category.includes(data))
+   if(food.name.includes(inputValue) || food.category.includes(inputValue))
    {
      arr.push(food);
    }
