@@ -1,4 +1,10 @@
+// modal search
+document.getElementById("searchData-appear").addEventListener("input", searchFoodData);
 
+
+// search click 
+
+document.getElementById("search").addEventListener("click", search);
 /*Modal Functioning Of Search*/
   function search(){
       document.getElementById("searchModal").style.display = "block";
