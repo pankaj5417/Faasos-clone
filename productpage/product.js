@@ -1,4 +1,11 @@
-import {product_type} from "./export.js";
+import { product_type, customize } from "./export.js";
+
+// add customization html code to the html body 
+
+document.body.innerHTML += customize();
+console.log(customize());
+
+//
 
 async function getData() {
     let res=await fetch(`https://demo8715768.mockable.io/faasos`)
@@ -337,6 +344,7 @@ function show_customize(prod) {
         ;
 
 }
+
 
 
 

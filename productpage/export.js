@@ -1,4 +1,22 @@
 //to set non - veg and veg image
+function customize() {
+    return `   <!-- div for customization -->
+            <div class="custom-parent">
+              <div class="custom">
+                <div class="custom-top">
+                  <div id="custom-close"><i class="fas fa-times"></i></div>
+                  <div>Customization</div>
+                </div>
+                <div class="custom-middle">
+                       
+                </div>
+                <div class="custom-bottom">
+                  <p>Apply</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of customization div -->`;
+}
 function product_type(prod) {
      if (prod.type === 'veg') {
               
@@ -10,4 +28,4 @@ function product_type(prod) {
 }
 
 
-export {product_type};
+export {product_type,customize};
