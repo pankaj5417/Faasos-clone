@@ -32,8 +32,9 @@ getData();
 var searchContent = document.getElementById("searchContent");
 
 function dataSearch(data){
+  searchContent.innerHTML = null;
   data.forEach((food) => {
-    searchContent.innerHTML = null;
+    
     let div = document.createElement("div");
     div.setAttribute("class","foodData");
     
