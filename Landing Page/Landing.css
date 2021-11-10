@@ -250,12 +250,61 @@
   width:100%;
   font-family: Muli, sans-serif;
   font-size: 15px;
-  margin-top:10%;
   background-color: rgb(86, 64, 153);
+}
+#lower-box{
+  width:80%;
+  margin-left: 10%;
+  margin-top: 8%;
+  transform: translate(0px, -40px);
+  margin-bottom: -9%;
+  padding:1.1%;
+  display: grid;
+  text-align: center;
+  grid-gap:1.1%;
+  background-color: rgb(107, 85, 205);
+  grid-template-columns: 17% 15% 16% 17% 16% 10%;
+  border-radius: 25px/15%;
+}
+#lower-box > div:nth-child(1){
+  border-right: 1px solid rgb(126, 126, 126);
+  padding-right:6%;
+}
+#lower-box > div:nth-child(1) > img{
+  width:98%;
+  height: 100%;
+}
+#lower-box > div:nth-child(2){
+  border-right: 1px solid gray;
+  padding:2%;
+  color: white;
+}
+#lower-box > div:nth-child(3){
+  border-right: 1px solid gray;
+  padding:2%;
+  color: white;
+}
+#lower-box > div:nth-child(4){
+  border-right: 1px solid gray;
+  padding:2%;
+  color: white;
+}
+#lower-box > div:nth-child(5){
+  padding:2%;
+  color: white;
+}
+#lower-box > div:nth-child(6){
+  margin-top: 25%;
+  padding-top: 8%;
+  height: 25%;
+  font-size: 14px;
+  color:rgb(107, 85, 205);
+  font-weight: bold;
+  background-color: white;
 }
 #lower > p:nth-child(1){
   font-family: Muli, sans-serif;
-  padding-top: 5%;
+  padding-top: 7.5%;
   color:rgb(255, 211, 68);
   text-align: center;
 }
@@ -292,6 +341,67 @@
 }
 .pad1{
   padding-top: 8%;
+}
+
+
+/*footer css*/
+#big {
+  margin-top: -1%;
+  margin-bottom: -1%;
+  width: 100%;
+  /* height: 600px; */
+  background-color: rgb(25, 11, 69);
+  color:white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#big1 {
+  width: 75%;
+  /* height: 400px; */
+  /* background-color: orangered; */
+  margin: 8px 13%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+#big2 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  /* grid-gap: 3%; */
+  justify-content: center;
+}      
+#heading {
+  font-size: 25px;
+  color: rgb(196, 196, 196);
+}
+.inrbox {
+  /* display: grid; */
+  /* background-color: violet; */
+  font-size: 16px;
+  line-height: 25px;
+}
+.fh{
+  font-size: 25px;
+  color: rgb(196, 196, 196);
+}
+#line {
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgb(107, 85, 205);
+}
+#ft {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  font-size: 18px;
+  color: rgb(126, 126, 126);
+}
+#lastr {
+  text-align: right;
+  letter-spacing: 0.01rem;
+}
+#con{
+  display: grid;
+  grid-template-columns: 30% 30%;
+  grid-gap:20%;
 }
 
 
