@@ -407,11 +407,11 @@ body{
         margin: 0;
         }
 
-        /* search bar css*/
-
-        #search-container{
-            padding:20px;
-            position: sticky;
+         /* search bar css*/
+         #search-container{
+            padding:10px;
+            height: 70px;
+            position:sticky;
             background-color: rgb(245, 245, 246);
             top: 0;
             z-index: 1;
@@ -427,6 +427,7 @@ body{
           
       }
       #searchhead > div:nth-child(1){ 
+        height: 60%;
           text-align: right;
           color: rgb(51, 51, 51);
           font-weight: 400;
@@ -434,6 +435,7 @@ body{
           font-family: Muli, sans-serif;
       }
       #searchhead > div:nth-child(2){
+        height: 60%;
           display: grid;
           grid-template-columns: 40% 28% 20%;
           grid-gap:2%;
@@ -441,6 +443,7 @@ body{
           font-weight: 100;
       }
       #searchhead > div:nth-child(2) > div:nth-child(1){
+          height: 60%;
           display: grid;
           border-radius: 5px;
           grid-template-columns: 8% 85%;
@@ -451,6 +454,7 @@ body{
           box-shadow:1px 3px 5px lightgray;
       }
       #searchhead > div:nth-child(2) > div:nth-child(2){
+        height: 60%;
           display: grid;
           grid-template-columns: 10% 82%;
           grid-gap: 8%;
@@ -459,9 +463,9 @@ body{
           background-color: white;
           border-radius: 5px;
           box-shadow:1px 3px 5px lightgray;
-
       }
       #searchhead > div:nth-child(2) > div:nth-child(3){
+        height: 80%;
           display: grid;
           grid-template-columns: 14% 76%;
           grid-gap: 10%;
@@ -471,31 +475,64 @@ body{
           background-color: white;
           border-radius: 5px;
           box-shadow:1px 3px 5px lightgray;
-
       }
       /* Search Modal CSS */
+      #searchModalContainer{
+        display: none;
+     position: fixed;
+    
+     top:0;
+     left: 0;
+     height: 100%;
+    width: 100%;
+    
+     z-index:3;
+    background-color:rgba(0, 0, 0, 0.5);
+    }
       #searchModal{
           display: none; 
           position: fixed; 
-          z-index: 2;
+          z-index: 5;
           left: 0;
           top:0;
           width: 100%;
-          height: 65%; 
+          height: 80%; 
           overflow: auto; 
-          background-color: rgb(0,0,0); 
+          background-color: rgb(0,0,0.5); 
           background-color: rgba(245, 245, 246); 
           padding-top: 50px;
       }
-      #modalContent{
-          display:grid;
-          grid-template-columns: 5% 65% 5%;
+      #search-logo{
+          width: 20px;
+          height: 20px;
+          align-self: center;
+      }
+      #modal-container{
+          width: 70%;
+          height: 80%;
+          margin: auto;
+      }
+     #modalContent{
+         padding: 4px;
+         width: 99%;
+         height: 70px;
+         border: 1px solid lavender;
+         background-color: white;
+         display:grid;
+          grid-template-columns: 5% 88% 2%;
           grid-gap:1%;
-          margin-left: 20%;
+          margin: auto;
+     }
+      #searchContent{
+          display:grid;
+          grid-template-columns:repeat(3,25%);
+          grid-gap:1%;
+          margin-left: auto;
       }
       #modalContent > button:nth-child(1){
-        font-size: 30px;
-        font-weight: bold;
+        font-size: 35px;
+        font-weight:300;
+        background-color: white;
         border:none;
         cursor:pointer;
     }
@@ -506,52 +543,16 @@ body{
           font-size: large;
       }
       #modalContent > i:nth-child(3){
-          font-size: 40px;
+          font-size: 30px;
           cursor:pointer;
       }
       #searchContent{
-          width:51.85%;
-          height: 60%;
+          width:100%;
+          height: 100%;
           background-color: white;
-          margin-left: 24.9%;
+          margin-left: auto;
           overflow: scroll;
       }
-
-      /* After search CSS*/
-
-      .foodData{
-          width:90%;
-          height:65%;
-          margin: 2% 0% 0% 5%;
-          border:1px solid gray;
-          display:grid;
-          grid-template-columns: 30% 50% 10%;
-          grid-gap:4%;
-      }
-      .foodData > img{
-          margin:3% 0% 0% 3%;
-          width:95%;
-          border-radius: 8%;
-      }
-      .foodData > div:nth-child(2){
-        height:60%;
-        margin-top: 2%;
-      }
-      .foodData > div:nth-child(3){
-        text-align: right;
-        height:60%;
-        margin-top: 10%;
-      }
-       .foodData > button{
-           margin-left: 267%;
-           margin-top: -15%;
-           margin-bottom: 2%;
-           padding:5%;
-           width: 60%;
-           background-color:#FFCA28;
-           border: none;
-           border-radius: 8%;
-       }
       /* After search CSS End*/
       /*searchbar css End*/
 
