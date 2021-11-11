@@ -6,17 +6,55 @@ document.body.innerHTML += customize();
 console.log(customize());
 
 
-
+var glob;
 async function getData() {
     let res = await fetch(`https://demo8715768.mockable.io/faasos`);
-    let data=await res.json()
+    let data=await res.json();
+    glob = data;
     console.log(data)
     showData(data)
-} 
+}
 getData();
+
+/*Filter*/
+document.getElementById("nonveg").addEventListener("click",myFunction);
+document.getElementById("veg").addEventListener("click",myFunction);
+function myFunction(){
+    var arr=[];
+    let nonveg = document.getElementById("nonveg");
+    let veg = document.getElementById("veg");
+    if(nonveg.checked == true)
+    {
+        glob.forEach((el)=>{
+            if(el.type == "non-veg")
+            {
+                arr.push(el);
+            }
+        })
+        console.log(arr);
+        showData(arr);
+    }
+    else if(veg.checked == true)
+    {
+        glob.forEach((el)=>{
+            if(el.type == "veg")
+            {
+                arr.push(el);
+            }
+        })
+        console.log(arr);
+        showData(arr);
+    }
+    
+    else{
+        showData(glob);
+    }
+}
+/*Filter Code END here*/
 
 function showData(data){
     let midContainer=document.getElementById('mid-container')
+    midContainer.innerHTML = null;
       data.forEach((prod)=>{
          // console.log(prod)
         let div=document.createElement("div")
