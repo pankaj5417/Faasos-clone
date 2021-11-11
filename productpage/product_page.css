@@ -142,10 +142,11 @@ body{
     background-color: #FFCA28; 
 }
 .cart-bottom-left{
-    width: 85%;
+    width: 90%;
 }
 .cart-bottom-right{
-    width: 15%;
+    width: 10%;
+    font-weight: 700;
 }
 .checkout-btn{
     width: 100%;

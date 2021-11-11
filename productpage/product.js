@@ -58,7 +58,11 @@ function showData(data){
          let readmore=document.createElement('p')
          readmore.innerText="Read More"
 
-        
+         readmore.onclick=()=>{
+            window.location.href="single_product.html"
+        }
+
+
 
          let prod_rating_div=document.createElement("div")
           let prod_rating = document.createElement("p")
@@ -253,14 +257,40 @@ var count=0;
         product_name.innerText = item.name
         product_name.style.width = "90%"
         let product_price = document.createElement("p")
-        product_price.innerText = "₹" + " " + item.price
-        let buttonLeft = document.createElement("button");
+        product_price.innerText = "₹" + item.price
+        //product_price.style.marginLeft="7px"
+       // let buttonLeft = document.createElement("button");
+
+        let buttonLeft=document.createElement("img")
+        buttonLeft.src="https://github.com/pankaj5417/koovs.com/blob/main/icons/leftbtn.png?raw=true"
+       
+        let buttonRight=document.createElement("img")
+        buttonRight.src="https://github.com/pankaj5417/koovs.com/blob/main/icons/right btn.png?raw=true"
+       
+       
+      
+        buttonLeft.style.width="43px"
+        buttonLeft.style.marginRight="3px"
+      let itemNo=document.createElement("p")
+        itemNo.innerText="1"
+       // buttonRight.innerText="+"
+        buttonLeft.style.backgroundColor="white"
+        buttonRight.style.backgroundColor="white"
+        buttonRight.style.width="40px"
+        buttonRight.style.height="40px"
+        buttonLeft.style.height="40px"
+      
+        buttonRight.style.marginLeft="7px"
+
+
+
          buttonLeft.addEventListener('click', (event) => {
                
              let kart = JSON.parse(localStorage.getItem("FaasosCart"));
              let index = kart.indexOf(item);
              console.log(index)
              kart.splice(index, 1);
+
              localStorage.setItem("FaasosCart", JSON.stringify(kart));
 
 
@@ -274,31 +304,9 @@ var count=0;
              
              cartData();
               });
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        buttonLeft.innerText = "-"
-        buttonLeft.style.width = "43px"
-        buttonLeft.style.fontSize = "16px"
-        buttonLeft.style.marginRight = "3px"
-        buttonLeft.style.border = "1px solid #FFA000"
-        buttonLeft.style.borderRadius = "4px 7px 7px 4px"
-        let buttonRight = document.createElement("button")
-        let itemNo = document.createElement("p")
-        itemNo.innerText = " " + "1" + " "
-        buttonRight.innerText = "+"
-         //adding addcustomisabe to right button 
+    
+    
+              //adding addcustomisabe to right button 
           buttonRight.addEventListener('click', (event) => {
                       //adding custimable to +button
               document.querySelector(".custom-parent").classList.add("active-custom");
@@ -312,18 +320,8 @@ var count=0;
         
 
 
-        buttonLeft.style.backgroundColor = "white"
-        buttonRight.style.backgroundColor = "white"
-        buttonRight.style.width = "43px"
-        buttonRight.style.height = "32px"
-        buttonLeft.style.height = "32px"
-        buttonRight.style.fontSize = "19px"
-        buttonRight.style.border = "1px solid #FFA000"
-        buttonRight.style.borderRadius = "7px 4px 4px 7px"
-        buttonRight.style.marginLeft = "3px"
-        buttonLeft.className = "cartLeftBtn"
-        buttonRight.className = "cartRightBtn"
         let btn_img = document.createElement("img")
+
         if (item.type === 'veg') {
             
             btn_img.src = "https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png"
@@ -335,13 +333,14 @@ var count=0;
 
         div2.append(buttonLeft, itemNo, buttonRight)
         div2.style.display = "flex"
+        div2.style.alignItems="center"
         div2.style.width = "22%"
         div2.style.marginLeft = "2%"
         let div3 = document.createElement("div")
         div3.append(btn_img, product_name)
         div3.style.display = "flex"
         div3.style.alignItems = "center"
-        div3.style.width = "56%"
+        div3.style.width = "65%"
         div3.style.justifyContent = "space-between"
 
 
@@ -349,12 +348,11 @@ var count=0;
         let cartItem = document.getElementById("cart-item");
         
         div.append(div3, div2, product_price)
-        // product_name.style.width="58%"
-        product_price.style.width = "15%"
-        product_price.style.marginLeft = "2%"
+        product_price.style.width = "10%"
+        product_price.style.marginLeft = "8%"
 
         div.style.display = "flex"
-        // div.style.height="20px"
+        div.style.alignItems="center"
         div.style.width = "100%"
         cartItem.append(div)
 
@@ -365,6 +363,7 @@ var count=0;
         var total_pr = document.getElementById("total")
           
         total_pr.innerHTML = '₹' + "" + total
+        total_pr.style.marginLeft
           
     });
 }

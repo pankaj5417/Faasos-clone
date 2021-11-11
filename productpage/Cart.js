@@ -131,7 +131,7 @@ qty.innerHTML=count+" "+"Item";
         buttonLeft.style.width="43px"
         buttonLeft.style.marginRight="3px"
       let itemNo=document.createElement("p")
-        itemNo.innerText=" "+"1"+" "
+        itemNo.innerText="1"
        // buttonRight.innerText="+"
         buttonLeft.style.backgroundColor="white"
         buttonRight.style.backgroundColor="white"
@@ -139,7 +139,7 @@ qty.innerHTML=count+" "+"Item";
         buttonRight.style.height="40px"
         buttonLeft.style.height="40px"
       
-        buttonRight.style.marginLeft="3px"
+        buttonRight.style.marginLeft="7px"
         buttonLeft.className="cartLeftBtn"
         buttonRight.className="cartRightBtn"
         let btn_img = document.createElement("img")
@@ -154,6 +154,7 @@ qty.innerHTML=count+" "+"Item";
 
         div2.append( buttonLeft,itemNo,buttonRight)
         div2.style.display="flex"
+        div2.style.alignItems="center"
         div2.style.width="25%"
         div2.style.marginLeft="2%"
         let div3=document.createElement("div")
@@ -171,6 +172,7 @@ qty.innerHTML=count+" "+"Item";
         product_price.style.marginLeft="2%"
 
         div.style.display="flex"
+        div.style.alignItems="center"
         div.style.width="100%"
         cartItem.append(div)
 
