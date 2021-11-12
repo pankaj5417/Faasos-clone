@@ -1,7 +1,10 @@
 
 function yellow(){
     return `
-    <div>nav bar</div>
+    <div id="navbar"></div>
+    <div id="navbar2" class="sidebar">
+    
+    </div>
     <div id="data">
     
 <div id ="image"><img src="https://raw.githubusercontent.com/pankaj5417/koovs.com/main/icons/faasos%20loginl%20ogo.png" alt = "profile"></div>
