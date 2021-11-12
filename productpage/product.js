@@ -499,12 +499,13 @@ function showData(data){
      
               }
               if(prod.category=="Sides And Beverages"){
-                let div28=document.createElement("div")
+                let div4=document.createElement("div")
+                  div4.setAttribute("class", "prod_card")
 
-               div28.append(img, div3)
-               midContainer8.append(div28)
+               div4.append(img, div3)
+               midContainer8.append(div4)
              
-               div28.style.backgroundColor="white"
+               div4.style.backgroundColor="white"
 
               }
               if(prod.category=="Combos for 2 (Save upto 25% Extra)"){
