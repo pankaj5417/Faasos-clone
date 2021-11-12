@@ -669,6 +669,9 @@ body{
             border: none;
             padding:5px 5px;
         }
+        #qty{
+            margin-right: 5px;
+        }
         
         /* adding customization css  */
 .custom-parent{
