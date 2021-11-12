@@ -378,9 +378,15 @@ form {
   color: white;
 }
 
+#navLeft{
+    margin-left: 13vh;
+    width: 80%;
+}
+
 </style>
 <link rel="stylesheet" href="../Nav_bar/navbar.css">
 </head>
+<div id="navbar"></div>
 <body>
     <div id="bg-modal" class="bg-modal">
 
@@ -461,7 +467,7 @@ form {
         </div>
     </div>
 <!-- OK -->
-<div id="navbar"></div>
+
 <!--sidebar(code) open on click on ham-->
 <div id="mySidebar" class="sidebar"></div>
     <hr>
@@ -573,13 +579,13 @@ form {
     <script src="https://unpkg.com/location-picker/dist/location-picker.min.js"></script>
     
     <!-- <script src="address.js"></script> -->
-    <script src="Cart.js"></script>
+    <script type="module" src="Cart.js"></script>
 </body>
 </html>
 <script type="module">
-    import {nav,sid} from "../Nav_bar/navbar.js";
-    document.getElementById("navbar").innerHTML = nav;
-    document.getElementById("mySidebar").innerHTML = sid;
+    // import {nav,sid} from "../Nav_bar/navbar.js";
+    // document.getElementById("navbar").innerHTML = nav;
+    // document.getElementById("mySidebar").innerHTML = sid;
     import foot from "../footer/footer.js";
     document.getElementById("big").innerHTML = foot;
     document.getElementById("ham").onclick = () => {
@@ -594,6 +600,10 @@ form {
     document.getElementById("help").onclick = () => {
     window.location.href = "../footer/help_n_support.html";
 }
+
+let name = document.getElementById("showName")
+        let arr2 = JSON.parse(localStorage.getItem("current"))
+        name.innerText = arr2[arr2.length-1].name2
 </script>
 
   

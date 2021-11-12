@@ -477,19 +477,22 @@ input.addEventListener("keyup",(e)=>{
   var v = e.currentTarget.value
   console.log(v)
 
-  if(v.length>4){
-    console.log("suman")
-    
+  if(v.length>4){    
     btn.style.backgroundColor="#eebc1c"
     btn.style.color="black"
 
   }
   if(v.length<4){
-    console.log("suman")
-    
     btn.style.backgroundColor="#d2d2d2"
     btn.style.color="white"
-
   }
 
 })
+
+
+import {nav,sid} from "../Nav_bar/navbar.js";
+document.getElementById("navbar").innerHTML = nav;
+document.getElementById("mySidebar").innerHTML = sid;
+
+let name = document.getElementById("showName")
+        console.log(name+"suman")

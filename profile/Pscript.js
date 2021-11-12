@@ -9,6 +9,7 @@ import  {holder} from "./profile.js"
   import  {Dholder} from "./profile.js"
   const Dn = new Dholder();
   Dn.Doperation()
+
  
   let hr1 = document.getElementById("hr1")
  
@@ -52,6 +53,12 @@ document.getElementById("ham").onclick = () => {
   document.getElementById("pay").onclick = () => {
       window.location.href = "../profile/payments.html";
   }
-  
+  let name = document.getElementById("showName")
+        let arr2 = JSON.parse(localStorage.getItem("current"))
+        name.innerText = arr2[arr2.length-1].name2
+
+        
+        
+        
 
 
