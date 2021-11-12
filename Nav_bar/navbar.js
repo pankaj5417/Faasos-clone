@@ -4,7 +4,7 @@ const nav = `<div id="navLeft">
 <div id="navRight">
 <div>
   <span class="material-icons">person</span>
-  <div>Login</div>
+  <div id="showName">Login</div>
 </div>
 <span id="ham" class="material-icons">menu</span>
 </div>`;
