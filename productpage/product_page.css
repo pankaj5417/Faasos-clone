@@ -139,6 +139,7 @@ body{
     color: black;
     border: none;
     background-color: #FFCA28; 
+    cursor: pointer;
 }
 .cart-bottom-left{
     width: 90%;
@@ -156,6 +157,7 @@ body{
     color: black;
     border: none;
     background-color: #FFCA28;
+    cursor: pointer;
 }
 .text-bold{
     font-size: 22px;

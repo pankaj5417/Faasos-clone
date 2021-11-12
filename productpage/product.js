@@ -130,6 +130,8 @@ function showData(data){
          prod_desc.style.overflow="hidden"
          let readmore=document.createElement('p')
          readmore.innerText="Read More"
+         readmore.style.cursor="pointer"
+
 
          readmore.onclick=()=>{
             window.location.href="single_product.html"
@@ -149,6 +151,7 @@ function showData(data){
          prod_rating_div.style.borderRadius="2px"
          let addToCart=document.createElement("button")
          addToCart.innerText="ADD"
+         addToCart.style.cursor="pointer"
          addToCart.style.backgroundColor="#FFCA28"
          addToCart.style.width="85%"
          let custom_text=document.createElement("p")
@@ -311,7 +314,7 @@ function showData(data){
    
       P1.addEventListener("click",myFunction1)
        function myFunction1() {
-        var elmnt = document.getElementById("midContainer1");
+       // var elmnt = document.getElementById("midContainer1");
         //P1.style.color="black"
    
         window.scrollTo(0,200);
@@ -560,6 +563,8 @@ var count=0;
         buttonLeft.style.height="40px"
       
         buttonRight.style.marginLeft="7px"
+        buttonLeft.style.cursor="pointer"
+        buttonRight.style.cursor="pointer"
 
 
 
