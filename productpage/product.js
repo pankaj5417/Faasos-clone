@@ -289,7 +289,8 @@ function showData(data){
          let midContainer8=document.getElementById("mid-container8")
          let midContainer9=document.getElementById("mid-container9")
 
-        
+         let midContainer10=document.getElementById("mid-container10")
+
 
          div3.append(div,prod_desc ,readmore,div2)
          // div4.append(img, div3)
@@ -405,8 +406,8 @@ function showData(data){
                div4.style.backgroundColor="white"
 
             }
-            
-              if(prod.category=="Combos for 1 (Upto 15% Savings)"){
+            console.log(prod.category)
+              if(prod.category=="Combos for 1 (Save upto 15% Extra)"){
                 let div4=document.createElement("div")
 
                div4.append(img, div3)
@@ -415,7 +416,7 @@ function showData(data){
 
      
               }
-              if(prod.category=="Super Saver Match Day Combos at Rs444"){
+              if(prod.category=="New Launches"){
                 let div4=document.createElement("div")
 
                div4.append(img, div3)
@@ -459,11 +460,11 @@ function showData(data){
 
      
               }
-              if(prod.category=="Sides And Beverages"){
+              if(prod.category=="Combos for 2 (Save upto 25% Extra)"){
                 let div28=document.createElement("div")
 
                div28.append(img, div3)
-               midContainer9.append(div28)
+               midContainer10.append(div28)
              
                div28.style.backgroundColor="white"
 
