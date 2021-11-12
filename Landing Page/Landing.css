@@ -15,110 +15,135 @@
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 4% auto; /* 15% from the top and centered */
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+    width: 35%;
+    height: 87%; /* Could be more or less, depending on screen size */
+    padding: 8px;
+    border-radius: 5px;
+     
   }
   
   /* The Close Button */
   .close,.close2 {
     font-size: 28px;
     margin-top: 5px;
+    font-weight: 700;
   }
   .color-l{
-      color:#888;
+      color:rgb(10, 10, 10);
+      margin-left: 9px;
   }
-  /* close css */
+  
   .close:hover,
-  .close:focus,
-  .close2:hover,
-  .close2:focus {
+  .close:focus,.close2:hover,
+  .close2:focus  {
     color: black;
     text-decoration: none;
     cursor: pointer;
   }
-  /* input css */
-  #number,#number2,#name2,#email2{
+ #name,#email,#name2,#email2{
     margin-top:5px;
     padding: 10px;
-    width: 75%;
-    border: 1px solid #aaa;
-    border-radius:5px;
+    width: 60%;
+    border: 1px solid lightgray;
+    border-radius:3px;
     height: 40px;
     margin-bottom:20px ;
   }
-  /* sign up input css */
-  #name2,#email2{
+  #name,#email,#name2,#email2{
     margin: auto 10px;
-    width: 85%;
+    width: 91%;
     margin-bottom:20px ;
-    margin-left: 33px;
-    
-  }
-  #name2{
-    margin-top: 15px;
 
   }
-  /* flex to number,code */
+  #name,#name2{
+    margin-top: 10px;
+  }
   #span-F,#span-F2{
       display: flex;
   }
-  /* code css */
-  #code,#code2{
-    margin-top:5px;
-    padding: 20px;
-    width: 20px;
-    border: 1px solid #aaa;
+  #code,#code2 {
+   
+    height: 30px;
     border-radius:5px;
-    height: 20px;
-    margin-right: 10px;
-    display: flex;
-    font-size: 20px;
-    text-align: center;
-    margin-left: 5%;
+    
   }
-  /* alignment */
-  #lin,#tc,#lin2,#tc2{
+  #lin,#tc, #lin2,#tc2{
       text-align: center;
   }
-  /* log in signup btn */
+  #lin1{
+    margin-top: 40%;
+   text-align: center;
+  }
 #btn,#btn2{
     margin-top: 20px;
-   width:90%;
+   width:96%;
    color: white;
+   font-size: 26px;
    margin: 10px;
    height: 50px;
    border:none;
-   background-color: #d2d2d2;
-  position: relative;
-  border-radius: 0.4rem;
-  transition: all 0.3s ease;
-  font-size: 1.2rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  justify-content: center;
-  margin-left: 5%;
+   border-radius: 3px;
 }
-/* flex to image and coles btn */
 #top,#top2{
     display: flex;
+    
 }
-#img1,#img2{
+#img,#img2{
     margin-left: auto;
+    margin-right: 13px;
 }
-
 #cl,#cl2{
     height:20px;
     transform: rotate(180deg);
 }
-#check,#check2{
+.countrys,.countrys2{
+  font-weight: 700;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  width: 11%;
+}
+ .phone-container, .phone-container2{
+   width: 98%;
+   height: 66px;
+   display: flex;
+   margin: auto;
+ } 
+ .phone-container >div,.phone-container2 >div{
+   margin: 4px;
+ }
+ #number,#number2{
+   padding: 5px;
+   border-radius: 3px;
+   width: 25rem;
+   display: inline;
+   outline: none;
+   border: 1px solid lightgray;
+
+
+ }
+ #country-code,#country-code2{
+  padding: 2px;
+margin-bottom: 9px;
+   width: 24px;
+   border: none;
+ }
+
+ #check,#check2{
   color: red;
   font-size: 10px;
-   margin-top: -15px; 
    padding-left: 80px;
   margin-left: 4px;
-  
 }
+
+#Link,#Sink{
+  color: #715c94;
+  cursor: pointer;
+}
+ 
 /*Login Css End*/
 
 
@@ -341,67 +366,6 @@
 }
 .pad1{
   padding-top: 8%;
-}
-
-
-/*footer css*/
-#big {
-  margin-top: -1%;
-  margin-bottom: -1%;
-  width: 100%;
-  /* height: 600px; */
-  background-color: rgb(25, 11, 69);
-  color:white;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-#big1 {
-  width: 75%;
-  /* height: 400px; */
-  /* background-color: orangered; */
-  margin: 8px 13%;
-  padding-top: 20px;
-  padding-bottom: 50px;
-}
-#big2 {
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  /* grid-gap: 3%; */
-  justify-content: center;
-}      
-#heading {
-  font-size: 25px;
-  color: rgb(196, 196, 196);
-}
-.inrbox {
-  /* display: grid; */
-  /* background-color: violet; */
-  font-size: 16px;
-  line-height: 25px;
-}
-.fh{
-  font-size: 25px;
-  color: rgb(196, 196, 196);
-}
-#line {
-  height: 2px;
-  border-radius: 2px;
-  background-color: rgb(107, 85, 205);
-}
-#ft {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: center;
-  font-size: 18px;
-  color: rgb(126, 126, 126);
-}
-#lastr {
-  text-align: right;
-  letter-spacing: 0.01rem;
-}
-#con{
-  display: grid;
-  grid-template-columns: 30% 30%;
-  grid-gap:20%;
 }
 
 

@@ -82,7 +82,7 @@ let arr = JSON.parse(localStorage.getItem("faasosUser"))
 arr.forEach(el => {
 //console.log(el.number2+"qwerty")
    if(number==el.number2){
-       alert("Log in successfull")
+     alert("log in succsesfull")
        let name2 = el.name2
        let  email2 = el.email2
        let number2 = el.number2
@@ -249,3 +249,18 @@ let E = document.getElementById("email2")
 localStorage.setItem("faasosUser",JSON.stringify( arr2));
 
 }
+
+///modal to modal
+let slink = document.getElementById("Sink")
+let llink = document.getElementById("Link")
+
+slink.addEventListener("click",()=>{
+  modal.style.display = "none"
+  modal2.style.display = "block"
+})
+
+llink.addEventListener("click",()=>{
+  modal2.style.display = "none"
+  modal.style.display = "block"
+})
+
