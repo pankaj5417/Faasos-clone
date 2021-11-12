@@ -491,7 +491,7 @@ function showData(data){
                div4.append(img, div3)
                midContainer8.append(div4)
              
-               div28.style.backgroundColor="white"
+               div4.style.backgroundColor="white"
 
               }
               if(prod.category=="Combos for 2 (Save upto 25% Extra)"){
