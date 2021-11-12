@@ -6,38 +6,6 @@
         body{
           background-color: rgb(245, 245, 246);
         }
-        /*Navbar*/
-        #navbar{
-            width:101.6%;
-            display: grid;
-            margin-top: -1%;
-            margin-left: -1%;
-            grid-template-columns: 20% 20%;
-            grid-gap: 55%;
-            margin-bottom: 1%;
-            background-color: white;
-            box-shadow: 0px  0px 7px black;
-        }
-        #navLeft{
-            text-align: center;
-            padding:5%;
-        }
-        #navRight{
-            display: grid;
-            grid-template-columns: 32% 20%;
-            grid-gap: 10%;
-            color:darkblue;
-        }
-        #navRight > div:nth-child(1){
-            display: grid;
-            grid-template-columns: 40% 40%;    
-            padding-top: 30%;       
-        }
-        #navRight > span:nth-child(2){
-            text-align: center;
-            padding-top: 45%; 
-        }
-        /*Navbar CSS end*/
         /* Image Carousel  */
         .swiper {
         width: 100%;
