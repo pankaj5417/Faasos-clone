@@ -1,8 +1,4 @@
 /* Login CSS*/
-*{
-  font-family: sans-serif;
-}
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

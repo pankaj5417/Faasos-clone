@@ -37,6 +37,19 @@ document.getElementById("about").onclick = () => {
 document.getElementById("help").onclick = () => {
     window.location.href = "../footer/help_n_support.html";
 }
+document.getElementById("profile").onclick = () => {
+    window.location.href = "../profile/profile.html";
+}
+document.getElementById("orders").onclick = () => {
+    window.location.href = "../profile/orders.html";
+}
+document.getElementById("addr").onclick = () => {
+    window.location.href = "../profile/adress.html";
+}
+document.getElementById("pay").onclick = () => {
+    window.location.href = "../profile/payments.html";
+}
+
 
 /*Filter*/
 document.getElementById("nonveg").addEventListener("click",myFunction);

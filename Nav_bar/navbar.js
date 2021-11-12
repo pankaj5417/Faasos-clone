@@ -11,19 +11,19 @@ const nav = `<div id="navLeft">
 const sid = `<span id="closeBtn" class="material-icons">close</span>
 <div class="prof">
   <span class="material-icons">account_circle</span>
-  <div>Profile</div>
+  <div id="profile">Profile</div>
 </div>
 <div class="prof">
   <span class="material-icons">border_color</span>
-  <div>Manage Orders</div>
+  <div id="orders">Manage Orders</div>
 </div>
 <div class="prof">
   <span class="material-icons">location_on</span>
-  <div>Manage Adresses</div>
+  <div id="addr">Manage Adresses</div>
 </div>
 <div class="prof">
   <span class="material-icons">currency_rupee</span> 
-  <div>Manage Payments</div>
+  <div id="pay">Manage Payments</div>
 </div>
 <div class="prof">
   <span class="material-icons">contact_support</span>
