@@ -54,6 +54,7 @@ document.getElementById("pay").onclick = () => {
 /*Filter*/
 document.getElementById("nonveg").addEventListener("click",myFunction);
 document.getElementById("veg").addEventListener("click",myFunction);
+var flag=0
 function myFunction(){
     var arr=[];
     let nonveg = document.getElementById("nonveg");
@@ -67,6 +68,7 @@ function myFunction(){
             }
         })
         console.log(arr);
+        
         showData(arr);
     }
     else if(veg.checked == true)
@@ -86,19 +88,21 @@ function myFunction(){
     }
 }
 /*Filter Code END here*/
+var midContainer=document.getElementById('mid-container')
 
 function showData(data){
-    let midContainer=document.getElementById('mid-container')
-   // midContainer.innerHTML = null;
+
+  //  midContainer.innerHTML = null;
+
+
       data.forEach((prod)=>{
-         // console.log(prod)
+
         let div=document.createElement("div")
         let div2=document.createElement("div")
         let div3=document.createElement("div")
         let div4=document.createElement("div")
         let div5=document.createElement("div")
         let div6=document.createElement("div")
-       // if(prod.category=="Fab Wraps starting at 99 each"){
         let img=document.createElement("img")
          img.src=prod.img
          img.style.width="100%"
@@ -265,7 +269,7 @@ function showData(data){
             });
 
           };
-          
+        
 
           
                if(localStorage.getItem("FaasosCart")===null) {
@@ -531,6 +535,7 @@ function showData(data){
       })
 }
 
+/*mid end*/
 
 
 //cart data();
