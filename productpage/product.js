@@ -129,9 +129,10 @@ function showData(data){
          div5.style.marginTop="-15px"
          div.append(prod_name,div5)
          let prod_desc=document.createElement("p")
-         prod_desc.innerText=prod.description
-         prod_desc.style.height="16px"
-         prod_desc.style.overflow="hidden"
+          prod_desc.innerText = prod.description;
+          prod_desc.setAttribute("class", "prod_desc");
+        //  prod_desc.style.height="16px"
+        //  prod_desc.style.overflow="hidden"
          let readmore=document.createElement('p')
          readmore.innerText="Read More"
          readmore.style.cursor="pointer"
@@ -148,10 +149,13 @@ function showData(data){
           prod_rating_div.setAttribute("class", "prod-rating");
          prod_rating="★"+" "+prod.rating
          prod_rating_div.append(prod_rating)
-         prod_rating_div.style.backgroundColor="#4caf50"
+          prod_rating_div.style.backgroundColor = "#4caf50"
+          prod_rating_div.style.height = "25px";
+
          prod_rating_div.style.color="white"
-         prod_rating_div.style.width="20%"
-         prod_rating_div.style.padding="6px"
+         prod_rating_div.style.width="50px"
+          prod_rating_div.style.textAlign = "center";
+          prod_rating_div.style.lineHeight = '25px'
          prod_rating_div.style.borderRadius="2px"
          let addToCart=document.createElement("button")
          addToCart.innerText="ADD"
@@ -161,7 +165,12 @@ function showData(data){
          let custom_text=document.createElement("p")
          custom_text.innerText="customisable"
          custom_text.style.fontSize="10px"
-         custom_text.style.lineHeight="0"
+          custom_text.style.lineHeight = "0"
+          
+          let reviews = document.createElement("p");
+          reviews.innerHTML = prod.reviews + " bought this";
+          reviews.setAttribute("class", "reviews");
+
 
         //  //for customisable
 
@@ -276,15 +285,16 @@ function showData(data){
 
 
 
-
-         div2.append(prod_rating_div,div6)
+          let div_rating_reviews = document.createElement('div');
+          div_rating_reviews.append(prod_rating_div, reviews);
+         div2.append(div_rating_reviews,div6)
          div.style.display="flex"
          div.style.justifyContent="space-between"
          //div.style.alignItems="center"
          div2.style.display="flex"
          div2.style.height="40px"
          div2.style.justifyContent="space-between"
-         div3.style.padding="2%"
+         div3.style.padding="0 10px 20px 10px"
 
          var midContainer1=document.getElementById("mid-container1")
          var midContainer2=document.getElementById("mid-container2")
@@ -400,6 +410,7 @@ function showData(data){
              div4.append(img, div3)
              midContainer1.append(div4)
              div4.style.backgroundColor="white"
+                  div4.setAttribute("class", "prod_card")
 
    
             // midContainer.append(p11,div20)
@@ -407,6 +418,7 @@ function showData(data){
            
             if(prod.category=="Daily Value Wrap Combos (Save Upto 40% Extra)"){
                 let div4=document.createElement("div")
+                  div4.setAttribute("class", "prod_card")
 
                div4.append(img, div3)
                midContainer2.append(div4)
@@ -416,7 +428,7 @@ function showData(data){
             console.log(prod.category)
               if(prod.category=="Combos for 1 (Save upto 15% Extra)"){
                 let div4=document.createElement("div")
-
+                  div4.setAttribute("class", "prod_card")
                div4.append(img, div3)
                midContainer3.append(div4)
                div4.style.backgroundColor="white"
@@ -425,6 +437,7 @@ function showData(data){
               }
               if(prod.category=="New Launches"){
                 let div4=document.createElement("div")
+                  div4.setAttribute("class", "prod_card")
 
                div4.append(img, div3)
                midContainer4.append(div4)
@@ -434,6 +447,7 @@ function showData(data){
               }
               if(prod.category=="Combos for 4 (Upto 25% Savings)"){
                 let div4=document.createElement("div")
+                  div4.setAttribute("class", "prod_card")
 
                div4.append(img, div3)
                midContainer5.append(div4)
@@ -442,6 +456,7 @@ function showData(data){
               }
               if(prod.category=="Signature Wraps"){
              let div4=document.createElement("div")
+                  div4.setAttribute("class", "prod_card")
 
                div4.append(img, div3)
             midContainer6.append(div4)
@@ -450,20 +465,22 @@ function showData(data){
      
               }
               if(prod.category=="Classic Wraps"){
-                let div26=document.createElement("div")
+                let div4=document.createElement("div")
+                  div4.setAttribute("class", "prod_card")
 
-               div26.append(img, div3)
-               midContainer7.append(div26)
-               div26.style.backgroundColor="white"
+               div4.append(img, div3)
+               midContainer7.append(div4)
+               div4.style.backgroundColor="white"
 
      
               }
-              if(prod.category=="Desserts"){
-                let div27=document.createElement("div")
+              if(prod.category=="Rice Bowls"){
+                let div4=document.createElement("div")
+                  div4.setAttribute("class", "prod_card")
 
-               div27.append(img, div3)
-               midContainer10.append(div27)
-               div27.style.backgroundColor="white"
+               div4.append(img, div3)
+               midContainer8.append(div4)
+               div4.style.backgroundColor="white"
 
      
               }
@@ -477,12 +494,13 @@ function showData(data){
 
               }
               if(prod.category=="Combos for 2 (Save upto 25% Extra)"){
-                let div28=document.createElement("div")
+                let div4=document.createElement("div")
+                  div4.setAttribute("class", "prod_card")
 
-               div28.append(img, div3)
-               midContainer9.append(div28)
+               div4.append(img, div3)
+               midContainer10.append(div4)
              
-               div28.style.backgroundColor="white"
+               div4.style.backgroundColor="white"
 
               }
               

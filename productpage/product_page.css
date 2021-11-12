@@ -381,10 +381,39 @@ body{
     }
 }
 
+/* reviews font class */
+.reviews{
+    font-size: 10px;
+    margin-top:5px;
+}
+
+.prod_desc{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    margin-bottom: 0;
+    cursor: pointer;
+
+}
+
+.prod_desc +p{
+   margin-top:0;
+   font-size: 12px;
+   font-weight: bold;
+   cursor:pointer;
+
+}
+
+/* prod card  */
+.prod_card{
+    box-shadow:0px 0px 12px lightgray;
+    border-radius:5px;
+    overflow:hidden;
+    padding-bottom: 15px;
 
 
-
-
+}
        
 
 
@@ -614,7 +643,7 @@ body{
       /* adding css to increase / decrease quantity */
       .inc-des-quantity{
           display: flex;
-          gap:10px;
+          gap:5px;
         }
         .minus , .plus{
             border:1px solid #FFA000;
@@ -625,10 +654,9 @@ body{
         .minus{
             border-radius:2px 10px 10px 2px;
 
-        transform: skewY(3deg);
+       
         }
         .plus{
-        transform: skewY(-deg);
         border-radius:10px 2px 2px 10px;
 
         }
