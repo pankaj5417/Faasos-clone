@@ -1,8 +1,4 @@
 /* Login CSS*/
-*{
-  font-family: sans-serif;
-}
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -35,7 +31,7 @@
     font-weight: 700;
   }
   .color-l{
-      color:#888;
+      color:rgb(10, 10, 10);
       margin-left: 9px;
   }
   
@@ -135,6 +131,18 @@ margin-bottom: 9px;
    width: 24px;
    border: none;
  }
+
+ #check,#check2{
+  color: red;
+  font-size: 10px;
+   padding-left: 80px;
+  margin-left: 4px;
+}
+
+#Link,#Sink{
+  color: #715c94;
+  cursor: pointer;
+}
  
 /*Login Css End*/
 

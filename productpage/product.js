@@ -1,10 +1,11 @@
 import { product_type, customize } from "./export.js";
 
-import nav from "../Nav_bar/navbar.js";
+import {nav,sid} from "../Nav_bar/navbar.js";
 document.getElementById("navbar").innerHTML = nav;
+document.getElementById("mySidebar").innerHTML = sid;
 
 import foot from "../footer/footer.js";
-    document.getElementById("big5").innerHTML = foot;
+document.getElementById("big5").innerHTML = foot;
 
     
 // add customization html code to the html body 
@@ -27,6 +28,28 @@ getData();
 document.getElementById("ham").onclick = () => {
 document.getElementById("mySidebar").style.width = "370px";
 }
+document.getElementById("closeBtn").onclick = () => {
+    document.getElementById("mySidebar").style.width = "0px";
+}
+document.getElementById("about").onclick = () => {
+    window.location.href = "../footer/aboutus.html";
+}
+document.getElementById("help").onclick = () => {
+    window.location.href = "../footer/help_n_support.html";
+}
+document.getElementById("profile").onclick = () => {
+    window.location.href = "../profile/profile.html";
+}
+document.getElementById("orders").onclick = () => {
+    window.location.href = "../profile/orders.html";
+}
+document.getElementById("addr").onclick = () => {
+    window.location.href = "../profile/adress.html";
+}
+document.getElementById("pay").onclick = () => {
+    window.location.href = "../profile/payments.html";
+}
+
 
 /*Filter*/
 document.getElementById("nonveg").addEventListener("click",myFunction);

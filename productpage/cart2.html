@@ -462,6 +462,8 @@ form {
     </div>
 <!-- OK -->
 <div id="navbar"></div>
+<!--sidebar(code) open on click on ham-->
+<div id="mySidebar" class="sidebar"></div>
     <hr>
     <div class="container   "> 
         <div class="hrow">
@@ -575,10 +577,23 @@ form {
 </body>
 </html>
 <script type="module">
-    import nav from "../Nav_bar/navbar.js";
+    import {nav,sid} from "../Nav_bar/navbar.js";
     document.getElementById("navbar").innerHTML = nav;
+    document.getElementById("mySidebar").innerHTML = sid;
     import foot from "../footer/footer.js";
     document.getElementById("big").innerHTML = foot;
+    document.getElementById("ham").onclick = () => {
+    document.getElementById("mySidebar").style.width = "370px";
+}
+    document.getElementById("closeBtn").onclick = () => {
+    document.getElementById("mySidebar").style.width = "0px";
+}
+    document.getElementById("about").onclick = () => {
+    window.location.href = "../footer/aboutus.html";
+}
+    document.getElementById("help").onclick = () => {
+    window.location.href = "../footer/help_n_support.html";
+}
 </script>
 
   
