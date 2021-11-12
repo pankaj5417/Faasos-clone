@@ -451,24 +451,35 @@ function showData(data){
 
      
               }
-              if(prod.category=="Rice Bowls"){
+              if(prod.category=="Desserts"){
                 let div27=document.createElement("div")
 
                div27.append(img, div3)
-               midContainer8.append(div27)
+               midContainer10.append(div27)
                div27.style.backgroundColor="white"
 
      
+              }
+              if(prod.category=="Sides And Beverages"){
+                let div28=document.createElement("div")
+
+               div28.append(img, div3)
+               midContainer8.append(div28)
+             
+               div28.style.backgroundColor="white"
+
               }
               if(prod.category=="Combos for 2 (Save upto 25% Extra)"){
                 let div28=document.createElement("div")
 
                div28.append(img, div3)
-               midContainer10.append(div28)
+               midContainer9.append(div28)
              
                div28.style.backgroundColor="white"
 
               }
+              
+              
               
               
            
