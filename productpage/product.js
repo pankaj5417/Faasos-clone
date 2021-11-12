@@ -131,6 +131,8 @@ function showData(data){
         //  prod_desc.style.overflow="hidden"
          let readmore=document.createElement('p')
          readmore.innerText="Read More"
+         readmore.style.cursor="pointer"
+
 
          readmore.onclick=()=>{
             window.location.href="single_product.html"
@@ -153,6 +155,7 @@ function showData(data){
          prod_rating_div.style.borderRadius="2px"
          let addToCart=document.createElement("button")
          addToCart.innerText="ADD"
+         addToCart.style.cursor="pointer"
          addToCart.style.backgroundColor="#FFCA28"
          addToCart.style.width="85%"
          let custom_text=document.createElement("p")
@@ -321,7 +324,7 @@ function showData(data){
    
       P1.addEventListener("click",myFunction1)
        function myFunction1() {
-        var elmnt = document.getElementById("midContainer1");
+       // var elmnt = document.getElementById("midContainer1");
         //P1.style.color="black"
    
         window.scrollTo(0,200);
@@ -477,6 +480,15 @@ function showData(data){
 
      
               }
+              if(prod.category=="Sides And Beverages"){
+                let div28=document.createElement("div")
+
+               div28.append(img, div3)
+               midContainer8.append(div28)
+             
+               div28.style.backgroundColor="white"
+
+              }
               if(prod.category=="Combos for 2 (Save upto 25% Extra)"){
                 let div4=document.createElement("div")
                   div4.setAttribute("class", "prod_card")
@@ -487,6 +499,8 @@ function showData(data){
                div4.style.backgroundColor="white"
 
               }
+              
+              
               
               
            
@@ -567,6 +581,8 @@ var count=0;
         buttonLeft.style.height="40px"
       
         buttonRight.style.marginLeft="7px"
+        buttonLeft.style.cursor="pointer"
+        buttonRight.style.cursor="pointer"
 
 
 
