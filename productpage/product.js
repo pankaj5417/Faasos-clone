@@ -1,5 +1,12 @@
 import { product_type, customize } from "./export.js";
 
+import nav from "../Nav_bar/navbar.js";
+document.getElementById("navbar").innerHTML = nav;
+
+import foot from "../footer/footer.js";
+    document.getElementById("big5").innerHTML = foot;
+
+    
 // add customization html code to the html body 
 
 document.body.innerHTML += customize();
@@ -15,6 +22,11 @@ async function getData() {
     showData(data)
 }
 getData();
+
+/*SideBar*/
+document.getElementById("ham").onclick = () => {
+document.getElementById("mySidebar").style.width = "370px";
+}
 
 /*Filter*/
 document.getElementById("nonveg").addEventListener("click",myFunction);
