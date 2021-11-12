@@ -520,18 +520,101 @@ reviews:'0.2k'
         reviews:'124.4k',
 
     },
-    // {
-    //     category:"Classic Wraps",
-    //     name:"",
-    //     rating:5,
-    //     type:"veg",
-    //     price:194,
-    //     description:"",
-    //     tags: ['', ''],
-    //             img: "",
-    //     reviews:,
+    {
+        category:"Sides And Beverages",
+        name:"Potato Wedges (Medium)",
+        rating:4.4,
+        type:"veg",
+        price:100,
+        description:"When you dont know what to eat next we suggest keep it simple and call for the wedges.",
+        tags: ['ct_amz_Fast food','Amazon Recommended'],
+                img: "https://product-assets.faasos.io/production/product/image_1624452479369_Potato%20Wedges%20562.jpg",
+        reviews:'5.8k',
 
-    // },  
+    },
+     {
+        category:"Sides And Beverages",
+        name:"Cheesy Chicken Meatballs",
+        rating:4.3,
+        type:"non-veg",
+        price:115,
+        description:"[100% Safely Cooked Chicken] Juicy minced chicken meatballs, served with a cheesy mayonnaise dip - A no-brainer for snack cravings!",
+        tags: ['ct_amz_Fast food','Amazon Recommended'],
+                img: "https://product-assets.faasos.io/production/product/image_1598267868599_image_es_1596284076798_Cheesy%20Chicken%20Meatballs%20%28CF%29.jpg",
+        reviews:'51k',
+
+    }, {
+        category:"Sides And Beverages",
+        name:"Falafel Nuggets with Mayo Dip",
+        rating:4.4,
+        type:"veg",
+        price:95,
+        description:"Mediterranean inspired crispy falafel made from the finest soaked chickpeas and spices, served with a cheesy mayonnaise dip.",
+        tags: ['ct_amz_Fast food','Amazon Recommended','ct_amz_North Indian'],
+                img: "https://product-assets.faasos.io/production/product/image_1624511626778_Fafflafel%20Nnnuggets%20wiwwth%20Mayao%20Dddip.png",
+        reviews:'27.8k',
+
+    }, {
+        category:"Sides And Beverages",
+        name:"Latte Love (Hot) Reg-200ml",
+        rating:4.9,
+        type:"veg",
+        price:125,
+        description:"Unsweetened- Gives you the everyday caffeine kick to welcome new mornings, effortlessly. SLAY Signature Espresso Shot + Steamed Milk.",
+        tags: ['ct_amz_Beverage','Veg'],
+                img: "https://product-assets.faasos.io/production/product/image_1628884874072_WhatsApp%20Image%202021-08-14%20at%2001.29.13.jpeg",
+        reviews:619,
+
+    }, {
+        category:"Desserts",
+        name:"Triple Chocolate Mousse Pastry",
+        rating:4.7,
+        type:"veg",
+        price:193,
+        description:"(Eggless) Three layers of different Mousse (Dark, White & Milk) sandwiched between layers of Dark Chocolate Sponge, topped with dark ganache and swirled with white glaze topping.",
+        tags: ['ct_amz_Dessert','Amazon Recommended'],
+                img: "https://product-assets.faasos.io/production/product/image_1635343059321_Triple%20Chocolate%20Mousse%20Pastry.jpg",
+        reviews:'7.7k',
+
+    }, {
+        category:"Desserts",
+        name:"Rich Red Velvet Pastry",
+        rating:5,
+        type:"veg",
+        price:163,
+        description:"(Eggless) A slice of our luxurious layered red velvet cake where delectable cake meets irresistible cream cheese. The indulgence is absolutely worth it.",
+                tags: ['ct_amz_Dessert','Amazon Recommended'],
+
+                img: "https://product-assets.faasos.io/production/product/image_1635342896740_Rich%20Red%20Velvet%20Pastry.jpg",
+        reviews:'28.9k',
+
+    }, {
+        category:"Desserts",
+        name:"Red Velvet Lava Cake",
+        rating:4.8,
+        type:"veg",
+        price:121,
+        description:"Eggless) This unique dessert with its soft gooey center, filled with delicious Red Velvet molten lava, is an absolute treat to your tastebuds!",
+                     tags: ['ct_amz_Dessert','Amazon Recommended'],
+
+                img: "https://product-assets.faasos.io/production/product/image_1635343909394_Red%20Velvet%20Lava%20Cake.jpg",
+        reviews:'3.5k',
+
+    },
+    {
+        category:"Desserts",
+        name:"Red Velvet Dessert Jar",
+        rating:4.5,
+        type:"veg",
+        price:221,
+        description:"(Eggless) Fluffy red velvet sponge cakes with perfectly sweet & creamy, cream cheese frosting, layered in a mason jar. Worth the indulgence!",
+                            tags: ['ct_amz_Dessert','Amazon Recommended'],
+
+                img: "https://product-assets.faasos.io/production/product/image_1635344386036_Red%20Velvet%20Dessert%20Jar.jpg",
+        reviews:'12.4k',
+
+    },
+    
                
             
 ];
