@@ -337,6 +337,11 @@ function showData(data){
        let P3=document.getElementById("p3")
        let P4=document.getElementById("p4")
        let P5=document.getElementById("p5")
+       let P6=document.getElementById("p6")
+       let P7=document.getElementById("p7")
+       let P8=document.getElementById("p8")
+       let P9=document.getElementById("p9")
+       let P10=document.getElementById("p10")
    
    //scroll function starts
    
@@ -362,20 +367,45 @@ function showData(data){
        function myFunction3() {
          var elmnt = document.getElementById("mid-container3");
         // elmnt.scrollIntoView();
-         window.scrollTo(0,3070);
+         window.scrollTo(0,3700);
    
        }
        P4.addEventListener("click",myFunction4)
        function myFunction4() {
-         var elmnt = document.getElementById("mid-container4");
-         elmnt.scrollIntoView();
+         //var elmnt = document.getElementById("mid-container4");
+         window.scrollTo(0,5050);
        }
        P5.addEventListener("click",myFunction5)
        function myFunction5() {
-         var elmnt = document.getElementById("mid-container5");
-         elmnt.scrollIntoView();
+        // var elmnt = document.getElementById("mid-container5");
+         window.scrollTo(0,6830);
        }
-   
+       P6.addEventListener("click",myFunction6)
+       function myFunction6() {
+         var elmnt = document.getElementById("mid-container5");
+         window.scrollTo(0,7780);
+       }
+       P7.addEventListener("click",myFunction7)
+       function myFunction7() {
+         var elmnt = document.getElementById("mid-container5");
+         window.scrollTo(0,8700);
+       }
+
+       P8.addEventListener("click",myFunction8)
+       function myFunction8() {
+         var elmnt = document.getElementById("mid-container5");
+         window.scrollTo(0,9600);
+       }
+       P9.addEventListener("click",myFunction9)
+       function myFunction9() {
+         var elmnt = document.getElementById("mid-container5");
+         window.scrollTo(0,10500);
+       }
+       P10.addEventListener("click",myFunction10)
+       function myFunction10() {
+         var elmnt = document.getElementById("mid-container5");
+         window.scrollTo(0,11430);
+       }
        //scroll function ends
    
        let test=document.querySelector(".col-left")
@@ -386,22 +416,36 @@ function showData(data){
       document.body.onscroll = function() {myFunction()};
    
    function myFunction() {
-     if (document.body.scrollTop >300 ||document.documentElement.scrollTop<500 ) {
+     if (document.documentElement.scrollTop<300 ) {
        //let P1=document.getElementById("p1")
    
        P1.style.fontWeight="bold"
    
-     }else if (document.body.scrollTop >500 ||document.documentElement.scrollTop<800 ) {
+     }else{
+      P1.style.fontWeight="normal"
+
+     }
+     
+      if ( document.documentElement.scrollTop<500  ) {
        //let P1=document.getElementById("p1")
    
        P2.style.fontWeight="bold"
    
-     }else if (document.body.scrollTop >800 ||document.documentElement.scrollTop<1000 ) {
+     }else {
+      P2.style.fontWeight="normal"
+
+     }
+     
+     if (document.documentElement.scrollTop<1000 ) {
        //let P1=document.getElementById("p1")
    
        P3.style.fontWeight="bold"
    
-     }else if (document.body.scrollTop >1000 ||document.documentElement.scrollTop<1800 ) {
+     }else{
+      P3.style.fontWeight="normal"
+
+     }
+      if (document.documentElement.scrollTop<1800 ) {
        //let P1=document.getElementById("p1")
    
        P4.style.fontWeight="bold"
@@ -409,13 +453,83 @@ function showData(data){
      }
      
      else{
-       P1.style.fontWeight="normal"
-      P2.style.fontWeight="normal"
-      P3.style.fontWeight="normal"
       P4.style.fontWeight="normal"
    
    
      }
+
+     if (document.documentElement.scrollTop<1800 ) {
+      //let P1=document.getElementById("p1")
+  
+      P5.style.fontWeight="bold"
+  
+    }
+    
+    else{
+     P5.style.fontWeight="normal"
+  
+  
+    }
+    if (document.documentElement.scrollTop<1800 ) {
+      //let P1=document.getElementById("p1")
+  
+      P6.style.fontWeight="bold"
+  
+    }
+    
+    else{
+     P6.style.fontWeight="normal"
+  
+  
+    }
+    if (document.documentElement.scrollTop<1800 ) {
+      //let P1=document.getElementById("p1")
+  
+      P7.style.fontWeight="bold"
+  
+    }
+    
+    else{
+     P7.style.fontWeight="normal"
+  
+  
+    }
+    if (document.documentElement.scrollTop<1800 ) {
+      //let P1=document.getElementById("p1")
+  
+      P8.style.fontWeight="bold"
+  
+    }
+    
+    else{
+     P8.style.fontWeight="normal"
+  
+  
+    }
+    if (document.documentElement.scrollTop<1800 ) {
+      //let P1=document.getElementById("p1")
+  
+      P9.style.fontWeight="bold"
+  
+    }
+    
+    else{
+     P9.style.fontWeight="normal"
+  
+  
+    }
+    if (document.documentElement.scrollTop<1800 ) {
+      //let P1=document.getElementById("p1")
+  
+      P10.style.fontWeight="bold"
+  
+    }
+    
+    else{
+     P10.style.fontWeight="normal"
+  
+  
+    }
    }
    
    

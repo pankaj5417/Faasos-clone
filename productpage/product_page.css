@@ -229,7 +229,8 @@ body{
         position:sticky;
         top: 107px;
         z-index: 1;
-        width: 35%;
+       width: 35%;
+       min-width: 350px;
         height: 30%;
     
         border-radius: 2px;
@@ -283,7 +284,7 @@ body{
        margin-top: 8%;
     }
     .col-mid{
-        width: 50%;
+        width: 80%;
     }
     #mid-container1,#mid-container2,
     #mid-container3,#mid-container4,
@@ -309,16 +310,16 @@ body{
 
 
 
-@media (max-width:600px){
+@media (max-width:768px){
     .checkout-btn{
     width: 100%;
       height: 20%;
         bottom: 0;
         left: 0;
-        z-index: 1199;
+        z-index: 5;
         right: 0;
         background-color: white;
-        position: sticky;
+        position: fixed;
     }
     
     .cart-bottom,.cart-top{
@@ -346,9 +347,14 @@ body{
        margin-top: 8%;
     }
     .col-mid{
-        width: 50%;
+        width: 70%;
+        margin: auto;
     }
-    #mid-container1,#mid-container2,#mid-container3,#mid-container4,#mid-container5,#mid-container6,#mid-container7,#mid-container8,#mid-container9{
+    #mid-container1,#mid-container2,
+    #mid-container3,#mid-container4,
+    #mid-container5,#mid-container6,
+    #mid-container7,#mid-container8,
+    #mid-container9,#mid-container10{
        
         
         
@@ -356,10 +362,10 @@ body{
         display: grid;
 
        column-gap: 3%;
-       row-gap: 1.5%;
+       row-gap: 0.5%;
     }
-    .col-mid div{
-        margin: 5%;
+    .col-mid> div{
+        margin: 2px;
       
     }
     .col-right{
@@ -371,7 +377,7 @@ body{
     
     .checkout-btn{
         width: 100%;
-        height: 46px;
+        height: 66px;
         border-radius: 4px;
         font-size: 16px;
         font-weight: 600;
@@ -513,7 +519,7 @@ body{
           text-align: right;
           color: rgb(51, 51, 51);
           font-weight: 400;
-          font-size: 2rem;
+          font-size: 2vw;
           font-family: Muli, sans-serif;
       }
       #searchhead > div:nth-child(2){
@@ -530,6 +536,8 @@ body{
           border-radius: 5px;
           grid-template-columns: 8% 85%;
           grid-gap: 8%;
+          font-size: 1vw;
+
           padding: 5%;
           cursor: pointer;
           background-color: white;
@@ -541,6 +549,8 @@ body{
           grid-template-columns: 10% 82%;
           grid-gap: 8%;
           padding: 7% 2%;
+          font-size: 1vw;
+
           cursor: pointer;
           background-color: white;
           border-radius: 5px;
@@ -553,6 +563,8 @@ body{
           grid-gap: 10%;
           padding-top:10%;
           padding-right:2%;
+          font-size: 1vw;
+
           cursor: pointer;
           background-color: white;
           border-radius: 5px;
