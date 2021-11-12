@@ -195,15 +195,29 @@ body{
         cursor: pointer;
     
     }
+    h3{
+        font-weight: 700;
+        color: black;
+        margin-left: 10px;
+        margin-top: 1%;
+
+    }
+    hr{
+       margin-top: 8%;
+    }
     .col-mid{
-       
         width: 50%;
-        height: auto;
+    }
+    #mid-container1,#mid-container2,#mid-contairne3,#mid-container4,#mid-container5,#mid-contairne6,#mid-container7,#mid-container8,#mid-contairne9{
+       
+        
+        
         border-radius: 2px;
         display: grid;
         grid-template-columns: repeat(2,49%);
+
        column-gap: 3%;
-       row-gap: 0.5%;
+       row-gap: 1.5%;
     }
     .col-right{
         position:sticky;

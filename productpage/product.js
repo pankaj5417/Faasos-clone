@@ -66,7 +66,7 @@ function myFunction(){
 
 function showData(data){
     let midContainer=document.getElementById('mid-container')
-    midContainer.innerHTML = null;
+   // midContainer.innerHTML = null;
       data.forEach((prod)=>{
          // console.log(prod)
         let div=document.createElement("div")
@@ -227,7 +227,7 @@ function showData(data){
               localStorage.setItem("FaasosCart", JSON.stringify(kart));
 
               cartData();
-});
+            });
 
           };
           
@@ -256,8 +256,202 @@ function showData(data){
          div2.style.justifyContent="space-between"
          div3.style.padding="2%"
 
+         var midContainer1=document.getElementById("mid-container1")
+         var midContainer2=document.getElementById("mid-container2")
+         let midContainer3=document.getElementById("mid-container3")
+         let midContainer4=document.getElementById("mid-container4")
+         let midContainer5=document.getElementById("mid-container5")
+         let midContainer6=document.getElementById("mid-container6")
+         let midContainer7=document.getElementById("mid-container7")
+         let midContainer8=document.getElementById("mid-container8")
+         let midContainer9=document.getElementById("mid-container9")
+
+        
+
          div3.append(div,prod_desc ,readmore,div2)
-          div4.append(img, div3)
+         // div4.append(img, div3)
+         // midContainer.append(div4)
+         let p10=document.createElement("p")
+         let div10=document.createElement("div")
+         div10.appendChild(p10)
+         let hr5=document.createElement("hr")
+   
+        
+       let P1=document.getElementById("p1")
+       let P2=document.getElementById("p2")
+       let P3=document.getElementById("p3")
+       let P4=document.getElementById("p4")
+       let P5=document.getElementById("p5")
+   
+   //scroll function starts
+   
+      P1.addEventListener("click",myFunction1)
+       function myFunction1() {
+        var elmnt = document.getElementById("midContainer1");
+        //P1.style.color="black"
+   
+        window.scrollTo(0,200);
+   
+       }
+       
+       P2.addEventListener("click",myFunction2)
+        function myFunction2() {
+         var elmnt = document.getElementById("midContainer2");
+         //elmnt.scrollIntoView();
+        
+         
+           window.scrollTo(0,1470);
+       }
+   
+       P3.addEventListener("click",myFunction3)
+       function myFunction3() {
+         var elmnt = document.getElementById("mid-container3");
+        // elmnt.scrollIntoView();
+         window.scrollTo(0,3070);
+   
+       }
+       P4.addEventListener("click",myFunction4)
+       function myFunction4() {
+         var elmnt = document.getElementById("mid-container4");
+         elmnt.scrollIntoView();
+       }
+       P5.addEventListener("click",myFunction5)
+       function myFunction5() {
+         var elmnt = document.getElementById("mid-container5");
+         elmnt.scrollIntoView();
+       }
+   
+       //scroll function ends
+   
+       let test=document.querySelector(".col-left")
+         // test.style.overflow="scroll"
+         // test.style.height="10%"
+         let mid=document.querySelector('#mid-container')
+       
+      document.body.onscroll = function() {myFunction()};
+   
+   function myFunction() {
+     if (document.body.scrollTop >300 ||document.documentElement.scrollTop<500 ) {
+       //let P1=document.getElementById("p1")
+   
+       P1.style.fontWeight="bold"
+   
+     }else if (document.body.scrollTop >500 ||document.documentElement.scrollTop<800 ) {
+       //let P1=document.getElementById("p1")
+   
+       P2.style.fontWeight="bold"
+   
+     }else if (document.body.scrollTop >800 ||document.documentElement.scrollTop<1000 ) {
+       //let P1=document.getElementById("p1")
+   
+       P3.style.fontWeight="bold"
+   
+     }else if (document.body.scrollTop >1000 ||document.documentElement.scrollTop<1800 ) {
+       //let P1=document.getElementById("p1")
+   
+       P4.style.fontWeight="bold"
+   
+     }
+     
+     else{
+       P1.style.fontWeight="normal"
+      P2.style.fontWeight="normal"
+      P3.style.fontWeight="normal"
+      P4.style.fontWeight="normal"
+   
+   
+     }
+   }
+   
+   
+            if(prod.category=="Fab Wraps starting at 99 each" ){
+            let div4=document.createElement("div")
+             div4.append(img, div3)
+             midContainer1.append(div4)
+             div4.style.backgroundColor="white"
+
+   
+            // midContainer.append(p11,div20)
+           }
+           
+            if(prod.category=="Daily Value Wrap Combos (Save Upto 40% Extra)"){
+                let div4=document.createElement("div")
+
+               div4.append(img, div3)
+               midContainer2.append(div4)
+               div4.style.backgroundColor="white"
+
+            }
+            
+              if(prod.category=="Combos for 1 (Upto 15% Savings)"){
+                let div4=document.createElement("div")
+
+               div4.append(img, div3)
+               midContainer3.append(div4)
+               div4.style.backgroundColor="white"
+
+     
+              }
+              if(prod.category=="Super Saver Match Day Combos at Rs444"){
+                let div4=document.createElement("div")
+
+               div4.append(img, div3)
+               midContainer4.append(div4)
+               div4.style.backgroundColor="white"
+
+     
+              }
+              if(prod.category=="Combos for 4 (Upto 25% Savings)"){
+                let div4=document.createElement("div")
+
+               div4.append(img, div3)
+               midContainer5.append(div4)
+               div4.style.backgroundColor="white"
+
+              }
+              if(prod.category=="Signature Wraps"){
+             let div4=document.createElement("div")
+
+               div4.append(img, div3)
+            midContainer6.append(div4)
+            div4.style.backgroundColor="white"
+
+     
+              }
+              if(prod.category=="Classic Wraps"){
+                let div26=document.createElement("div")
+
+               div26.append(img, div3)
+               midContainer7.append(div26)
+               div4.style.backgroundColor="white"
+
+     
+              }
+              if(prod.category=="Rice Bowls"){
+                let div27=document.createElement("div")
+
+               div27.append(img, div3)
+               midContainer8.append(div27)
+               div4.style.backgroundColor="white"
+
+     
+              }
+              if(prod.category=="Sides And Beverages"){
+                let div28=document.createElement("div")
+
+               div28.append(img, div3)
+               midContainer9.append(div28)
+             
+               div4.style.backgroundColor="white"
+
+              }
+              
+              
+           
+   
+
+
+
 
         //   OPENING A NEW PAGE FOR INDIVIDUAL PRODUCT
           div.onclick = ()=>{
