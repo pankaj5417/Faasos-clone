@@ -323,7 +323,7 @@ function showData(data){
          //elmnt.scrollIntoView();
         
          
-           window.scrollTo(0,1470);
+           window.scrollTo(0,1570);
        }
    
        P3.addEventListener("click",myFunction3)
@@ -446,7 +446,7 @@ function showData(data){
 
                div26.append(img, div3)
                midContainer7.append(div26)
-               div4.style.backgroundColor="white"
+               div26.style.backgroundColor="white"
 
      
               }
@@ -455,7 +455,7 @@ function showData(data){
 
                div27.append(img, div3)
                midContainer8.append(div27)
-               div4.style.backgroundColor="white"
+               div27.style.backgroundColor="white"
 
      
               }
@@ -465,7 +465,7 @@ function showData(data){
                div28.append(img, div3)
                midContainer9.append(div28)
              
-               div4.style.backgroundColor="white"
+               div28.style.backgroundColor="white"
 
               }
               
