@@ -165,7 +165,7 @@ body{
     line-height: 0%;
 }
 
-@media (min-width:901px){
+@media (min-width:1101px){
     
     .container{
         width: 85%;
@@ -208,7 +208,7 @@ body{
     .col-mid{
         width: 50%;
     }
-    #mid-container1,#mid-container2,#mid-contairne3,#mid-container4,#mid-container5,#mid-contairne6,#mid-container7,#mid-container8,#mid-contairne9{
+    #mid-container1,#mid-container2,#mid-container3,#mid-container4,#mid-container5,#mid-container6,#mid-container7,#mid-container8,#mid-container9{
        
         
         
@@ -236,7 +236,7 @@ body{
 
 
 
-@media (min-width:601px)and (max-width:900px){
+@media (min-width:769px)and (max-width:1100px){
     
     .container{
         width: 85%;
@@ -266,15 +266,29 @@ body{
         cursor: pointer;
     
     }
+    h3{
+        font-weight: 700;
+        color: black;
+        margin-left: 10px;
+        margin-top: 1%;
+
+    }
+    hr{
+       margin-top: 8%;
+    }
     .col-mid{
+        width: 50%;
+    }
+    #mid-container1,#mid-container2,#mid-container3,#mid-container4,#mid-container5,#mid-container6,#mid-container7,#mid-container8,#mid-container9{
        
-        width: 83%;
-        height: auto;
+        
+        
         border-radius: 2px;
         display: grid;
-        grid-template-columns: repeat(3,29%);
+        grid-template-columns: repeat(3,32%);
+
        column-gap: 3%;
-       row-gap: 0.5%;
+       row-gap: 1.5%;
     }
     .col-right{
         display: none;
@@ -310,16 +324,30 @@ body{
         padding: 15px;
 
     }
-    .col-mid{
-      width: 80%;
-      margin: auto;
-      height: auto;
-      border-radius: 2px;
-     
-     column-gap: 3%;
-     row-gap: 0.5%;
+    h3{
+        font-weight: 700;
+        color: black;
+        margin-left: 10px;
+        margin-top: 1%;
+
     }
-    .col-mid>div{
+    hr{
+       margin-top: 8%;
+    }
+    .col-mid{
+        width: 50%;
+    }
+    #mid-container1,#mid-container2,#mid-container3,#mid-container4,#mid-container5,#mid-container6,#mid-container7,#mid-container8,#mid-container9{
+       
+        
+        
+        border-radius: 2px;
+        display: grid;
+
+       column-gap: 3%;
+       row-gap: 1.5%;
+    }
+    .col-mid div{
         margin: 5%;
       
     }
