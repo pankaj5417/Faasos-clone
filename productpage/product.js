@@ -474,12 +474,12 @@ function showData(data){
 
      
               }
-              if(prod.category=="Rice Bowls"){
+              if(prod.category=="Desserts"){
                 let div4=document.createElement("div")
                   div4.setAttribute("class", "prod_card")
 
                div4.append(img, div3)
-               midContainer8.append(div4)
+               midContainer10.append(div4)
                div4.style.backgroundColor="white"
 
      
@@ -498,7 +498,7 @@ function showData(data){
                   div4.setAttribute("class", "prod_card")
 
                div4.append(img, div3)
-               midContainer10.append(div4)
+               midContainer9.append(div4)
              
                div4.style.backgroundColor="white"
 
