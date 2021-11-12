@@ -90,9 +90,31 @@ function myFunction(){
 /*Filter Code END here*/
 var midContainer=document.getElementById('mid-container')
 
+       var midContainer1=document.getElementById("mid-container1")
+         var midContainer2=document.getElementById("mid-container2")
+         var midContainer3=document.getElementById("mid-container3")
+         var midContainer4=document.getElementById("mid-container4")
+         var midContainer5=document.getElementById("mid-container5")
+         var midContainer6=document.getElementById("mid-container6")
+         var midContainer7=document.getElementById("mid-container7")
+         var midContainer8=document.getElementById("mid-container8")
+         var midContainer9=document.getElementById("mid-container9")
+
+         var midContainer10=document.getElementById("mid-container10")
+
+
 function showData(data){
 
-  //  midContainer.innerHTML = null;
+  midContainer1.innerHTML=null
+  midContainer2.innerHTML=null
+  midContainer3.innerHTML=null
+  midContainer4.innerHTML=null
+  midContainer5.innerHTML=null
+  midContainer6.innerHTML=null
+  midContainer7.innerHTML=null
+  midContainer8.innerHTML=null
+  midContainer9.innerHTML=null
+  midContainer10.innerHTML=null
 
 
       data.forEach((prod)=>{
@@ -296,18 +318,10 @@ function showData(data){
          div2.style.justifyContent="space-between"
          div3.style.padding="0 10px 20px 10px"
 
-         var midContainer1=document.getElementById("mid-container1")
-         var midContainer2=document.getElementById("mid-container2")
-         let midContainer3=document.getElementById("mid-container3")
-         let midContainer4=document.getElementById("mid-container4")
-         let midContainer5=document.getElementById("mid-container5")
-         let midContainer6=document.getElementById("mid-container6")
-         let midContainer7=document.getElementById("mid-container7")
-         let midContainer8=document.getElementById("mid-container8")
-         let midContainer9=document.getElementById("mid-container9")
 
-         let midContainer10=document.getElementById("mid-container10")
 
+
+         
 
          div3.append(div,prod_desc ,readmore,div2)
          // div4.append(img, div3)
