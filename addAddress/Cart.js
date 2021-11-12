@@ -16,6 +16,7 @@ function showData(data){
         let div3=document.createElement("div")
         let div4=document.createElement("div")
        // if(prod.category=="Fab Wraps starting at 99 each"){
+         console.log(prod);
         let img=document.createElement("img")
          img.src=prod.img
          img.style.width="100%"
@@ -34,7 +35,7 @@ function showData(data){
          prod_rating_div.style.color="white"
          prod_rating_div.style.width="15%"
          prod_rating_div.style.borderRadius="4px"
-         let addtoCartBtn=document.createElement("button")
+         let addtoCartBtn=document.createElement("button") 
          addtoCartBtn.innerText="ADD"
          addtoCartBtn.style.backgroundColor="#FFCA28"
         // addtoCartBtn.style.width="40%"
@@ -90,8 +91,9 @@ function showData(data){
 
          div3.append(div,prod_desc,div2)
          div4.append(img,div3)
+         div4.style.backgroundColor = 'white'
          midContainer.append(div4)
-         div4.style.backgroundColor="white"
+         
       //  }
      
       })
