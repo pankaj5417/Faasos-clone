@@ -118,7 +118,7 @@ function show_customize(prod) {
     <div class="custom-option">
     <div class = "option">
     <div class = "option-head">
-    <div><img src ="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png" />Potato Wedges (Medium) Thums Up (250ml) (Save Rs26)</div>
+    <div><img src ="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png" />Potato Wedges (Medium) Thums Up (250ml)</div>
     <div>	&#8377 87<input type="checkbox" id="vehicle2" name="" value="87"></div>
     </div>
     </div>

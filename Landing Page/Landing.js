@@ -87,7 +87,6 @@ let arr = JSON.parse(localStorage.getItem("faasosUser"))
 arr.forEach(el => {
 //console.log(el.number2+"qwerty")
    if(number==el.number2){
-     alert("log in succsesfull")
        let name2 = el.name2
        let  email2 = el.email2
        let number2 = el.number2
@@ -99,7 +98,10 @@ arr.forEach(el => {
         email2,
         
     };
-    window.location = "/productpage/productpage.html"
+    setTimeout(() => {
+      window.location = "/productpage/productpage.html"
+    },1000);
+    
     let curr = JSON.parse(localStorage.getItem("current"))
     curr.pop();
     curr.push(user2)
@@ -226,15 +228,17 @@ let arr2 = JSON.parse(localStorage.getItem("faasosUser"))
 arr2.forEach(el => {
 //console.log(el.number2)
    if(number2==el.number2 || email2==el.email2){
-       alert("Already a member")
+       alert("Alreary a member")
        credentials2 = false
    }
 });
 if(credentials2==true){
 arr2.push(user)
-alert("Sign Up sucsessfull")
+
 modal2.style.display = "none";
-window.location = "/productpage/productpage.html"
+setTimeout(() => {
+  window.location = "/productpage/productpage.html"
+},1000);
  let curr = JSON.parse(localStorage.getItem("current"))
     curr.pop();
     curr.push(user)
