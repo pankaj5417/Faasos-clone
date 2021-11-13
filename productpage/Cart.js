@@ -3,8 +3,13 @@ import { product_type, customize } from "./export.js";
 import {nav,sid} from "../Nav_bar/navbar.js";
 document.getElementById("navbar").innerHTML = nav;
 document.getElementById("mySidebar").innerHTML = sid;
-let name = document.getElementById("showName")
-        console.log(name+"suman")
+
+import foot from "../footer/footer.js";
+document.getElementById("big5").innerHTML = foot;
+
+
+//let name = document.getElementById("showName")
+  //      console.log(name+"suman")
 
 
         // adding customize to the end of the html document
@@ -20,6 +25,7 @@ async function getData(){
     showData(data)
 } 
 getData()
+
 
 var viewCouponsFun=document.getElementById("view-coupons")
 viewCouponsFun.onclick=()=>{
@@ -424,7 +430,13 @@ function applyCoupon(d){
         total_pr.innerHTML='₹'+parseInt(total12)
         console.log(total2)
 
-    }
+    }else if(d=="WRAPPER"&&total2>=800){
+      var total12=total2-200
+
+       total_pr.innerHTML='₹'+parseInt(total12)
+       console.log(total2)
+
+   }
 }
 
 function gotoCart(){
@@ -556,6 +568,37 @@ input.addEventListener("keyup",(e)=>{
   }
 
 })
+
+
+
+
+/*SideBar*/
+document.getElementById("ham").onclick = () => {
+  document.getElementById("mySidebar").style.width = "370px";
+  }
+  document.getElementById("closeBtn").onclick = () => {
+      document.getElementById("mySidebar").style.width = "0px";
+  }
+  document.getElementById("about").onclick = () => {
+      window.location.href = "../footer/aboutus.html";
+  }
+  document.getElementById("help").onclick = () => {
+      window.location.href = "../footer/help_n_support.html";
+  }
+  document.getElementById("profile").onclick = () => {
+      window.location.href = "../profile/profile.html";
+  }
+  document.getElementById("orders").onclick = () => {
+      window.location.href = "../profile/orders.html";
+  }
+  document.getElementById("addr").onclick = () => {
+      window.location.href = "../profile/adress.html";
+  }
+  document.getElementById("pay").onclick = () => {
+      window.location.href = "../profile/payments.html";
+  }
+
+
 //login
  let nam = document.getElementById("showName")
        let arr2 = JSON.parse(localStorage.getItem("current"))
