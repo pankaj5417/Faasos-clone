@@ -226,6 +226,12 @@ body{
        column-gap: 3%;
        row-gap: 1.5%;
     }
+    #mid-container2{
+        row-gap: 1%;
+    }
+    #mid-container4{
+        row-gap: 1%;
+    }
     .col-right{
         position:sticky;
         top: 107px;
