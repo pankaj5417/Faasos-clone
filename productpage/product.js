@@ -57,10 +57,24 @@ document.getElementById("veg").addEventListener("click",myFunction);
 var flag=0
 function myFunction(){
     var arr=[];
-    let nonveg = document.getElementById("nonveg");
-    let veg = document.getElementById("veg");
+    let nonveg = document.getElementById("nonveg")
+    let veg = document.getElementById("veg")
+    
+    nonveg.onclick=()=>{
+      veg.checked=false
+     // nonveg.checked=true
+    }
+    veg.onclick=()=>{
+     nonveg.checked=false
+     //veg.checked=true
+    }
+
+    
+
     if(nonveg.checked == true)
     {
+     // veg.checked=false
+
         glob.forEach((el)=>{
             if(el.type == "non-veg")
             {
@@ -73,6 +87,8 @@ function myFunction(){
     }
     else if(veg.checked == true)
     {
+      //nonveg.checked=false
+
         glob.forEach((el)=>{
             if(el.type == "veg")
             {
