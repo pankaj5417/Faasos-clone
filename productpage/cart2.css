@@ -371,3 +371,11 @@ color: white;
 margin-left: 13vh;
 width: 80%;
 }
+#logged{
+    display: flex;
+}
+#hr{
+    width: 0.3vh;
+    height: 3vh;
+    background-color: black;
+}

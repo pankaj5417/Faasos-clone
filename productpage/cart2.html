@@ -111,6 +111,11 @@
             <div class="col-left  "> 
                 <div class="cart-status">
                     <h2>Logged in</h2>
+                    <div id="logged">
+                    <div id="loggedName"></div>
+                    <div id="hr"></div>
+                    <div id="loggedNumber"></div>
+                </div>
                 </div>
                 <div class="cart-address">
                     <h2>Delivery Address</h2>
@@ -236,9 +241,6 @@
     window.location.href = "../footer/help_n_support.html";
 }
 
-let name = document.getElementById("showName")
-        let arr2 = JSON.parse(localStorage.getItem("current"))
-        name.innerText = arr2[arr2.length-1].name2
 </script>
 
   
