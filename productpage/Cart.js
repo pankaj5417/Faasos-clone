@@ -202,8 +202,8 @@ qty.innerHTML=count+" "+"Item";
             tax=total*0.05
             var gsttax=document.getElementById("gsttax").innerText='₹'+" "+parseInt(tax)
              total2=total+tax
-            total3=total2
-            total4=total2
+           // total3=total2
+            //total4=total2
             total_pr.innerHTML='₹'+parseInt(total2)
             total_pr.style.fontWeight="700"
 
@@ -349,7 +349,7 @@ function viewCoupons(){
   div.style.top="40px"
   div.style.left="33%"
   div.style.zIndex="100"
-div.style.display="block"
+  div.style.display="block"
 
 
    div2.style.display="flex"
