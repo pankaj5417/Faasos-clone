@@ -7,12 +7,10 @@
     <title>Order Food Online from Faasos</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-   <!-- <link rel="stylesheet" href="address.css" />-->
-    <link rel="icon" href="https://c2.iwebchk.com/icon/view/order.faasos.io">
-
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="icon" href="https://c2.iwebchk.com/icon/view/order.faasos.io">
 
     <style>
                 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -27,9 +25,7 @@
             }
 
 
-
         .container{
-
             width: 85%;
             height: 100%;
             margin: auto;
@@ -39,7 +35,7 @@
             border-radius: 10px;
             margin-top: 20px;
         }
-        .hrow{
+        .row{
             display: flex;
         }
         .loginData{
@@ -48,6 +44,10 @@
         }
         .center{
             align-items: center;
+        }
+
+        .grand-total  p{
+            padding-top: 1rem;
         }
         .col-left{
             width: 57%;
@@ -62,7 +62,6 @@
             text-align: center;
         }
         .add-new{
-            
             width: 30%;
             height: 33px;
             border-radius: 4px;
@@ -86,7 +85,7 @@
             padding: 20px;
         }
         #cart-right{
-            padding: 5px;
+            margin: 3px;
             width: 98%;
             background-color: white;
         }
@@ -137,14 +136,13 @@
        
        
         .cart-bottom-left{
-            width: 84%;
+            width: 85%;
         }
         .cart-bottom-right {
-            width: 80px;
+            width: 12%;
         }
         .grand-total{
-            height: 30%;
-            padding: 15px;
+            height: 17%;
             width: 98%;
             background-color: white;
         }
@@ -157,7 +155,7 @@
            
         }
         .coupon{
-            width: 98%;
+            width: 93%;
             border: 1px solid lightgrey;
             border-radius: 3px;
             padding: 10px;
@@ -168,21 +166,16 @@
             font-size: 13px;
         }
         .credits{
-            width: 98%;
-            height: 80px;
+            width: 93%;
             border: 1px solid lightgrey;
             border-radius: 3px;
             padding: 10px;
             justify-content: space-between;
         }
-        .credits-mid-txt{
-            width: 290px;
-        }
         
         .credit-img{
             width: 25px;
             height: 22px;
-            margin: 5px;
         }
         .coupon-img{
             width: 34px;
@@ -195,29 +188,9 @@
         .cursor{
             cursor: pointer;
         }
-        
-        .coupon-cont{
-            display: none;
-
-         position: fixed;
-        
-         top:0;
-         left: 0;
-         height: 100%;
-        width: 100%;
-        
-         z-index:5;
-        background-color:rgba(0, 0, 0, 0.5);
-
-
-        }
-
-
-
-
-    .bg-modal{ 
+        .bg-modal{ 
             width: 100%;
-                    height: 100%;
+            height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
             position: absolute;
             top: 0;
@@ -564,7 +537,7 @@ margin-bottom: 20px;
                 <div class="btn_wrapper_top justify-between grid grid-cols-3 gap-4 ">
                     <button id="1" onclick="activate(this)"
                         class=".checkStatus w-24 rounded-3xl inline-flex items-center py-2 font-medium px-4 w- 6 leading-5 text-primary-100 text-white ">
-                        <i class=" fas fa-home inline-block w-5 h-5 mr-1"></i>
+                        <i class="fas fas fa-home inline-block w-5 h-5 mr-1"></i>
                         Home
                     </button>
 
@@ -592,15 +565,13 @@ margin-bottom: 20px;
 <!-- OK -->
 
     <hr>
-
     <div class="container box  "> 
         <div class="row">
             <div class="col-left box "> 
                 <div class="cart-status" id="cart-status">
                     <h1>Logged in</h1>
-
                 </div>
-                <div class="cart-address" id="cart-address">
+                <div class="cart-address">
                     <h1>Delivery Address</h1>
                     <div class="addAddress">
                         <h2>ADD NEW ADDRESS</h2>
@@ -720,7 +691,7 @@ margin-bottom: 20px;
             <div class="col-right box "> 
                 <div id="cart-right">
 
-            <div class="hrow center ">
+            <div class="row center ">
                 <h2 class="margin ">Cart</h2>
                 <p id="qty">Q.</p>
                 <p></p> 
@@ -734,8 +705,8 @@ margin-bottom: 20px;
 
                 <p class="p-text-color ">You can either apply coupon or credits</p>
                 
-                <div class="credits hrow center pt-4">
-                    <div class="hrow center">
+                <div class="credits row center pt-4">
+                    <div class="row center">
                         <img class="credit-img" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/Screenshot%202021-11-02%20233252.png?raw=true" alt="">
                         <div class="credits-mid-txt">
                             <h5 class="line-height p-text-color ">FAASOS CREDITS</h5>
@@ -746,8 +717,8 @@ margin-bottom: 20px;
                    <img class="credit-img" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/Screenshot%202021-11-02%20233452.png?raw=true" alt="">
                     
                 </div>
-                <div class=" hrow coupon center">
-                    <div class="hrow center">
+                <div class=" row coupon center">
+                    <div class="row center">
                         <img class="coupon-img" src="https://github.com/pankaj5417/koovs.com/blob/main/icons/Screenshot%202021-11-02%20231754.png?raw=true" alt="">
                         <h5 class="line-height">APPLY COUPON</h5>
                     </div>
@@ -756,21 +727,21 @@ margin-bottom: 20px;
                 </div>
                 </div>  
                 </div>
-                  <div class="grand-total space-y-4 ">
-                      <div class="hrow ">
+                  <div class="grand-total">
+                      <div class="row">
                         <div class="cart-bottom-left">
 
                           <p class="line-height p-text-color">Cart Amount</p>
                         </div>
                           <p class="line-height margin-rt" id="total-amt"></p>
                         </div>
-                      <div class="hrow">
+                      <div class="row">
                         <div class="cart-bottom-left">
 
                         <p class="line-height p-text-color">Tax</p></div>
                         <p class="line-height cart-bottom-right margin-rt" id="gsttax"></p>
                     </div>
-                    <div class="hrow">
+                    <div class="row">
                         <div class="cart-bottom-left">
 
                         <p class="line-height p-text-color">Delivery</p>
@@ -778,11 +749,11 @@ margin-bottom: 20px;
                         <p class="line-height cart-bottom-right cart-txt-color margin-rt">Free</p>
                     </div>
                     <hr>
-                    <div class="hrow items-center">
+                    <div class="row ">
                         <div class="cart-bottom-left">
-                            <h2 class="line-height ">GrandTotal</h2>
+                            <h2 class="line-height p-4">GrandTotal</h2>
                         </div>
-                        <div class=" cart-bottom-right">
+                        <div class="row cart-bottom-right">
                            <p class="" id="total"></p>
                         </div>
                     </div>
@@ -793,9 +764,7 @@ margin-bottom: 20px;
         </div>
     
     </div>
-    <div id="coupon-container" class="coupon-cont">
-        <div class="coupon-divs" id="coupon-div"></div>
-    </div> 
+
 
 
 
@@ -804,13 +773,10 @@ margin-bottom: 20px;
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFqHdww7qwKP8nyQ4MUNFDPAgnfzNbZAU"></script>
     <script src="https://unpkg.com/location-picker/dist/location-picker.min.js"></script>
     
-
     <script src="Cart.js"></script>
-
-    <script src="address.js"></script>
-    <script  src="Cart.js"></script>
-
-
 </body>
 </html>
 
+
+  
+</script>

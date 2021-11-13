@@ -248,7 +248,6 @@ function viewCoupons(){
       //  console.log(couponBox.value)
     applyCoupon(couponBox.value)
 }
-=======
 
  couponBox.style.width="100%"
  couponBox.style.border="none"
@@ -397,10 +396,10 @@ function activate(e) {
     }
 
   }
-}
-let div = document.getElementById(id);
-div.classList.add("active");
-div.value = div.innerText;
+
+let setdiv = document.getElementById(id);
+setdiv.classList.add("active");
+setdiv.value = div.innerText;
 }
 
 // User Info
@@ -493,7 +492,6 @@ if(savedAddress){
 }else{ 
     localStorage.setItem("Address", JSON.stringify([addressForm]));
 }
-=======
 
 house = "";
 landmark = "";
@@ -540,6 +538,7 @@ if(savedAddress.length > 0){
 
 
 // Payment Sectioin
+
 var div = document.querySelector(".checkPayment");
 var id;
 function activatePayment(e) {            
