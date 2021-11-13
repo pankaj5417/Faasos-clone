@@ -382,7 +382,13 @@ function applyCoupon(d){
         total_pr.innerHTML='₹'+parseInt(total12)
         console.log(total2)
 
-    }
+    }else if(d=="WRAPPER"&&total2>=800){
+      var total12=total2-200
+
+       total_pr.innerHTML='₹'+parseInt(total12)
+       console.log(total2)
+
+   }
 }
 
 function gotoCart(){
