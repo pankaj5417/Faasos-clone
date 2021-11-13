@@ -412,6 +412,16 @@ function showData(data){
          // test.style.overflow="scroll"
          // test.style.height="10%"
          let mid=document.querySelector('#mid-container')
+/*
+     document.body.onscroll = logScroll
+
+    function logScroll(e) {
+      if(e.target.top>200){
+        P1.style.fontWeight="bold"
+
+      }
+   }
+   */
        
       document.body.onscroll = function() {myFunction()};
    
@@ -531,6 +541,7 @@ function showData(data){
   
     }
    }
+   
    
    
             if(prod.category=="Fab Wraps starting at 99 each" ){

@@ -502,6 +502,14 @@ input.addEventListener("keyup",(e)=>{
   }
 
 })
+//login
+ let nam = document.getElementById("showName")
+       let arr2 = JSON.parse(localStorage.getItem("current"))
+       nam.innerText = arr2[arr2.length-1].name2
+
+//logged name & number
+document.getElementById("loggedName").innerText=arr2[arr2.length-1].name2
+document.getElementById("loggedNumber").innerText=arr2[arr2.length-1].number2
 
 
 

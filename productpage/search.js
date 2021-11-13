@@ -45,7 +45,9 @@ data.forEach((prod)=>{
        // if(prod.category=="Fab Wraps starting at 99 each"){
         let img=document.createElement("img")
          img.src=prod.img
-         img.style.width="100%"
+         img.style.width="50%"
+         img.style.height="100%"
+
          let prod_name=document.createElement("p")
          prod_name.innerText=prod.name
          prod_name.style.fontSize="18px"
@@ -89,6 +91,7 @@ data.forEach((prod)=>{
          prod_rating_div.style.backgroundColor="#4caf50"
          prod_rating_div.style.color="white"
          prod_rating_div.style.width="20%"
+         prod_rating_div.style.height="22px"
          prod_rating_div.style.padding="6px"
          prod_rating_div.style.borderRadius="2px"
          let addToCart=document.createElement("button")
@@ -223,6 +226,11 @@ localStorage.setItem("FaasosCart",JSON.stringify(products_cart));
 
  div3.append(div,prod_desc ,readmore,div2)
   div4.append(img, div3)
+  div4.style.backgroundColor="white"
+  div4.style.display="flex"
+  div4.style.height="220px"
+  div4.setAttribute("class", "prod_card")
+
 
 //   OPENING A NEW PAGE FOR INDIVIDUAL PRODUCT
   div.onclick = ()=>{
