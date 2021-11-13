@@ -1,4 +1,5 @@
 
+
 async function saveAddress() {
   let lat = document.querySelector("#LATITUDE_ELEMENT_ID").value;
   let lng = document.querySelector("#LONGITUDE_ELEMENT_ID").value;
@@ -153,8 +154,3 @@ setdiv.value = div.innerText;
   }
     appendAddresses()
     
-
-    document.getElementById('google_pay_button').innerText = `Pay ₹${parseInt(total2)}`
-    document.getElementById('cod_pay_button').innerText = `Pay ₹${parseInt(total2)}`
-
-    console.log(total2);
