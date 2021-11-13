@@ -11,7 +11,7 @@ document.getElementById("big5").innerHTML = foot;
 // add customization html code to the html body 
 
 document.body.innerHTML += customize();
-console.log(customize());
+// console.log(customize());
 
 
 var glob;
@@ -19,7 +19,7 @@ async function getData() {
     let res = await fetch(`https://demo8715768.mockable.io/faasos`);
     let data=await res.json();
     glob = data;
-    console.log(data)
+    // console.log(data)
     showData(data)
 }
 getData();
@@ -67,7 +67,7 @@ function myFunction(){
                 arr.push(el);
             }
         })
-        console.log(arr);
+        // console.log(arr);
         
         showData(arr);
     }
@@ -79,7 +79,7 @@ function myFunction(){
                 arr.push(el);
             }
         })
-        console.log(arr);
+        // console.log(arr);
         showData(arr);
     }
     
@@ -130,7 +130,7 @@ function showData(data){
          img.style.width="100%"
          let prod_name=document.createElement("p")
          prod_name.innerText=prod.name
-         prod_name.style.fontSize="18px"
+         prod_name.style.fontSize="15px"
          prod_name.style.fontWeight="700"
          prod_name.style.color="black"
          prod_name.style.width="75%"
@@ -237,14 +237,14 @@ function showData(data){
           addToCart.addEventListener("click", addtocart);
           function addtocart(event) {
               let ans = document.getElementsByClassName("addtoCartBtn");
-              console.log(ans);
+            //   console.log(ans);
               
 
 
               //add active class to the customize
               document.querySelector(".custom-parent").classList.add("active-custom");
               show_customize(prod);
-              console.log("1",event.target)
+            //   console.log("1",event.target)
 
 
               let div = event.target.parentNode;
@@ -553,7 +553,7 @@ function showData(data){
                div4.style.backgroundColor="white"
 
             }
-            console.log(prod.category)
+            // console.log(prod.category)
               if(prod.category=="Combos for 1 (Save upto 15% Extra)"){
                 let div4=document.createElement("div")
                   div4.setAttribute("class", "prod_card")
@@ -647,7 +647,7 @@ function showData(data){
               
               localStorage.setItem("single-prod", JSON.stringify(prod));
               window.location.href = "single_product.html";
-              console.log(JSON.parse(localStorage.getItem("single-prod")));
+        
               
           }
          div4.style.cursor="pointer"
@@ -667,16 +667,63 @@ function showData(data){
 /*mid end*/
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //cart data();
 function cartData() {
+    let kart = JSON.parse(localStorage.getItem("FaasosCart"));
+    if (kart.length === 0 || kart === null) {
+        document.getElementById("cart-head").innerText = "Empty cart";
+        document.getElementById("qty").style.display = "none";
+        document.getElementById("cart-head-2").style.display = "none"
+        let cart = document.getElementById("cart-center");
+        cart.style.display = "none";
+        document.getElementById("empty-cart").style.display = "block"
+        return;
+    }
+        document.getElementById("cart-head").innerText = "cart";
+document.getElementById("qty").style.display = "block";
+        document.getElementById("cart-head-2").style.display = "block"
+    let cart_center = document.getElementById("cart-center");
+        cart_center.style.display = "block";
+        document.getElementById("empty-cart").style.display = "none"
+    
     let qty = document.getElementById("qty");
 
     let cart = document.getElementById("cart-item");
     cart.innerHTML = null;
 
-let kart = JSON.parse(localStorage.getItem("FaasosCart"));
 var count=0;
-    console.log(kart)
+    // console.log(kart)
     if (kart === null) {
         return 
     }
@@ -724,7 +771,7 @@ var count=0;
                
              let kart = JSON.parse(localStorage.getItem("FaasosCart"));
              let index = kart.indexOf(item);
-             console.log(index)
+            //  console.log(index)
              kart.splice(index, 1);
 
              localStorage.setItem("FaasosCart", JSON.stringify(kart));
@@ -823,7 +870,7 @@ document.getElementById("custom-close").addEventListener("click",()=> {
 //login to name 
 let name = document.getElementById("showName")
 let arr2 = JSON.parse(localStorage.getItem("current"))
-name.innerText = arr2[arr2.length-1].name2
+name.innerText = arr2[arr2.length - 1].name2;
 
 
 
