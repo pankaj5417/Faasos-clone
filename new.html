@@ -14,8 +14,11 @@
   background-color: white;
   border-radius:5px 0 0 5px;
   margin-right: 0;
-  width: 105%;
+  width: 110%;
 } 
+.payment_section{
+  padding: 15px 18px;
+}
 .google_pay_top{
  
 }
@@ -30,14 +33,13 @@
   margin-left:2rem;
   margin-top: 20px ;
    border-radius: 10px;
-  width: 26rem; 
-  padding:5px;
+  width: 30rem; 
+  padding:24px;
 } 
 .payment_top{
   margin-bottom: 10px; 
   display: flex;
   justify-content: space-between;
-  padding: 7px 10px;
 }
 .google_pay_logo{
   height: 2rem;
@@ -66,11 +68,10 @@ width: 16rem;
     padding-left: 5px;
     color: #ccc;
     float: left;
-    margin-left: 10px;
 }
 .payment_label{
   position: absolute;
-  margin-left: 15px;
+  margin-left: 5px;
   color: #ccc;
 }
 .payment_number:focus, textarea:focus {
@@ -89,7 +90,7 @@ width: 16rem;
 }
 .pay_button{
   display: block;
-  width: 80%;
+  width: 100%;
   border: none; 
   background-color: #FFD344;
   padding: 10px 18px; 
@@ -100,8 +101,6 @@ width: 16rem;
   margin: auto;
   border-radius: 5px;
   float: left;
-  margin-left: 10px;
-  margin-bottom: 10px;
 }
 
 
@@ -116,12 +115,23 @@ width: 16rem;
 }
 
 .cod_main_text{
-  
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 .cod_description{
-
+font-size: small;
+font-weight: lighter;
+margin-bottom: 20px;
 }
-
+#paymentType2{
+  display: none;
+}
+#paymentType3{
+  display: none;
+}
+#paymentType4{
+  display: none;
+}
   </style>
 </head>
 <body>
@@ -148,39 +158,39 @@ width: 16rem;
     </div>
   </div>
  
-
+<!-- Payment -->
 <!-- Credit/ Debit Card -->
 
-  <!-- <div id='paymentType1' class="flex flex-col w-96 h-28 border-dashed border-2 rounded items-center 	items-center ml-2"> 
+  <div id='paymentType1' class="flex flex-col  h-28  items-center 	items-center ml-2 pl-5"> 
     <div class="m-auto" id="paymentMethod"> 
 
-      <div class="flex"> 
-        <p class="text-xs">WE ACCEPT &nbsp;</p> 
+      <div class="flex "> 
+        <p class="text-xs" style="font-size:xx-small;">WE ACCEPT &nbsp;</p> 
         <img class="w-44 " src="https://www.faasos.com/images/group-card.svg" alt="Cards" style="filter: grayscale(1); opacity: 0.7;">
       </div>
-    <div class="btn_wrapper">
+    <div class="btn_wrapper border-dashed border-2 rounded p-6">
     <button class="bg-white border border-indigo-900	p-2 rounded text-indigo-900">+ Add Debit Card</button>
     <button class="bg-white border border-indigo-900	p-2 rounded text-indigo-900">+ Add Credit Card</button>
     </div>
 
 </div>
-</div>  -->
+</div> 
 
 <!-- WALLET -->
 
-<!-- <div id='paymentType2' class="flex flex-col w-72 h-20 border-2 rounded-xl items-center items-center ml-10 p-0"> 
+<div id='paymentType2' class="flex flex-col w-72 h-20 border-2 rounded-xl items-center items-center ml-10 p-0"> 
   <div class="m-auto" id="paymentMethod"> 
  
-  <div class="btn_wrapper">
+  <div class="wallet p-6 cursor-pointer	">
     <img class="w-40 mr-16" src="https://product-assets.faasos.io/production/savor/payment_icons/phonepe.png" alt="">
   </div>
 
 </div>
-</div>  --> 
+</div>   
 
 <!-- UPI -->
 
-<!-- <div id='paymentType1' class="payment_box "> 
+<div id='paymentType3' class="payment_box "> 
   <div class="payment_top">
   <img class='google_pay_logo' src="https://assets.faasos.io/faasos_v2/gpayLogo.png" alt="">
   <i class="fas fa-check-circle"></i>
@@ -197,7 +207,7 @@ width: 16rem;
   <button class="pay_button">Pay</button>
 </payment>
 
-</div> -->
+</div>
 
 <!-- COD -->
 
@@ -230,14 +240,22 @@ function activatePayment(e) {
 
   for (var i = 0; i <= 4; i++) {
     var classDiv = document.getElementById('payment_method_'+String(i));
-    if (classDiv) {
+    var showDiv = document.getElementById('paymentType'+String(i));
+    if (classDiv && showDiv) {
       classDiv.classList.remove("active");
+      console.log('ok');
       classDiv.value = "";
+      showDiv.style.display = 'none'
     }
   }
-  let div = document.getElementById(id); 
-  div.classList.add("active");
-  div.value = div.innerText;
+  let idIndex = id[id.length-1]
+  let leftDiv = document.getElementById(id); 
+  let rightDiv = document.getElementById('paymentType'+String(idIndex));
+  leftDiv.classList.add("active");
+  leftDiv.value = div.innerText;
+
+  rightDiv.style.display = 'block'
+
 
 if(id === 'payment_method_1'){
 
