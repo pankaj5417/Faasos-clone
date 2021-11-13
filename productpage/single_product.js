@@ -1,5 +1,13 @@
 import { product_type, customize } from "./export.js";
 
+// bread crumbs
+let current_prod = document.getElementById("prod");
+let prod = JSON.parse(localStorage.getItem("single-prod"));
+current_prod.innerHTML = prod.name;
+
+
+
+
 // add customization html code to the html body 
 
 document.body.innerHTML += customize();
