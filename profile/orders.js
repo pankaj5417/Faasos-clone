@@ -47,6 +47,9 @@ document.getElementById("ham").onclick = () => {
   document.getElementById("pay").onclick = () => {
       window.location.href = "../profile/payments.html";
   }
+  document.getElementById("logoImg").onclick = () => {
+    window.location.href = "../productpage/productpage.html";
+  }
   let name = document.getElementById("showName")
         let arr2 = JSON.parse(localStorage.getItem("current"))
         name.innerText = arr2[arr2.length-1].name2

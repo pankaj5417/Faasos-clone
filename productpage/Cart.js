@@ -614,6 +614,9 @@ document.getElementById("ham").onclick = () => {
   document.getElementById("pay").onclick = () => {
       window.location.href = "../profile/payments.html";
   }
+  document.getElementById("logoImg").onclick = () => {
+    window.location.href = "./productpage.html";
+  }
 
 
 //login

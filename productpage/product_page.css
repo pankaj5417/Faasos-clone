@@ -82,6 +82,9 @@
     background: #fff url('../profile/image/original.gif') no-repeat center;
     z-index: 5;
 }
+#logoImg{
+    cursor:pointer;
+}
 
 
 body{

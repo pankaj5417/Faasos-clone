@@ -1,5 +1,5 @@
 const nav = `<div id="navLeft">
-<img width="32%" src="https://assets.faasos.io/faasos_v2/faasosLogoPurple.svg" alt=""/>
+<img id="logoImg" width="32%" src="https://assets.faasos.io/faasos_v2/faasosLogoPurple.svg" alt=""/>
 </div>
 <div id="navRight">
 <div>

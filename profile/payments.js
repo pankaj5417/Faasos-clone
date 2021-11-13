@@ -20,6 +20,10 @@ document.getElementById("big5").innerHTML = foot;
 import {nav,sid} from "../Nav_bar/navbar.js";
 document.getElementById("navbar2").innerHTML = sid;
 document.getElementById("navbar").innerHTML = nav;
+document.getElementById("logoImg").onclick = () => {
+    window.location.href = "../productpage/productpage.html";
+  }
+  
 
 
 document.getElementById("ham").onclick = () => {
