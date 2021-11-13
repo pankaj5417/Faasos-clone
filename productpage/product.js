@@ -149,7 +149,9 @@ function showData(data){
         let div6=document.createElement("div")
         let img=document.createElement("img")
           img.src = prod.img
-          img.onclick=()=>{
+          img.onclick = () => {
+              localStorage.setItem("single-prod", JSON.stringify(prod));
+              
             window.location.href="single_product.html"
         }
          img.style.width="100%"
@@ -185,7 +187,9 @@ function showData(data){
          readmore.style.cursor="pointer"
 
 
-         readmore.onclick=()=>{
+          readmore.onclick = () => {
+              localStorage.setItem("single-prod", JSON.stringify(prod));
+             
             window.location.href="single_product.html"
         }
 
