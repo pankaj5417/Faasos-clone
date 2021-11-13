@@ -528,46 +528,6 @@ function appendAddress(town, address) {
 }
 
 
-async function saveAddress() {
-  let lat = document.querySelector("#LATITUDE_ELEMENT_ID").value;
-  let lng = document.querySelector("#LONGITUDE_ELEMENT_ID").value;
-  let house = document.getElementById("house").value;
-  let landmark = document.getElementById("landmark").value;
-  
-  
-  let response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyCFqHdww7qwKP8nyQ4MUNFDPAgnfzNbZAU`);
-  
-  let data = await response.json();
-  let address = data.results[3].formatted_address;
-  
-  if (id == "1") {
-  var addressType = "home";
-  } else if (id == "2") {
-  var addressType = "work";
-  } else if (id === "3") {
-  var addressType = "others";
-  }
-  
-  
-  let addressForm = {
-    houseNo: house,
-    landmark: landmark,
-    address:address,
-    addressType: addressType,
-  }; 
-  let savedAddress = JSON.parse(localStorage.getItem("Address"))
-  if(savedAddress){
-  savedAddress.push(addressForm)
-  localStorage.setItem("Address", JSON.stringify(savedAddress));
-  }else{ 
-    localStorage.setItem("Address", JSON.stringify([addressForm]));
-  }
-  
-  house = "";
-  landmark = "";
-  document.querySelector(".bg-modal").style.display = "none";
-  appendAddresses()
-  }
 document.getElementById("addAddress").addEventListener("click", function () {
   document.querySelector(".bg-modal").style.display = "flex";
 });
@@ -690,55 +650,3 @@ function changeNumber(){
   item.style.color = 'black'
 }
 
-
-  // AppendAddresses
-  function appendAddresses(){
-    let savedAddress = JSON.parse(localStorage.getItem("Address"))
-    if(savedAddress.length > 0){
-    
-    savedAddress.forEach((el)=>{
-      let parent = document.getElementById('cart-address')
-      let addressDiv = document.createElement('div')
-      let addressTop = document.createElement('div')
-      let addressBottom = document.createElement('div')
-      let choose = document.createElement('button')
-      addressDiv.classList.add('addresses')
-     addressTop.classList.add('addresses_top')
-     addressBottom.classList.add('addresses_bottom')
-      let icon = document.createElement('i')
-      if(el.addressType == 'home'){
-        icon.classList.add('fas')
-        icon.classList.add('fa-home')
-      }else if(el.addressType == 'work'){
-        icon.classList.add('fas')
-        icon.classList.add('fa-briefcase')
-    
-      }else if(el.addressType == 'other'){
-        icon.classList.add('fas')
-        icon.classList.add('fa-map-marker')
-      }
-      let p = document.createElement('p')
-      p.classList.add('address_text')
-      p.innerText = `${el.houseNo},${el.landmark},${el.address}`
-      let h3 = document.createElement('h3')
-      h3.innerText = el.addressType
-  
-      choose.innerText = 'DELIVER HERE'
-      choose.classList.add('deliver_btn')
-  
-  
-  
-    addressTop.append(icon,h3)
-    addressBottom.append(p,choose)
-      addressDiv.append(addressTop,addressBottom)
-      parent.append(addressDiv) 
-    })
-    }
-  }
-    appendAddresses()
-    
-
-    document.getElementById('google_pay_button').innerText = `Pay ₹${parseInt(total2)}`
-    document.getElementById('cod_pay_button').innerText = `Pay ₹${parseInt(total2)}`
-
-    console.log(total2);
