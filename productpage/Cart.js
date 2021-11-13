@@ -21,6 +21,12 @@ document.body.onload = () => {
   preloader.style.display = "none"; 
 }
 
+document.getElementById("cod_pay_button").onclick = () =>{
+
+  window.location.href = "../paymentAfterPage/afterpage.html";
+  
+}
+
 
 
 async function getData(){
@@ -436,6 +442,8 @@ function applyCoupon(d){
 
         total_pr.innerHTML='₹'+parseInt(total12)
         console.log(total2)
+        document.getElementById('google_pay_button').innerText = `Pay ₹${parseInt(total12)}`
+        document.getElementById('cod_pay_button').innerText = `Pay ₹${parseInt(total12)}`
 
     }else if(d=="WRAPPED"&&total2>=199&& c==0){
       var total3=0.60*total2
@@ -443,12 +451,17 @@ function applyCoupon(d){
       if(total3<=120){
        var total13=total2-total3
         total_pr.innerHTML='₹'+parseInt(total13)
+        document.getElementById('google_pay_button').innerText = `Pay ₹${parseInt(total13)}`
+        document.getElementById('cod_pay_button').innerText = `Pay ₹${parseInt(total13)}`
+
       }
       else{
         var total14=total2-120
         total_pr.innerHTML='₹'+parseInt(total14)
-
+        document.getElementById('google_pay_button').innerText = `Pay ₹${parseInt(total14)}`
+        document.getElementById('cod_pay_button').innerText = `Pay ₹${parseInt(total14)}`
       }
+      
 
       // total_pr.innerHTML='₹'+parseInt(total12)
       // console.log(total2)
