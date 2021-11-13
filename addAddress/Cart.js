@@ -510,26 +510,31 @@ if(savedAddress.length > 0){
 
   savedAddress.forEach((el)=>{
     let parent = document.getElementById('cart-address')
-    let icon = document.getElementById('i')
+    let addressDiv = document.createElement('div')
+    div.classList.add('addAddress')
+    let icon = document.createElement('i')
     if(el.addressType == 'home'){
       icon.classList.add = 'fas'
       icon.classList.add = 'fa-home'
 
     }else if(el.addressType == 'work'){
       icon.classList.add = 'fas'
-      icon.classList.add = 'fa-home'
+      icon.classList.add = 'fa-briefcase'
 
     }else if(el.addressType == 'other'){
       icon.classList.add = 'fas'
-      icon.classList.add = 'fa-home'
+      icon.classList.add = 'fa-map-marker'
 
     }
 
 
-    let h3 = document.getElementById('h3')
+    let h3 = document.createElement('h3')
     h3.innerText = el.addressType
     console.log(el.addressType)
-  })
+
+  //   addressDiv.append(icon,h3)
+  //   parent.append(addressDiv)
+  // })
 
 
 
