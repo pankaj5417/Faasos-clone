@@ -1,4 +1,13 @@
 
+import {nav,sid} from "../Nav_bar/navbar.js";
+document.getElementById("navbar").innerHTML = nav;
+document.getElementById("mySidebar").innerHTML = sid;
+let name = document.getElementById("showName")
+        console.log(name+"suman")
+
+
+
+
 async function getData(){
     let res=await fetch(`https://demo8715768.mockable.io/faasos`)
     let data=await res.json()
@@ -6,6 +15,11 @@ async function getData(){
     showData(data)
 } 
 getData()
+
+var viewCouponsFun=document.getElementById("view-coupons")
+viewCouponsFun.onclick=()=>{
+  viewCoupons()
+}
 
 function showData(data){
     var midContainer=document.getElementById('mid-container')
@@ -490,9 +504,4 @@ input.addEventListener("keyup",(e)=>{
 })
 
 
-import {nav,sid} from "../Nav_bar/navbar.js";
-document.getElementById("navbar").innerHTML = nav;
-document.getElementById("mySidebar").innerHTML = sid;
 
-let name = document.getElementById("showName")
-        console.log(name+"suman")
