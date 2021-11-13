@@ -1,3 +1,8 @@
+/*preloader*/ 
+var preloader = document.getElementById("loading");
+document.body.onload = () => {
+  preloader.style.display = "none"; 
+}
 var modal = document.getElementById("myModal");
 
 //  button that opens the modal

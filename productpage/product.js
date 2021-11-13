@@ -12,7 +12,11 @@ document.getElementById("big5").innerHTML = foot;
 
 document.body.innerHTML += customize();
 // console.log(customize());
-
+/*preloader*/
+var preloader = document.getElementById("loading");
+document.body.onload = () => {
+  preloader.style.display = "none"; 
+}
 
 var glob;
 async function getData() {
@@ -23,6 +27,8 @@ async function getData() {
     showData(data)
 }
 getData();
+
+
 
 /*SideBar*/
 document.getElementById("ham").onclick = () => {

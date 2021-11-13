@@ -1,3 +1,8 @@
+/*preloader*/ 
+var preloader = document.getElementById("loading");
+document.body.onload = () => {
+  preloader.style.display = "none"; 
+}
 import { product_type, customize } from "./export.js";
 
 import {nav,sid} from "../Nav_bar/navbar.js";
@@ -21,6 +26,7 @@ async function getData(){
     showData(data)
 } 
 getData()
+
 
 var viewCouponsFun=document.getElementById("view-coupons")
 viewCouponsFun.onclick=()=>{

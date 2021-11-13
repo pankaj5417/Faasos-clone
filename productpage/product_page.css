@@ -74,12 +74,19 @@
 
   /* Image Carousel End */
 
+/*preloader*/
+  #loading{
+    position: fixed;
+    width:100%;
+    height: 100vh;
+    background: #fff url('../profile/image/original.gif') no-repeat center;
+    z-index: 2;
+}
 
 
 body{
     background-color: whitesmoke;
     scroll-behavior: smooth;
-
 }
 /*
 .container{
@@ -625,11 +632,10 @@ body{
           margin: auto;
      }
       #searchContent{
-          width: 90%;
           display:grid;
-          grid-template-columns:repeat(2,48%);
-         row-gap:4%;
-         column-gap: 2%;
+          grid-template-columns:repeat(3,25%);
+          grid-gap:1%;
+          margin-left: auto;
       }
       #modalContent > button:nth-child(1){
         font-size: 35px;
@@ -652,10 +658,9 @@ body{
           width:100%;
           height: 100%;
           background-color: white;
-          margin: auto;
+          margin-left: auto;
           overflow: scroll;
       }
-      
       /* After search CSS End*/
       /*searchbar css End*/
 
