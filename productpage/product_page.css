@@ -86,7 +86,7 @@
 
 body{
     background-color: whitesmoke;
-
+    scroll-behavior: smooth;
 }
 /*
 .container{
