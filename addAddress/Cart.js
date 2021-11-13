@@ -453,10 +453,13 @@ function saveAddress() {
     lat: inputLat,
     lng: inputLng,
   };
-
-  var addressData = [addressForm];
-
-  localStorage.setItem("Address", JSON.stringify(addressData));
+  let savedAddress = JSON.parse(localStorage.getItem("Address"))
+if(savedAddress){
+  savedAddress.push(addressForm)
+  localStorage.setItem("Address", JSON.stringify(savedAddress));
+}else{ 
+    localStorage.setItem("Address", JSON.stringify([addressForm]));
+}
 
   house = "";
   landmark = "";
@@ -469,7 +472,37 @@ document.getElementById("closeMap").addEventListener("click", function () {
   document.querySelector(".bg-modal").style.display = "none";
 });
 
+// AppendAddresses
+let savedAddress = JSON.parse(localStorage.getItem("Address"))
+if(savedAddress.length > 0){
 
+  savedAddress.forEach((el)=>{
+    let parent = document.getElementById('cart-address')
+    let icon = document.getElementById('i')
+    if(el.addressType == 'home'){
+      icon.classList.add = 'fas'
+      icon.classList.add = 'fa-home'
+
+    }else if(el.addressType == 'work'){
+      icon.classList.add = 'fas'
+      icon.classList.add = 'fa-home'
+
+    }else if(el.addressType == 'other'){
+      icon.classList.add = 'fas'
+      icon.classList.add = 'fa-home'
+
+    }
+
+
+    let h3 = document.getElementById('h3')
+    h3.innerText = el.addressType
+    console.log(el.addressType)
+  })
+
+
+
+
+}
 
 
 // Payment Sectioin
