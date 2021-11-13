@@ -16,6 +16,12 @@ async function getData(){
 } 
 getData()
 
+/*preloader*/ 
+var preloader = document.getElementById("loading");
+document.body.onload = () => {
+  preloader.style.display = "none"; 
+}
+
 var viewCouponsFun=document.getElementById("view-coupons")
 viewCouponsFun.onclick=()=>{
   viewCoupons()
