@@ -148,7 +148,12 @@ function showData(data){
         let div5=document.createElement("div")
         let div6=document.createElement("div")
         let img=document.createElement("img")
-         img.src=prod.img
+          img.src = prod.img
+          img.onclick = () => {
+              localStorage.setItem("single-prod", JSON.stringify(prod));
+              
+            window.location.href="single_product.html"
+        }
          img.style.width="100%"
          let prod_name=document.createElement("p")
          prod_name.innerText=prod.name
@@ -182,7 +187,9 @@ function showData(data){
          readmore.style.cursor="pointer"
 
 
-         readmore.onclick=()=>{
+          readmore.onclick = () => {
+              localStorage.setItem("single-prod", JSON.stringify(prod));
+             
             window.location.href="single_product.html"
         }
 
@@ -297,7 +304,7 @@ function showData(data){
                   
                       let qty = event.target.parentNode.querySelector(".qty");
                       let curent = Number(qty.innerText);
-                      qty.innerText = curent+1;
+                    //   qty.innerText = curent+1;
                       
               });
 

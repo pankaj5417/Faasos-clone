@@ -1,8 +1,3 @@
-/*preloader*/ 
-var preloader = document.getElementById("loading");
-document.body.onload = () => {
-  preloader.style.display = "none"; 
-}
 import { product_type, customize } from "./export.js";
 
 import {nav,sid} from "../Nav_bar/navbar.js";
@@ -17,12 +12,16 @@ document.getElementById("big5").innerHTML = foot;
   //      console.log(name+"suman")
 
 
+        // adding customize to the end of the html document
+document.body.innerHTML += customize();
+
+
 
 
 async function getData(){
     let res=await fetch(`https://demo8715768.mockable.io/faasos`)
     let data=await res.json()
-    console.log(data)
+    // console.log(data)
     showData(data)
 } 
 getData()
@@ -117,8 +116,8 @@ function showData(data){
          div3.append(div,prod_desc,div2)
          div4.append(img,div3)
 
-         console.log(midContainer+"mid")
-         console.log(div4)
+        //  console.log(midContainer+"mid")
+        //  console.log(div4)
          //midContainer.append(div4+"div")
          div4.style.backgroundColor="white"
       //  }
@@ -132,10 +131,19 @@ let qty=document.getElementById("qty")
 let kart=JSON.parse(localStorage.getItem("FaasosCart"))
 var count=0;
 console.log(kart)
-function cartData(){
+
+
+
+
+
+function cartData() {
+        let cartItem=document.getElementById("cart-item")
+  cartItem.innerHTML = null;
+  let kart = JSON.parse(localStorage.getItem("FaasosCart"))
+         
+qty.innerHTML=kart.length+" "+"Item";
     kart.forEach((item)=>{
-        count++
-qty.innerHTML=count+" "+"Item";
+ 
         console.log(item.name)
         let div=document.createElement("div")
         let div2=document.createElement("div")
@@ -162,7 +170,47 @@ qty.innerHTML=count+" "+"Item";
         buttonLeft.style.backgroundColor="white"
         buttonRight.style.backgroundColor="white"
         buttonRight.style.width="40px"
-        buttonRight.style.height="40px"
+      buttonRight.style.height = "40px"
+
+    document.querySelector(".custom-bottom").addEventListener("click", () => {
+              document.querySelector(".custom-parent").classList.remove("active-custom");
+            //   console.log("1",prod);
+      
+      let kart = JSON.parse(localStorage.getItem("FaasosCart"));
+      
+              kart.push(item);
+              localStorage.setItem("FaasosCart", JSON.stringify(kart));
+
+              cartData();
+            });
+      // adding funtionality to left and right button 
+        buttonLeft.addEventListener('click', (event) => {
+               
+          let kart = JSON.parse(localStorage.getItem("FaasosCart"));
+          console.log(kart)
+             let index = kart.indexOf(item);
+             console.log(index)
+             kart.splice(index, 1);
+
+             localStorage.setItem("FaasosCart", JSON.stringify(kart));
+
+
+  
+             
+             cartData();
+              });
+
+          //adding addcustomisabe to right button 
+          buttonRight.addEventListener('click', (event) => {
+                      //adding custimable to +button
+              document.querySelector(".custom-parent").classList.add("active-custom");
+              show_customize(item);
+
+                  
+                
+          });
+        
+      
         buttonLeft.style.height="40px"
       
         buttonRight.style.marginLeft="7px"
@@ -227,7 +275,7 @@ cartData()
 
 
 function viewCoupons(){
-    var couponContainer=document.getElementById("coupon-container")
+  var couponContainer = document.getElementById("coupon-container");
 
 
    let div=document.getElementById("coupon-div")
@@ -574,3 +622,48 @@ document.getElementById("loggedNumber").innerText=arr2[arr2.length-1].number2
 
 
 
+// customize
+
+// close custom 
+document.getElementById("custom-close").addEventListener("click", () => {
+  console.log(document.querySelector(".custom-parent"))
+    document.querySelector(".custom-parent").classList.remove("active-custom");
+    
+});
+//
+// document.querySelector(".custom-bottom").addEventListener("click", () => {
+//     document.querySelector(".custom-parent").classList.remove("active-custom");
+//     // cartData();
+// });
+
+
+
+
+
+//function for customizable option 
+function show_customize(prod) {
+    let parent = document.querySelector(".custom-middle");
+    let type_src = product_type(prod);
+    console.log(type_src)
+    parent.innerHTML = `<div class="head">
+    <div><img src = ${type_src} /></div>
+    <div><h3>${prod.name}</h3></div>
+    </div>
+    <div><p> MAKE YOUR FAVOURITE MEAL </p></div>
+    <div class="custom-option">
+    <div class = "option">
+    <div class = "option-head">
+    <div><img src ="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png" />Potato Wedges (Medium) Thums Up (250ml) (Save Rs26)</div>
+    <div>	&#8377 87<input type="checkbox" id="vehicle2" name="" value="87"></div>
+    </div>
+    </div>
+
+    <div class = "option-head">
+    <div><img src ="https://png.pngitem.com/pimgs/s/151-1515150_veg-icon-png-circle-transparent-png.png" />Coke 330 ml.</div>
+    <div>	&#8377 57<input type="checkbox" id="" name="" value="55"></div>
+    </div>
+    </div>
+    </div>`
+        ;
+
+}
