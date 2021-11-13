@@ -13,7 +13,7 @@
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
-  top: 0;
+  top: -5;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -82,8 +82,11 @@
     text-align: center;
 }
 #lin1{
-  margin-top: 40%;
+ margin-top: 35%;
  text-align: center;
+}
+#lin2{
+  margin-top: -3%;
 }
 #btn,#btn2{
   margin-top: 20px;
@@ -127,7 +130,7 @@ width: 11%;
 #number,#number2{
  padding: 5px;
  border-radius: 3px;
- width: 25rem;
+ width: 23.5rem;
  display: inline;
  outline: none;
  border: 1px solid lightgray;
