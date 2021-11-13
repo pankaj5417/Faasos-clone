@@ -1,4 +1,5 @@
 
+
 async function saveAddress() {
   let lat = document.querySelector("#LATITUDE_ELEMENT_ID").value;
   let lng = document.querySelector("#LONGITUDE_ELEMENT_ID").value;
@@ -153,6 +154,3 @@ setdiv.value = div.innerText;
   }
     appendAddresses()
     
-
-    
-    console.log(total2);

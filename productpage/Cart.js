@@ -650,5 +650,6 @@ function changeNumber(){
   item.style.color = 'black'
 }
 
+
 document.getElementById('google_pay_button').innerText = `Pay ₹${parseInt(total2)}`
-    document.getElementById('cod_pay_button').innerText = `Pay ₹${parseInt(total2)}`
+document.getElementById('cod_pay_button').innerText = `Pay ₹${parseInt(total2)}`
