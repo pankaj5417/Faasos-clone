@@ -26,8 +26,11 @@
   background-color: #fefefe;
   margin: 4% auto; /* 15% from the top and centered */
   border: 1px solid #888;
+  z-index: 3;
   width: 35%;
-  height: 87%; /* Could be more or less, depending on screen size */
+  min-width: 350px;
+  height: 80vh; 
+  min-height: 670px;/* Could be more or less, depending on screen size */
   padding: 8px;
   border-radius: 5px;
    
@@ -54,7 +57,7 @@
 #name,#email,#name2,#email2{
   margin-top:5px;
   padding: 10px;
-  width: 60%;
+  width: 30vw;
   border: 1px solid lightgray;
   border-radius:3px;
   height: 40px;
@@ -62,7 +65,8 @@
 }
 #name,#email,#name2,#email2{
   margin: auto 10px;
-  width: 91%;
+  width: 31vw;
+  min-width: 310px;
   margin-bottom:20px ;
 
 }
@@ -130,7 +134,10 @@ width: 11%;
 #number,#number2{
  padding: 5px;
  border-radius: 3px;
- width: 23.5rem;
+ width: 27.3vw;
+
+ min-width: 275px;
+
  display: inline;
  outline: none;
  border: 1px solid lightgray;
