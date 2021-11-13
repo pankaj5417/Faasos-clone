@@ -2,7 +2,7 @@
 async function getData(){
     let res=await fetch(`https://demo8715768.mockable.io/faasos`)
     let data=await res.json()
-    console.log(data)
+    // console.log(data)
     showData(data)
 } 
 getData()
@@ -16,7 +16,7 @@ function showData(data){
         let div3=document.createElement("div")
         let div4=document.createElement("div")
        // if(prod.category=="Fab Wraps starting at 99 each"){
-         console.log(prod);
+        //  console.log(prod);
         let img=document.createElement("img")
          img.src=prod.img
          img.style.width="100%"
@@ -48,10 +48,10 @@ function showData(data){
     
         
          addtoCartBtn.onclick=function() {
-                 console.log("Yes")
+                //  console.log("Yes")
               let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
               let bagcount=0;
-              console.log(presentitems);
+              // console.log(presentitems);
                presentitems.forEach(function (items) {
                 
                if(items.name==prod.name) {
@@ -104,12 +104,12 @@ var total_amt=document.getElementById("total-amt")
 let qty=document.getElementById("qty")
 let kart=JSON.parse(localStorage.getItem("FaasosCart"))
 var count=0;
-console.log(kart)
+// console.log(kart)
 function cartData(){
     kart.forEach((item)=>{
         count++
 qty.innerHTML=count+" "+"Item";
-        console.log(item.name)
+        // console.log(item.name)
         let div=document.createElement("div")
         let div2=document.createElement("div")
         let product_name=document.createElement("p")
@@ -264,7 +264,7 @@ function viewCoupons(){
  
  
    button3.onclick=()=>{
-       console.log(couponBox.value)
+      //  console.log(couponBox.value)
     applyCoupon(couponBox.value)
 }
 
@@ -337,13 +337,13 @@ div.style.display="block"
 
 }
 function applyCoupon(d){
-    console.log(total2)
+    // console.log(total2)
 
     if(d=="BIGSAVE"&&total2>=800){
        var total12=total2-200
 
         total_pr.innerHTML='₹'+" "+parseInt(total12)
-        console.log(total2)
+        // console.log(total2)
 
     }
 }
@@ -356,7 +356,7 @@ function gotoCart(){
 var div = document.querySelector(".checkStatus");
 var id;
 function activate(e) {
-  console.log(e.id);
+  // console.log(e.id);
   id = e.id;
 
   for (var i = 0; i <= 3; i++) {
@@ -371,7 +371,22 @@ function activate(e) {
   div.value = div.innerText;
 }
 
-// Map
+// User Info
+
+let user = JSON.parse(localStorage.getItem("faasosUser"))[0]
+
+let username = user.name
+let phone = user.number
+let item = document.getElementById('cart-status')
+
+let h3 = document.createElement('h3')
+  h3.innerText = `${username} | ${phone}`
+  h3.classList.add('loginData')
+
+  item.append(h3);
+
+console.log(phone);
+// Map 
 var confirmBtn = document.getElementById("confirmPosition");
 var onClickPositionView = document.getElementById("onClickPositionView");
 var onIdlePositionView = document.getElementById("onIdlePositionView");
@@ -431,18 +446,15 @@ function saveAddress() {
     var addressType = "others";
   }
 
-  let typedAddress = {
+  let addressForm = {
     houseNo: house,
     landmark: landmark,
     addressType: addressType,
-  };
-
-  let mapData = {
     lat: inputLat,
     lng: inputLng,
   };
 
-  var addressData = [mapData, typedAddress];
+  var addressData = [addressForm];
 
   localStorage.setItem("Address", JSON.stringify(addressData));
 
@@ -457,3 +469,56 @@ document.getElementById("closeMap").addEventListener("click", function () {
   document.querySelector(".bg-modal").style.display = "none";
 });
 
+
+
+
+// Payment Sectioin
+var div = document.querySelector(".checkPayment");
+var id;
+function activatePayment(e) {            
+   
+  id = e.id; 
+
+  for (var i = 0; i <= 4; i++) {
+    var classDiv = document.getElementById('payment_method_'+String(i));
+    var showDiv = document.getElementById('paymentType'+String(i));
+    if (classDiv && showDiv) {
+      classDiv.classList.remove("payActive");
+      console.log('ok');
+      classDiv.value = "";
+      showDiv.style.display = 'none'
+    }
+  }
+  let idIndex = id[id.length-1]
+  let leftDiv = document.getElementById(id); 
+  let rightDiv = document.getElementById('paymentType'+String(idIndex));
+  leftDiv.classList.add("payActive");
+  leftDiv.value = div.innerText;
+
+  rightDiv.style.display = 'block'
+
+
+if(id === 'payment_method_1'){
+
+
+
+}else if('payment_method_2'){
+  let value = JSON.parse(localStorage.getItem("faasosUser"))
+  document.getElementById('payment_number').value = value[0].number
+
+}else if('payment_method_3'){
+  console.log(e.id);
+}else if('payment_method_4'){
+  console.log(e.id);
+}
+
+
+
+}
+
+
+function changeNumber(){
+  let item = document.getElementById('payment_number')
+  item.removeAttribute('readonly')
+  item.style.color = 'black'
+}
