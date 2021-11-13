@@ -186,7 +186,7 @@ qty.innerHTML=kart.length+" "+"Item";
               kart.push(item);
               localStorage.setItem("FaasosCart", JSON.stringify(kart));
 
-              cartData();
+            //  cartData();
             });
       // adding funtionality to left and right button 
         buttonLeft.addEventListener('click', (event) => {
