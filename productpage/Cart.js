@@ -426,20 +426,32 @@ function viewCoupons(){
 
 
 }
+var c=0
 function applyCoupon(d){
     console.log(total2)
 
-    if(d=="BIGSAVE"&&total2>=800){
+    if(d=="BIGSAVE"&&total2>=800&&c==0){
+      c++
        var total12=total2-200
 
         total_pr.innerHTML='₹'+parseInt(total12)
         console.log(total2)
 
-    }else if(d=="WRAPPER"&&total2>=800){
-      var total12=total2-200
+    }else if(d=="WRAPPED"&&total2>=199&& c==0){
+      var total3=0.60*total2
+      console.log(total3)
+      if(total3<=120){
+       var total13=total2-total3
+        total_pr.innerHTML='₹'+parseInt(total13)
+      }
+      else{
+        var total14=total2-120
+        total_pr.innerHTML='₹'+parseInt(total14)
 
-       total_pr.innerHTML='₹'+parseInt(total12)
-       console.log(total2)
+      }
+
+      // total_pr.innerHTML='₹'+parseInt(total12)
+      // console.log(total2)
 
    }
 }

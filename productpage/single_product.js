@@ -90,6 +90,14 @@ document.getElementById("custom-close").addEventListener("click",()=> {
 //
 document.querySelector(".custom-bottom").addEventListener("click", () => {
     document.querySelector(".custom-parent").classList.remove("active-custom");
+   
+     let products_cart=JSON.parse(localStorage.getItem("FaasosCart"));
+    
+    products_cart.push(prod);
+    localStorage.setItem("FaasosCart", JSON.stringify(products_cart));
+    window.location.href = "./productpage.html"
+
+
     // cartData();
 });
 
