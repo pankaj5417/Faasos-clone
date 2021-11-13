@@ -244,10 +244,10 @@ function showData(data){
 
     
         
-        //   addToCart.onclick=function() {
-        //           console.log("Yes")
-        //       let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
-        //       let bagcount=0;
+         //addToCart.onclick=function() {
+         //         console.log("Yes")
+         //     let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
+         //     let bagcount=0;
         //    console.log(presentitems);
         //        presentitems.forEach(function (items) {
                 
