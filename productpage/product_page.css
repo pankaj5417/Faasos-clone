@@ -633,8 +633,9 @@ body{
      }
       #searchContent{
           display:grid;
-          grid-template-columns:repeat(3,25%);
-          grid-gap:1%;
+          grid-template-columns:repeat(2,48%);
+          row-gap:4%;
+          column-gap: 2%;
           margin-left: auto;
       }
       #modalContent > button:nth-child(1){
