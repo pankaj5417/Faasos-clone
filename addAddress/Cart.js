@@ -532,9 +532,9 @@ if(savedAddress.length > 0){
     h3.innerText = el.addressType
     console.log(el.addressType)
 
-  //   addressDiv.append(icon,h3)
-  //   parent.append(addressDiv)
-  // })
+    addressDiv.append(icon,h3)
+    parent.append(addressDiv)
+  })
 
 
 
