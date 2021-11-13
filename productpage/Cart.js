@@ -1,3 +1,4 @@
+
 import { product_type, customize } from "./export.js";
 
 import {nav,sid} from "../Nav_bar/navbar.js";
@@ -15,6 +16,10 @@ document.getElementById("big5").innerHTML = foot;
         // adding customize to the end of the html document
 document.body.innerHTML += customize();
 
+var preloader = document.getElementById("loading");
+document.body.onload = () => {
+  preloader.style.display = "none"; 
+}
 
 
 
