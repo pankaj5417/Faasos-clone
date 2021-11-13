@@ -20,9 +20,11 @@
          
 </style>
 </head>
-<div id="loading"></div>
-<div id="navbar"></div>
+
+
 <body>
+    <div id="loading"></div>
+    <div id="navbar"></div>
     <div id="bg-modal" class="bg-modal">
 
        <div id="addressDiv" class="address  bg-white align-middle"> 
@@ -104,7 +106,7 @@
 <!-- OK -->
 
 <!--sidebar(code) open on click on ham-->
-<div id="mySidebar" class="sidebar"></div>
+<!--<div id="mySidebar" class="sidebar"></div>-->
 
     <hr>
     <div class="container   "> 
@@ -210,7 +212,7 @@
     <div id="coupon-container" class="coupon-cont">
         <div class="coupon-divs" id="coupon-div"></div>
     </div> 
-    <div id="big"></div>
+    <div id="big5"></div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -223,25 +225,7 @@
     <script type="module" src="Cart.js"></script>
 </body>
 </html>
-<script type="module">
-    // import {nav,sid} from "../Nav_bar/navbar.js";
-    // document.getElementById("navbar").innerHTML = nav;
-    // document.getElementById("mySidebar").innerHTML = sid;
-    import foot from "../footer/footer.js";
-    document.getElementById("big").innerHTML = foot;
-    document.getElementById("ham").onclick = () => {
-    document.getElementById("mySidebar").style.width = "370px";
-}
-    document.getElementById("closeBtn").onclick = () => {
-    document.getElementById("mySidebar").style.width = "0px";
-}
-    document.getElementById("about").onclick = () => {
-    window.location.href = "../footer/aboutus.html";
-}
-    document.getElementById("help").onclick = () => {
-    window.location.href = "../footer/help_n_support.html";
-}
 
-</script>
+
 
   
