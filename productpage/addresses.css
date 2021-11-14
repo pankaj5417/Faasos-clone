@@ -60,7 +60,7 @@ grid-gap: 20px;
 }
 .addresses_top > i{ 
 margin:6px;
-color: black; !important
+color: black !important;
 }
 .address_text{
   font-size: small;
