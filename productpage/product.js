@@ -368,6 +368,7 @@ window.location.reload()
 
      localStorage.setItem("FaasosCart",JSON.stringify(products_cart));
      window.location.reload()
+     window.scrollTo(0,0)
      cartData()
      // }
          }
