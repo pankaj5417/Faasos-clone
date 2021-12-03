@@ -127,6 +127,7 @@ var midContainer=document.getElementById('mid-container')
 
          var midContainer10=document.getElementById("mid-container10")
 
+        
 
 function showData(data){
 
@@ -242,29 +243,29 @@ function showData(data){
 
       
 
-    
+    /*
         
-         //addToCart.onclick=function() {
-         //         console.log("Yes")
-         //     let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
-         //     let bagcount=0;
-        //    console.log(presentitems);
-        //        presentitems.forEach(function (items) {
+         addToCart.onclick=function() {
+                 console.log("Yes")
+             let presentitems=JSON.parse(localStorage.getItem("FaasosCart"));
+             let bagcount=0;
+           console.log(presentitems);
+                presentitems.forEach(function (items) {
                 
-        //         if(items.name==prod.name) {
-        //           bagcount++;
-        //           //let qty=document.getElementById(qty)
-        //          //qty.innerText="bagcount"
-        //         }
-        //        }); 
-        //        if(bagcount==1) {
-        //       // alert("Already in Cart");
-        //        } else {
-        //           addtobag(prod);
+                if(items.name==prod.name) {
+                  bagcount++;
+                   //let qty=document.getElementById(qty)
+                  //qty.innerText="bagcount"
+                }
+               }); 
+              if(bagcount==1) {
+              // alert("Already in Cart");
+               } else {
+                   addtobag(prod);
                   
-        //     }   	
-        //        }
-        
+             }   	
+                }
+        */
           
           addToCart.addEventListener("click", addtocart);
           function addtocart(event) {
@@ -315,25 +316,61 @@ function showData(data){
           document.querySelector(".custom-bottom").addEventListener("click", () => {
               document.querySelector(".custom-parent").classList.remove("active-custom");
             //   console.log("1",prod);
-              let kart = JSON.parse(localStorage.getItem("FaasosCart"));
+             
+           addtobag(prod)
+           /* 
+            let kart = JSON.parse(localStorage.getItem("FaasosCart"));
               kart.push(prod);
               localStorage.setItem("FaasosCart", JSON.stringify(kart));
 
-              cartData();
-            });
+           */
 
+             // cartData();
+            });
+        
           };
         
 
-          
+       var itemsArr=[]
                if(localStorage.getItem("FaasosCart")===null) {
          localStorage.setItem("FaasosCart",JSON.stringify([]))
      }
-     function addtobag(p) {
-     let products_cart=JSON.parse(localStorage.getItem("FaasosCart"));
+    
+    async function addtobag(p) {
+
+      let products_cart= await JSON.parse(localStorage.getItem("FaasosCart"));
+
+     /* if(localStorage.getItem("FaasosCart")===null) {
+      itemsArr.push(p)
+     // console.log(itemsArr)
+      localStorage.setItem("FaasosCart",JSON.stringify(itemsArr));
+      window.location.reload()
+
+      }else{
+        let products_cart= await JSON.parse(localStorage.getItem("FaasosCart"));
+        products_cart.map(data=>{
+          if(data.name==p.name){
+
+          }
+          else{
+            itemsArr.push(data)
+            console.log(itemsArr)
+            localStorage.setItem("FaasosCart",JSON.stringify(itemsArr));
+                          
+          }
+        })
+        itemsArr.push(p)
+       localStorage.setItem("FaasosCart",JSON.stringify(itemsArr))
+window.location.reload()
+*/
      products_cart.push(p);
+     //console.log(productsArray[0])
 
      localStorage.setItem("FaasosCart",JSON.stringify(products_cart));
+     window.location.reload()
+     window.scrollTo(0,0)
+     cartData()
+     // }
          }
 
 
@@ -710,40 +747,16 @@ function showData(data){
 /*mid end*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var kart = JSON.parse(localStorage.getItem("FaasosCart"));
 
 
 //cart data();
 function cartData() {
-    let kart = JSON.parse(localStorage.getItem("FaasosCart"));
+
+
+  var cartItem = document.getElementById("cart-item");
+
+  //cartItem.innerHTML=null
     if (kart.length === 0 || kart === null) {
         document.getElementById("cart-head").innerText = "Empty cart";
         document.getElementById("qty").style.display = "none";
@@ -815,7 +828,8 @@ var count=0;
              let kart = JSON.parse(localStorage.getItem("FaasosCart"));
              let index = kart.indexOf(item);
             //  console.log(index)
-             kart.splice(index, 1);
+            kart.splice(index, 1);
+          // kart.removeItem(item)
 
              localStorage.setItem("FaasosCart", JSON.stringify(kart));
 
@@ -873,7 +887,6 @@ var count=0;
 
 
 
-        let cartItem = document.getElementById("cart-item");
         
         div.append(div3, div2, product_price)
         product_price.style.width = "10%"
