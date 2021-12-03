@@ -99,7 +99,7 @@ arr.forEach(el => {
         
     };
     setTimeout(() => {
-      window.location = "/productpage/productpage.html"
+      window.location = "./productpage/productpage.html"
     },1000);
     
     let curr = JSON.parse(localStorage.getItem("current"))
@@ -237,7 +237,7 @@ arr2.push(user)
 
 modal2.style.display = "none";
 setTimeout(() => {
-  window.location = "/productpage/productpage.html"
+  window.location = "./productpage/productpage.html"
 },1000);
  let curr = JSON.parse(localStorage.getItem("current"))
     curr.pop();
