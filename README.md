@@ -1,5 +1,7 @@
 # Faasos-clone
 
+#This is the clone of Koovs.com ,which we made during the UNIT II construct week. We made this website functional as well.
+
 ![Clone of Faasos.com](https://miro.medium.com/max/1050/0*LDBDuvlq2q9q3EUK.png)
 
 ## Technologies Used :
