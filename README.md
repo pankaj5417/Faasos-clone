@@ -1,6 +1,6 @@
 # Faasos-clone
 
-#This is the clone of Koovs.com ,which we made during the UNIT II construct week. We made this website functional as well.
+#This is the clone of Faasos.com ,which we made during the UNIT 3 construct week. We made this Clone functional and responsive.
 
 ![Clone of Faasos.com](https://miro.medium.com/max/1050/0*LDBDuvlq2q9q3EUK.png)
 
