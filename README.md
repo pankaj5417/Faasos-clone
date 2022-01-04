@@ -48,12 +48,11 @@
 * Login Page/SignUp Page
 
     ![Faasos.com login page/signup page](https://miro.medium.com/max/1050/0*UQlEVpD-TIVfwP53.png)
-* Products Page
+* Cart Page & Payment page
 ![Faasos.com Cart page](https://miro.medium.com/max/1050/0*q3Qh-Ibz-Ld8z-ww.png)
   
 
-* Cart
-* Payments Page
+
 
 ## Contributors :
 * Pankaj Kumar
