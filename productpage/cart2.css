@@ -636,3 +636,17 @@ margin-top: 10px;
     font-size: 15px;
 }
 
+@media (max-width: 1050px){
+    .container > div{
+       display:block;
+    }
+    .hrow{
+        width: 100%;
+    }
+    .col-right{
+        width: 100%;
+    }
+    .col-left{
+        width: 100%;
+    }
+}
